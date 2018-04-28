@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureSocialLoginB2C", "AzureSocialLoginB2C\AzureSocialLoginB2C.csproj", "{CFD1F1BC-25AB-405E-A0DD-AC6668799850}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CFD1F1BC-25AB-405E-A0DD-AC6668799850}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFD1F1BC-25AB-405E-A0DD-AC6668799850}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFD1F1BC-25AB-405E-A0DD-AC6668799850}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFD1F1BC-25AB-405E-A0DD-AC6668799850}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D33D19E6-33C3-40D0-8753-A1A3DE2D5340}
+	EndGlobalSection
+EndGlobal
