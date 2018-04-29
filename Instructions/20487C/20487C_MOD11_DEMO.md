@@ -1,5 +1,7 @@
 # Module 11: Identity Management and Authorization on Azure Active Directory
 
+Wherever  you see a path to a file that starts with *[repository root]*, replace it with the absolute path to the folder in which the 20487 repository resides. For example, if you cloned or extracted the 20487 repository to **C:\Users\John Doe\Downloads\20487**, the following path: **[repository root]\AllFiles\20487C\Mod06** should be changed to **C:\Users\John Doe\Downloads\20487\AllFiles\20487C\Mod11**.
+
 # Lesson 1: Claims-based Identity Concepts
 
 ### Demonstration: Using claims in an ASP.NET MVC application
@@ -244,10 +246,152 @@
 47. After the site was loaded, click in **Contact**, and see your name displayed.   
 
 
+
+
+# Lesson 3: Azure Active Directory B2C
+
+### Demonstration: Authorizing client applications using Azure AD B2C
+
+#### Preparation Steps
+
+  You need to have two available emails, one for the azure portal and the second for creating new user.
+
+#### Demonstration Steps
+
+1. Open **Microsoft Edge**.
+2. Go to the Azure portal at **http://portal.azure.com**.
+3. If a page appears, prompting for your email address, enter your email address, and then click **Continue**. Wait for the sign-in page to appear, enter your email address and password, and then click **Sign In.**
+
+   >**Note:** During the sign-in process, if a page appears prompting you to choose from a list of previously used accounts, select the account you previously used, and then enter your credentials.
+
+4. On the navigation menu on the left, click **Create a resource**, and search **Azure Active Directory B2C**, click **Create**.
+5. In **Create new B2C Tenant to existing Tenant** ,select **Create a new Azure AD B2C Tenant**, provide the following information:
+    - Organization name type **B2CMod11**.
+    - Initial domain name type **b2cmod11**YourInitials (Replace YourInitials with your initials).
+    - Country or region select your Country.
+6. Click on **Create**.
+7. In **Create new B2C Tenant to existing Tenant** ,select **Link an existing Azure AD B2C Tenant to my Azure subscription**, provide the following information:
+    - **Azure AD B2C Tenant** select **``b2cmod11[YourInitials].onmicrosoft.com``** (Replace YourInitials with your initials).
+    - Resource group select **Create new** and type **B2C**.
+8. Click on **Create**, and wait until the resource is created.
+9. On top bar click on your user information, the menu will open and under **DIRECTORY** select **B2CMod11**.
+    >**Note :** if you don't see **B2CMod11** just refresh the page.
+10. On top search bar type **Azure AD B2C** and navigate.
+11. On the **Azure AD B2C** blade, click **Applications** under **Manage** subtitle.
+12. Click on **Add** and provide the following information:
+    - Name type **B2C App**.
+    - Web App / Web API select **Yes**.
+    - Reply URL type **``http://localhost:51136/``**
+    - App ID URL type **api**.
+    - Native Client select **Yes**.
+13. Click on **Create**.
+14. On the **Azure AD B2C** blade, click **Sign-up or sign-in policies**, under **POLICIES** subtitle.
+15. Click on **Add** and provide the following information: 
+    - **Name** type **SignIn-Policy**
+    - Click on **Identity providers**, select **Email signup**, click **OK**.
+    - Click on **Sign-up attributes** , select **Display Name**, click **OK**.
+    - Click on **Application claims**, select **Display Name**, click **OK**. 
+16. Click **Create**.
+17. On the **Azure AD B2C** blade, click **Applications** under **Manage** subtitle.
+18. Click on **B2CApp**, and copy the **Application ID** to the next steps.
+19. On the **B2C App - Properties** blade, click **API access**, under **API ACCESS** subtitle.
+20. Click on **Add**, in **Select Scopes** select **user_impersontion**, and click **Save**.  
+21. Open **Visual Studio 2017**.
+22. On the **File** menu, point to **Open**, and then click **Project/Solution**.
+23. Go to **[repository root]\Allfiles\20487C\Mod11\DemoFiles\ClientAppUsingB2C**.
+24. Select the **ClientAppUsingB2C.sln** file, and then click **Open**.
+25. In **Solution Explorer**, under the **ClientAppUsingB2C.Server** project, double-click **Web.config**.
+26. Replace the following information: 
+    - **Tenant** replace YourInitials with your initials.
+    - **ClientId** replace with point 32.
+27. In **Solution Explorer** right click on **ClientAppUsingB2C.Server**, select **Publish**.
+28. In **Pick a publish target** window select **App Service**, select **Create New** and click on **Create Profile**.
+29. In **App Name** type **ClientAppUsingB2CServer**[YourInitials] (Replace YourInitials with your initials).
+30. Click on **Create**, and select **Publish**.
+31. Open **Microsoft Edge**, and type in the url **``http://clientappusingb2cserver[YourInitials].azurewebsites.net/api/values``** (Replace YourInitials with your initials).
+32. You should get the following message **Authorization has been denied for this request**.
+33. Go back to visaul studio.
+34. In **Solution Explorer**, under the **ClientAppUsingB2C.Client** project,expand **App.xaml** and double-click **App.xaml.cs**.
+35. Replace the following information: 
+    - **Tenant** replace YourInitials with your initials.
+    - **ClientId** replace with point 32.
+    - **ApiScopes** replace YourInitials with your initials.
+    - **ApiEndpoint** replace YourInitials with your initials.
+36. In **Solution Explorer**, under the **ClientAppUsingB2C.Client** right click **Set as StartUp Project**.
+37. Run the application, press Ctrl+F5.
+38. In the App Click on **Sign In**.
+39. Click on **Sign up now**, Enter your details.
+40. Click on **Call Api**.
+41. Now display on your screen **Success you finish the demo. You integrated  the WebApi with the client app**. 
+42. Go back to **Azure protal**.
+43. On the **Azure AD B2C** blade, click **Users**, under **MANAGE** subtitle.
+44. Your Display Name should now appear in the **All users** list.
+
+
 # Lesson 3: Azure Active Directory B2C
 
 ### Demonstration: Configuring social logins using Azure AD B2C
 
+#### Preparation Steps
+
+  You need to have two available emails, one for the azure portal and the second for creating new user.
+  And also you need to finish the previous demo.
+
 #### Demonstration Steps
 
-1. 
+1. Open **Microsoft Edge**.
+2. Navigate to **https://apps.dev.microsoft.com**.
+3. Login with your azure accout email.
+4. Click on **Add an app**.
+5. In Application Name type **B2CApp**, click **Create**.
+6. Copy the **Application Id** to the following tasks.
+7. **Application Secrets** click on **Generate New Password**, copy the code to the following tasks, and click **OK**.
+8. Under **Platforms** click on **Add Platform**, select **Web**.
+9. In **Redirect URLs** type **``https://login.microsoftonline.com/te/b2cmod11[YourInitials].onmicrosoft.com/oauth2/authresp``** (Replace YourInitials with your initials).
+10. Click on **Save**.
+11. Open **Microsoft Edge**.
+12. Go to the Azure portal at **http://portal.azure.com**.
+13. If a page appears, prompting for your email address, enter your email address, and then click **Continue**. Wait for the sign-in page to appear, enter your email address and password, and then click **Sign In.**
+
+   >**Note:** During the sign-in process, if a page appears prompting you to choose from a list of previously used accounts, select the account you previously used, and then enter your credentials.
+
+14. On top bar click on your user information, the menu will open and under **DIRECTORY** select **B2CMod11**.
+    >**Note :** if you don't see **B2CMod11** just refresh the page.
+15. On top search bar type **Azure AD B2C** and navigate.
+16. On the **Azure AD B2C** blade, click **Identity providers** under **Manage** subtitle.
+17. Click on **Add** and provide the following information:
+    - **Name** type **Microsoft**.
+    - Click on **identity provider type**, select **Microsoft Account**.
+    - Click on **Set up this identity provider**.
+        - **Client ID** paste from point 6.
+        - **Client secret** paste from point 7.
+        - Click **OK**.
+18. Click **Create**.
+19. On the **Azure AD B2C** blade, click **Sign-up or sign-in policies**, under **POLICIES** subtitle.
+20. In **Azure AD B2C - Sign-up or sign-in policies**, click on **B2C_1_SignIn-Policy**.
+21. On top bar click on **Edit**, select **Identity providers**.
+22. Select **Microsoft** , click **OK** and click on **Save**.
+
+23. On the **Azure AD B2C** blade, click **Applications** under **Manage** subtitle.
+24. Click on **B2CApp**, and copy the **Application ID** to the next steps.
+25. On the **B2C App - Properties** blade, click **Keys**, under **GENERAL** subtitle.
+26. Click on **Generate key**, then click **Save** and copy the **App key** to the next steps.
+
+27. Open **Visual Studio 2017**.
+28. On the **File** menu, point to **Open**, and then click **Project/Solution**.
+29. Go to **[repository root]\Allfiles\20487C\Mod11\DemoFiles\AzureSocialLoginB2C**.
+30. Select the **AzureSocialLoginB2C.sln** file, and then click **Open**.
+31. In **Solution Explorer**, under the **AzureSocialLoginB2C** project, double-click **Web.config**.
+32. Replace the following information: 
+    - **Tenant** replace YourInitials with your initials.
+    - **ClientId** replace with point 24.
+    - **ClientSecret**  replace with point 26.
+33. To run the project, press Ctrl+F5.
+34. On the top right, click on **Sign in**, and then click on **Microsoft** under **Sign in with your social account**.
+35. Sign in using your second Microsoft account.
+36. Confirm terms of use by clicking **Yes**.
+37. Type in Display Name, then click **Continue**.
+38. Go back to **Azure protal**.
+39. On the **Azure AD B2C** blade, click **Users**, under **MANAGE** subtitle.
+40. Your Display Name should now appear in the **All users** list.
+
