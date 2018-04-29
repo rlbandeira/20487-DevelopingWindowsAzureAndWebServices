@@ -30,7 +30,7 @@ Click **Ok**, Windows proceeds to install the required components; when it is do
 
 1. Click **Start** and in the Search box type **Visual Studio**. In the list of search results, right-click **Visual Studio 2017**, and then click **Run as administrator**, in **User Control** dislog box click **Yes**.
 2. On the **File** menu, point to **New**, and then click **Project**.
-3. In navigation pane of the **New Project** dialog box, expand the **Installed** node, expand the **Templates** node, and then expand the **Visual C#** node.
+3. In navigation pane of the **New Project** dialog box, expand the **Installed** node, and then expand the **Visual C#** node.
 4. Click the **WCF** node, and then from the list of templates, select **WCF Service Application**.
 5. In the **Name** text box, type **MyIISService**.
 6. In the **Location** text box, type **[repository root]\Allfiles\20487C\Mod06\DemoFiles\WCF**.
@@ -69,11 +69,11 @@ Click **Ok**, Windows proceeds to install the required components; when it is do
 
 #### Demonstration Steps
 
-1.  Click **Start**, type **Visual Studio**. From the search results, right-click **Visual Studio 2017**, and then select **Run as administrator**.
+1.  Click **Start**, type **Visual Studio**. From the search results, right-click **Visual Studio 2017**, and then select **Run as administrator**, In User **Control dialog** box  click **Yes**.
 2.  On the **File** menu, point to **New**, and then click **Project**.
 3.  In the **New Project** dialog box, on the navigation pane, expand the  **Installed** node, expand the **Visual C\#** node, click the **Web** node, and then in the list of templates, click **ASP.NET Web Application(.NET Framework)**.
 4.  In the **Name** text box, type **MyWebSite**.
-5.  In the **Location** text box, type **[repository root]\\Allfiles\\Mod06\\DemoFiles\\DeployWebApp**.
+5.  In the **Location** text box, type **[repository root]\Allfiles\20487C\Mod06\DemoFiles\DeployWebApp**.
 6.  Clear the **Create directory for solution** check box, and then click **OK**.
 7.  In the **New ASP.NET Web Application** dialog box, select **Web API**, and then click **OK**.
 8.	Open **Microsoft Edge** and go to **https://portal.azure.com**.
