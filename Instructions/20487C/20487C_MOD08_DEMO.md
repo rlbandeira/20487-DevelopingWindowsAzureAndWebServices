@@ -136,8 +136,10 @@ To verify that the installation worked, follow the first set of instructions abo
   ```cs
 		Sync-WDApp "Default Web Site/MyApp" "Default Web Site/MyAppDeployedWithPowerShell" -DestinationPublishSettings "C:\[path to downloads folder]\Server.publishsettings"
 ```
-6. Open a browser and navigate to **http://localhost/MyAppDeployedWithPowerShell/api/values**.
-7. Wait until the response is returned, you should see three values in the form of either XML or JSON, depending on your browser.
+6. Click **Start** and search for **services.msc**, in results click **services**.
+7. In the **Services** window go to **Web Deployment Agent Service** and then under status verify that the service is running. If not right click and then click **Start**.
+8. Open a browser and navigate to **http://localhost/MyAppDeployedWithPowerShell/api/values**.
+9. Wait until the response is returned, you should see three values in the form of either XML or JSON, depending on your browser.
 
 # Lesson 4: Continuous Delivery with TFS and Git
 
