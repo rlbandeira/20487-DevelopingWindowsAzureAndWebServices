@@ -24,7 +24,7 @@ Wherever  you see a path to a file that starts with *[repository root]*, replace
 14. Press Ctrl+F5. The WCF Test Client window will open.
 15. In the pane to the left, double-click the **Div** node.
 16. Set the **a** value to **4** and the **b** value to **2** , and click **Invoke**. If a **Security Warning** dialog box appears, click **OK**.
-17. Change the **b** property to **0**, and click **Invoke**. If a **Security Warning** dialog box appears, click **OK**. A dialog box with an exception will be shown.
+17. Change the **b** value to **0**, and click **Invoke**. If a **Security Warning** dialog box appears, click **OK**. A dialog box with an exception will be shown.
 18. Click **Close** and then close the WCF Test Client window.
 19. Open **File Explorer** and go to **[repository root]\Allfiles\20487C\Mod10\DemoFiles\TracingWCFServices\CalcService\CalcService**.
 20. Double-click **web_tracelog.svclog**. This will open the Microsoft Service Trace Viewer application.
