@@ -34,8 +34,8 @@ Before you begin this demo, you must complete the following steps:
  6. To open the **App Services** pane again, from the menu on the left side, select **App Services**, and then select **ScalableAzureApp**.
  7. In the **ScalableAzureApp** options pane:
   - Select **Scale up** (App Service plan) and select the **B1 Basic** pricing tier. To set the selection, click the **Select** button.
-  - To define the number of instances for the web app, select **Scale out** (App Service plan), and in the **Configure** tab, set  **Instance count** to **Click Save**. 
-  - To download the profile of the web app to your computer, click **Save**, and then click the **Get publish profile** tab.
+  - To define the number of instances for the web app, select **Scale out** (App Service plan), and in the **Configure** tab, set  **Instance count** to **2** ant then **Click Save**.  
+  - To download the profile of the web app to your computer, click **Overview**, and then click the **Get publish profile** tab and then click **Save**.
   > **Note:** You will need this profile later to publish the project to the web app.
 
 ### Demonstration: Using Microsoft Azure Redis Cache
