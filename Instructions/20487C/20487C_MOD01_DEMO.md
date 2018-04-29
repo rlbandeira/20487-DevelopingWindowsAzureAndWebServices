@@ -81,10 +81,10 @@ Follow these steps to set up the demo:
 1. Open **Visual Studio 2017.**
 2. On the **File** menu, point to **Open**, and then click **Project/Solution**.
 3. Go to **[repository root]\AllFiles\20487C\Mod01\DemoFiles\BlueYonderDemo\BlueYonder.Companion.Client**, select the **BlueYonder.Companion.Client.sln** file, and then click **Open**.
-4. If the **Settings** window appears, Change the Setting from **Sideload apps** to **Developer mode**.
+4. In the **Install Missing Features** window click **Install**, If the **Settings** window appears, Change the Setting from **Sideload apps** to **Developer mode**.
 5. If the **Use developer features** dialog box appears, click **Yes**.
 6. In Solution Explorer, right-click the **BlueYonder.Companion.Client** project, and then click **Set as StartUp Project**.
-7. To start the client app without debugging, press **Ctrl+F5**.
+7. right-click the solution and press **Rebuild Solution** and then to start the client app without debugging, press **Ctrl+F5**.
 8. If you are prompted to allow the app to run in the background, click **Allow**.  
  
     Understand the purpose and features of the Blue Yonder Companion app; it is a travel reservation and management app. It can help you search and book flights, manage your trip schedule, store and manage pictures and videos from trips, and provide weather information for your trip destinations.
