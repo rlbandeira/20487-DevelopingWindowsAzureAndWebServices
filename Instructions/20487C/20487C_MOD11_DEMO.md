@@ -328,8 +328,6 @@ Wherever  you see a path to a file that starts with *[repository root]*, replace
 44. Your Display Name should now appear in the **All users** list.
 
 
-# Lesson 3: Azure Active Directory B2C
-
 ### Demonstration: Configuring social logins using Azure AD B2C
 
 #### Preparation Steps
