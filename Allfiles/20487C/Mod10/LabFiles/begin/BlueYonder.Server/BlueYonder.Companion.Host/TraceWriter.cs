@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Http.Tracing;
 using System.Net.Http;
-using System.Web.Http.Tracing; 
 
 namespace BlueYonder.Companion.Host
 {
