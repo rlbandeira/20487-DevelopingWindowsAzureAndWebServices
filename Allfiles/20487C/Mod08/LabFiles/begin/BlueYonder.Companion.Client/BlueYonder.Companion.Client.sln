@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27428.2015
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueYonder.Companion.Client", "BlueYonder.Companion.Client\BlueYonder.Companion.Client.csproj", "{4E6A3FD7-E7BE-44F9-9E26-C37DCA1C3445}"
 EndProject
@@ -22,6 +22,8 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{4E6A3FD7-E7BE-44F9-9E26-C37DCA1C3445}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{4E6A3FD7-E7BE-44F9-9E26-C37DCA1C3445}.Debug|Any CPU.Build.0 = Debug|x86
+		{4E6A3FD7-E7BE-44F9-9E26-C37DCA1C3445}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{4E6A3FD7-E7BE-44F9-9E26-C37DCA1C3445}.Debug|ARM.ActiveCfg = Debug|ARM
 		{4E6A3FD7-E7BE-44F9-9E26-C37DCA1C3445}.Debug|ARM.Build.0 = Debug|ARM
 		{4E6A3FD7-E7BE-44F9-9E26-C37DCA1C3445}.Debug|ARM.Deploy.0 = Debug|ARM

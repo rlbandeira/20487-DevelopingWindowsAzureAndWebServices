@@ -174,7 +174,17 @@ namespace BlueYonder.Companion.Client.Helpers
         /// <returns></returns>
         public async Task<IEnumerable<Flight>> GetFlightsAsync(int source, int destination, DateTime? startDate)
         {
-            var uri = new Uri(string.Format(Addresses.GetFlightsUri, source, destination, startDate));
+            Uri uri = null;
+            if (!startDate.HasValue)
+            {
+                uri = new Uri(string.Format(Addresses.GetFlightsUri, source, destination));
+            }
+            else
+            {
+                var date = $"{startDate.Value.Year}-{startDate.Value.Month}-{startDate.Value.Day} {startDate.Value.TimeOfDay}";
+                uri = new Uri(string.Format(Addresses.GetFlightsUri, source, destination, date));
+            }
+
             var response = await GetAsync(uri);
             return JsonSerializerHelper.Deserialize<IEnumerable<Flight>>(response.Content);
         }
