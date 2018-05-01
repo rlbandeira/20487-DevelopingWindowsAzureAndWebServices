@@ -257,7 +257,7 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
 8. Click **Create**, and then wait until the resource is created.
 9. On top bar, click your user information, the menu opens. Under **DIRECTORY**, select **B2CMod11**.
     >**Note :** if you don't see **B2CMod11**, refresh the page.
-10. On top search bar, type **Azure AD B2C**, and then navigate.
+10. On top search bar, type **Azure AD B2C**, and then press **Enter**.
 11. On the **Azure AD B2C** blade, under the **Manage** section, click **Applications**.
 12. Click **Add**, and then provide the following information:
     - In the **Name** text box, type **B2C App**.
@@ -284,7 +284,7 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
 25. In **Solution Explorer**, under the **ClientAppUsingB2C.Server** project, double-click **Web.config**.
 26. Replace the following information: 
     - In the **Tenant** text box, replace *YourInitials* with your initials.
-    - In the **ClientId** text box, replace with point 32.
+    - In the **ClientId** text box, replace with the value copied in point 18.
 27. In **Solution Explorer**, right-click **ClientAppUsingB2C.Server**, and select **Publish**.
 28. In the **Pick a publish target** window, select **App Service**, select **Create New** and click **Create Profile**.
 29. In **App Name**, type **ClientAppUsingB2CServer***[YourInitials]* (Replace *YourInitials* with your initials).
@@ -295,7 +295,7 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
 34. In **Solution Explorer**, under the **ClientAppUsingB2C.Client** project, expand **App.xaml**, and then double-click **App.xaml.cs**.
 35. Replace the following information: 
     - In the **Tenant** text box, replace *YourInitials* with your initials.
-    - In the **ClientId** text box, replace with point 32.
+    - In the **ClientId** text box, replace with the value copied in point 18.
     - In the **ApiScopes** text box, replace *YourInitials* with your initials.
     - In the **ApiEndpoint** text box, replace *YourInitials* with your initials.
 36. In **Solution Explorer**, under **ClientAppUsingB2C.Client**, right-click **Set as StartUp Project**.
@@ -335,7 +335,7 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
 
 14. On the top bar, click your user information, the menu will open, and under **DIRECTORY** select **B2CMod11**.
     >**Note :**If you don't see **B2CMod11**, refresh the page.
-15. On the top search bar, type **Azure AD B2C** and navigate.
+15. On the top search bar, type **Azure AD B2C** and press **Enter**.
 16. On the **Azure AD B2C** blade, under the **Manage** section, click **Identity providers**.
 17. Click  **Add** and provide the following information:
     - In the **Name** text box, type **Microsoft**.
