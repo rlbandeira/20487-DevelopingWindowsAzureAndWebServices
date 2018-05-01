@@ -1,6 +1,6 @@
 # Module 11: Identity Management and Authorization on Azure Active Directory
 
-Wherever  you see a path to a file that starts with *[repository root]*, replace it with the absolute path to the folder in which the 20487 repository resides. For example, if you cloned or extracted the 20487 repository to **C:\Users\John Doe\Downloads\20487**, the following path: **[repository root]\AllFiles\20487C\Mod06** should be changed to **C:\Users\John Doe\Downloads\20487\AllFiles\20487C\Mod11**.
+Wherever you see a path to file starting with **[repository root]**, replace it with the absolute path to the directory in which the 20487 repository resides. For example, if you cloned or extracted the 20487 repository to C:\Users\John Doe\Downloads\20487, then the following path, **[repository root]\AllFiles\20487C\Mod01** will become **C:\Users\John Doe\Downloads\20487\AllFiles\20487C\Mod01**.
 
 # Lesson 1: Claims-based Identity Concepts
 
@@ -9,64 +9,62 @@ Wherever  you see a path to a file that starts with *[repository root]*, replace
 #### Demonstration Steps
 
 1. Open a browser. 
-2. In the address field, enter https://portal.azure.com and press enter.
-3. In the **Azure Portal**, click on **Create a resource**.
-4. In the **New** blade, Click **Web + Mobile** and then click **Web App**.
-5. In the **App Name**, enter **claims-example-yourinitials** (replace yourinitials with your initials, e.g. – John Doe  j.d.)
+2. In the address bar, enter **https://portal.azure.com**, and the press Enter.
+3. In theAzure portal, click **Create a resource**.
+4. In the **New** blade, click **Web + Mobile**, and then click **Web App**.
+5. In the **App Name** text box, enter **claims-example-***yourinitials* (replace *yourinitials* with your initials, e.g. – John Doe with  j.d.)
 6. Click **Create** and wait for the creation process to finish.
-7. Go to the **Authentication/Authorization** blade.
-8. In the **Authentication/Authorization** blade enable **App Service Authentication**.
-9. In the **Action to take when request is not authenticated** dropdown select **Log in with Azure Active Directory**.
-10. Under **Authentication Providers** click **Azure Active Directory**.
-11.	In the **Azure Active Directory Settings**, change **Management Mode** to **Express**.
-12.	Select **Create New AD App** and click **OK**, the blade should close.
-13.	Back in the **Authentication/Authorization** blade, click **Save**.
-14.	Click on the **Overview** blade and then click again on the **Authentication/Authorization** blade.
-    >**Note**: Due to a bug in the Azure portal, you need to go out of the Authentication/Authorization blade and enter it again in order for the portal to recognize the new authentication settings.
-15.	In the **Authentication/Authorization** blade, click **Azure Active Directory**.
-16.	In the **Azure Active Directory Settings**, click **Azure AD App**.
-17.	In the **Azure AD Applications** blade, copy the value under the **CLIENT** ID column.
-18.	Open **Visual Studio 2017**.
-19.	Click **File**, point to **New** and click **Project**.
-20.	In the **New Project** modal, expand **Installed** and then expand **Visual C#**.
-21.	Click **Web** and then select the **ASP.NET Web Application (.NET Framework)** template.
-22.	In the **Name** field, enter **ClaimsExampleApp**.
-23.	Click **OK**.
-24.	In the **New ASP.NET Web Application** modal, select the **MVC** template.
-25.	Click **Change Authentication**.
-26.	In the **Change Authentication** dialog, select **Work or School accounts**.
-27.	Expand **More Options**.
-28.	Check **Overwrite the application entry if one with the same ID exists**.
-29.	Paste the value you copied in step 17 into the **Client ID** field.
-30.	Click **OK**.
-31.	In the **New ASP.NET Web Application** click **OK**.
-32.	In the **Solution Explorer**, expand the **App_Start** folder and open the **Startup.Auth.cs** file.
-33.	Add the following Using directives:
-    ```cs
+7. In the **Authentication/Authorization** blade, enable **App Service Authentication**.
+8. In the **Action to take when request is not authenticated** list box, select **Log in with Azure Active Directory**.
+9. Under **Authentication Providers**, click **Azure Active Directory**.
+10.	In **Azure Active Directory Settings**, change **Management Mode** to **Express**.
+11.	Select **Create New AD App**, and the click **OK**. The blade closes.
+12.	On the **Authentication/Authorization** blade, click **Save**.
+13.	Click the **Overview** blade, and then click the **Authentication/Authorization** blade.
+    >**Note**: Due to a bug in the Azure portal, you need to go out of the **Authentication/Authorization** blade and enter it again for the portal to recognize the new authentication settings.
+14.	On the **Authentication/Authorization** blade, click **Azure Active Directory**.
+15.	In **Azure Active Directory Settings**, click **Azure AD App**.
+16.	On the **Azure AD Applications** blade, copy the value under the **CLIENT ID** column.
+17.	Open **Visual Studio 2017**.
+18.	Click **File**, point to **New**, and then click **Project**.
+19.	In the **New Project** modal, expand **Installed**, and then expand **Visual C#**.
+20.	Click **Web**, and then select the **ASP.NET Web Application (.NET Framework)** template.
+21.	In the **Name** text box, enter **ClaimsExampleApp**.
+22.	Click **OK**.
+23.	In the **New ASP.NET Web Application** modal, select the **MVC** template.
+24.	Click **Change Authentication**.
+25.	In the **Change Authentication** dialog box, select **Work or School accounts**.
+26.	Expand **More Options**.
+27.	Select the **Overwrite the application entry if one with the same ID exists** check box.
+28.	In the **Client ID** text box, paste the value you copied in step 16.
+29.	Click **OK**.
+30.	In the **New ASP.NET Web Application** modal, click **OK**.
+31.	In **Solution Explorer**, expand the **App_Start** folder, and then open the **Startup.Auth.cs** file.
+32.	Add the following **using** directives:
+   ```cs
         using System.Threading.Tasks;
         using Microsoft.Owin.Security.Notifications;
         using Microsoft.IdentityModel.Protocols;
-    ```
-34.	Under **PostLogoutRedirectUri**, add the following piece of code:
-    ```cs
+   ```
+33.	Under **PostLogoutRedirectUri**, add the following piece of code:
+   ```cs
         Notifications = new OpenIdConnectAuthenticationNotifications
         {
             SecurityTokenValidated = OnTokenValidated
         }
-    ```
-35.	Add the following code after the end of the **ConfigureAuth** method:
-    ```cs
+   ```
+34.	At the end of the **ConfigureAuth** method, add the following code:
+   ```cs
         private async Task OnTokenValidated(SecurityTokenValidatedNotification<OpenIdConnectMessage, OpenIdConnectAuthenticationOptions> context) => await Task.FromResult(0);
-    ```
-36.	Put a breakpoint on the **OnTokenValidated** method that you’ve just added.
-37.	Press F5 to debug the application.
-38.	The browser should be redirected to an address starting with https://login.microsoftonline.com and a page with **Accept** and **Cancel** buttons should appear.
-39.	Click **Accept**.
-40.	The application should break.
-41.	Inspect the **context** object, expand the **AuthenticationTicket** and inspect the **Identity** member.
-42.	Expand **Identity**, and then expand **Claims**, inside expand the **Results View** to see the list of claims.
-43.	Review the list of claims and note some familiar claims, like your name and the email address you used to sign up to Microsoft Azure.
-    >**Note**: The list of claims you saw in step 43 is provided by Microsoft Azure. In the next lessons you will be introduced to Azure Active Directory, the identity provider used in this demonstration. 
+   ```
+35.	Put a breakpoint in the **OnTokenValidated** method that you just added.
+36.	To debug the application, press F5.
+		The browser opens a page with the address starting with **https://login.microsoftonline.com**. The page has two buttons, **Accept** and **Cancel**.
+37.	Click **Accept**. The application stops.
+38.	Inspect the **context** object, expand **AuthenticationTicket**, and then inspect the **Identity** member.
+39.	To see the list of claims, expand **Identity**, expand **Claims**, and then expand **Results View**.
+40.	Review the list of claims and note some familiar claims, such as your name and the email address that you used to sign up to Microsoft Azure.
+    >**Note**: The list of claims you saw in step 39 is provided by Microsoft Azure. In the next lesson you will be introduced to Azure Active Directory, the identity provider used in this demonstration. 
 
 # Lesson 2: Introduction to Azure Active Directory
 
@@ -74,7 +72,7 @@ Wherever  you see a path to a file that starts with *[repository root]*, replace
 
 #### Preparation Steps
 
-  You need to have two available emails, one for the azure portal and the second for creating new user.
+  You need two available emails, one for the Azure portal and the second for creating a new user.
 
 #### Demonstration Steps
 
@@ -85,24 +83,24 @@ Wherever  you see a path to a file that starts with *[repository root]*, replace
    >**Note:** During the sign-in process, if a page appears prompting you to choose from a list of previously used accounts, select the account you previously used, and then enter your credentials.
 
 4. On the navigation menu on the left, click **Azure Active Directory**.
-5. On the **Azure Active Directory** blade, click **Custom domain names**, and copy the **NAME**.
-6. Go back to **Azure Active Directory** view, click **Users** under **Manage** subtitle.
-7. Click **New user**, on the top menu.
-    1. **Name**, enter full name.
-    2. **User name**, enter name + **@[Paste Domain name]** .
+5. On the **Azure Active Directory** blade, click **Custom domain names**, and then copy the value in the **NAME** field.
+6. Go back to the **Azure Active Directory** view, under the **Manage** section, click **Users** .
+7. On the top menu, click **New user**.
+    1. In the **Name** text box, enter your full name.
+    2. In the **User name** text box, enter your name + **@[Paste Domain name]** .
     3. Click **Create**.
-8. Click **New guest user**, on the top menu.
-9. Enter email address in the textbox and click invite.
-10. Go to the email and accept the invitation.
-11. Now in the portal go back to **Azure Active Directory**.
-12. On the **Azure Active Directory** blade, click **Groups** under **Manage** subtitle.
-13. Click **New group**, on the top menu.
-    - **Group type**, select **security**.
-    -  **Group name**, enter **Mod11Group**.
-    - **Membership type**, select **Assigned**.
-    - Click on **Members** and select the guest user, click **Select**.
+8. On the top menu, click **New guest user**.
+9. Enter the email address in the text box, and then click **Invite**.
+10. Open the email and accept the invitation.
+11. In the portal, go to **Azure Active Directory**.
+12. On the **Azure Active Directory** blade, under the **Manage** section, click **Groups**.
+13. On the top menu, click **New group**.
+    - In the **Group type** list box, select **security**.
+    -  In the **Group name** text box, enter **Mod11Group**.
+    - In the **Membership type** list box, select **Assigned**.
+    - Click **Members**, select the guest user, and then click **Select**.
     - Click **Create**.
-14. Go back to **Groups**, see that the **Group** was created.      
+14. Open **Groups**, see that the **Group** is created.      
 
 
 ### Demonstration: Using Azure AD to secure ASP.NET Web Applications.
@@ -111,53 +109,49 @@ Wherever  you see a path to a file that starts with *[repository root]*, replace
 
 1. Open **Visual Studio 2017**.
 2. On the **File** menu, point to **New**, and then click **Project**.
-3. In the **New Project** dialog box, on the navigation pane, expand the **Installed** node, expand the **Visual C#** node and then click the **Web** node.
-4. Select **ASP.NET Web Application (.NET Framework)** from the list of templates.
+3. In the **New Project** dialog box, on the navigation pane, expand the **Installed** node, expand the **Visual C#** node, and then click the **Web** node.
+4. From the list of templates, select **ASP.NET Web Application (.NET Framework)**.
 5. In the **Name** text box, type **AzureADWebApp**.
 6. In the **Location** text box, type **[repository root]\Allfiles\20487C\Mod11\Democode\AzureADWebApp\Begin**, and then click **OK**.
 7. In the **New ASP.NET Web Application - AzureADWebApp** dialog box, click **MVC**, and then click **OK**.
 8. In **Solution Explorer**, under the **MyApp** project, expand the **App\_Start** folder, and then double-click **WebApiConfig.cs**.
-9. Right click the **AzureADWebApp** project, and then click **Manage NuGet Packages**.
+9. Right-click the **AzureADWebApp** project, and then click **Manage NuGet Packages**.
     1. In the **NuGet: AzureADWebApp** window, click **Browse**.
-    2. In the search box on the top left of the window, enter **Microsoft.Owin.Host.SystemWeb** and press **Enter**.
-    3. In the results select **Microsoft.Owin.Host.SystemWeb** and click **Install**.
+    2. In the search box on the top left of the window, enter **Microsoft.Owin.Host.SystemWeb**, and then press **Enter**.
+    3. From the results, select **Microsoft.Owin.Host.SystemWeb**, and then click **Install**.
     4. If a **Preview Changes** modal appears, click **OK**.
     5. In the **License Acceptance** modal, click **I Accept**.
-    6. In the search box on the top left of the window, enter **Microsoft.Owin.Security.Cookies** and press **Enter**.
-    7. In the results select **Microsoft.Owin.Security.Cookies** and click **Install**.
+    6. In the search box on the top left of the window, enter **Microsoft.Owin.Security.Cookies**, and then press **Enter**.
+    7. From the results, select **Microsoft.Owin.Security.Cookies**, and then click **Install**.
     8. If a **Preview Changes** modal appears, click **OK**.
     9. In the **License Acceptance** modal, click **I Accept**.
-    10. In the search box on the top left of the window, enter **Microsoft.Owin.Security.OpenIdConnect** and press **Enter**.
-    11. In the results select **Microsoft.Owin.Security.OpenIdConnect** and click **Install**.
+    10. In the search box on the top left of the window, enter **Microsoft.Owin.Security.OpenIdConnect**, and then press **Enter**.
+    11. From the results, select **Microsoft.Owin.Security.OpenIdConnect**, and then click **Install**.
     12. If a **Preview Changes** modal appears, click **OK**.
     13. In the **License Acceptance** modal, click **I Accept**.
     14. Wait until the package is completely downloaded and installed. To close the **NuGet Package Manager: AzureADWebApp** dialog box, click **Close**.
-10. Right click the **AzureADWebApp** project, and then point to **Add** and select **Class**.
-11. In the **Add New Item- AzureADWebApp** dialog box, in the **Name** box, type **Startup.Auth.cs**, and then click **Add**.
+10. Right click the **AzureADWebApp** project, and then point to **Add**, and then select **Class**.
+11. In the **Add New Item- AzureADWebApp** dialog box, in the **Name** text box, type **Startup.Auth.cs**, and then click **Add**.
 12. Add the following **using** directives at the beginning of the class.
-
-    ```cs
+   ```cs
         using Owin;
         using Microsoft.Owin.Security;
         using Microsoft.Owin.Security.Cookies;
         using Microsoft.Owin.Security.OpenIdConnect;
-    ```
-13. Replace the class declaration with the following code.
-
-    ```cs
+   ```
+13. Replace the **class** declaration with the following code.
+   ```cs
         public partial class Startup
-    ```    
+   ```
 14. Add the following properties to the class.
-
-    ```cs
+   ```cs
         private static string clientId = ConfigurationManager.AppSettings["ClientId"];
         private static string aadInstance = ConfigurationManager.AppSettings["AADInstance"];
         private static string tenantId = ConfigurationManager.AppSettings["TenantId"];
         private static string authority = aadInstance + tenantId;
-     ```
+```
 15. Add the following method to the class.
-
-    ```cs
+   ```cs
         public void ConfigureAuth(IAppBuilder app)
         {
             app.SetDefaultSignInAsAuthenticationType(CookieAuthenticationDefaults.AuthenticationType);
@@ -171,82 +165,69 @@ Wherever  you see a path to a file that starts with *[repository root]*, replace
                     Authority = authority
                 });
         }
-    ```
-
-16. Drag the current class to folder **App_Start**.
-17. Right click the **AzureADWebApp** project, and then point to **Add** and select **Class**.
-18. In the **Add New Item- AzureADWebApp** dialog box, in the **Name** box, type **Startup.cs**, and then click **Add**. 
-19. Add the following **using** directives at the beginning of the class.
-
-    ```cs
+   ```
+16. Drag the current class to the **App_Start** folder.
+17. Right-click the **AzureADWebApp** project, point to **Add**, and then select **Class**.
+18. In the **Add New Item- AzureADWebApp** dialog box, in the **Name** text box, type **Startup.cs**, and then click **Add**. 
+19. At the beginning of the class, add the following **using** directives.
+   ```cs
         using Owin;
-    ```
+   ```
 20. Replace the class declaration with the following code.
-
-    ```cs
+   ```cs
         public partial class Startup
-    ```    
+   ```
 21. Add the following method to the class.
-
-    ```cs
+   ```cs
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
         }
-    ```
-
-22. Expand **Controller** folder, select **HomeController.cs**.
-23. Add a **[Authorize]** attribute to the **HomeController** class.
-24. Add the following **using** directives at the beginning of the class.
-
-    ```cs
+   ```
+22. Expand the **Controller** folder, select **HomeController.cs**.
+23. To the **HomeController** class, add an **[Authorize]** attribute.
+24. At the beginning of the class, add the following **using** directives.
+   ```cs
         using System.Security.Claims;
-    ```
+   ```
 25. Replace the **Contact** action content with the following code.
-
-    ```cs
+   ```cs
         string userfirstName = ClaimsPrincipal.Current.FindFirst(ClaimTypes.GivenName).Value;
         ViewBag.Message = String.Format("Welcome {0}!", userfirstName);
-
         return View();
-    ```
-26. Click on the **Web.config** file and locate the **\<appSettings\>** section.
-27. Add the following code under **\<appSettings\>** section.
-
-    ```xml
+   ```
+26. Click the **Web.config** file, and locate the **\<appSettings\>** section.
+27. Under the **\<appSettings\>** section, add the following code.
+   ```xml
         <add key="ClientId" value="[Azure Application ID]" />
         <add key="AADInstance" value="https://login.microsoftonline.com/" />
         <add key="Domain" value="[Azure AD Default Domain]" />
         <add key="TenantId" value="[Directory ID]" />
-    ```
-28. Select the **AzureADWebApp** project, and then go to the properties view.
-29. Change **SSL Enabled** from **False** to **True**.  
-30. Copy to clipboard **SSL Url** value.
-31. Right click the **AzureADWebApp** project, and select **Properties**.
-32. Select **Web** on the left menu, replace **Project Url** with **SSL Url** that we copied before and press **Ctrl+S**.
-33. Open Microsoft Edge.
+   ```
+28. Select the **AzureADWebApp** project, and then go to the **properties** view.
+29. Change the value for **SSL Enabled** from **False** to **True**.  
+30. Copy the value from **SSL Url**.
+31. Right-click the **AzureADWebApp** project, and select **Properties**.
+32. On the left menu, select **Web**, replace **Project Url** with the value for **SSL Url** that we copied earlier, and then press **Ctrl+S**.
+33. Open **Microsoft Edge**.
 34. Navigate to **https://portal.azure.com**.
-35. If a page appears prompting for your email address, enter your email address, and then click **Next** and enter your password, and then click **Sign In**.
-36. If the **Stay signed in?** dialog appears, click **Yes**.
-
+35. If a page appears prompting for your email address, enter your email address, click **Next**, enter your password, and then click **Sign In**.
+36. If the **Stay signed in?** dialog box appears, click **Yes**.
    >**Note**: During the sign-in process, if a page appears prompting you to choose from a list of previously used accounts, select the account that you previously used, and then continue to provide your credentials.   
-37. Click **Azure Active Directory** on the left side of the portal, and then click **App registrations**.
-38. Click on **New application registration**.
-    - **Name**, enter **AzureADWebApp**.
-    - **Sign-on URL**, enter the **SSL Url** from the privous task.
-    - click **Create**.
-39. Copy **Application ID** value, and go back to visual studio to **web.config** file and replace **ClientId** value.
-40. Click **Azure Active Directory** on the left side of the portal, then click **Custom domain names**, and copy the **NAME**.
-41. Go back to visual studio to **web.config** file and replace **Domain** value.
-42. Click **Azure Active Directory** on the left side of the portal, then click **Properties**, and copy the **Directory ID**.
-43. Go back to visual studio to **web.config** file and replace **TentantId** value.
+37. On the left side of the portal, click **Azure Active Directory**, and then click **App registrations**.
+38. Click **New application registration**.
+    - In the **Name** text box, type **AzureADWebApp**.
+    - In the **Sign-on URL** text box, enter the value from **SSL Url** from the previous task.
+    - Click **Create**.
+39. Copy the value from **Application ID**, go back to Visual Studio and in the **web.config** file, replace the value in **ClientId** with the copied value.
+40. On the left side of the portal, click **Azure Active Directory**, then click **Custom domain names**, and copy the **NAME**.
+41. Go back to Visual Studio, in the **web.config** file, replace the value in **Domain** with the copied value.
+42. On the left side of the portal, click **Azure Active Directory**, click **Properties**, and then copy the value from **Directory ID**.
+43. Go back to Visual Studio, in the **web.config** file, replace the value in **TentantId** with the copied value.
 44. To save the changes, press Ctrl+S.
 45. To run the application, press F5.
 46. Login with user name and password.
-47. After the site was loaded, click in **Contact**, and see your name displayed.   
-
-
-
+47. After the site loads, click **Contact**, and your name appears.   
 
 # Lesson 3: Azure Active Directory B2C
 
@@ -254,7 +235,7 @@ Wherever  you see a path to a file that starts with *[repository root]*, replace
 
 #### Preparation Steps
 
-  You need to have two available emails, one for the azure portal and the second for creating new user.
+  You need two available emails, one for the Azure portal and the second for creating a new user.
 
 #### Demonstration Steps
 
@@ -264,132 +245,129 @@ Wherever  you see a path to a file that starts with *[repository root]*, replace
 
    >**Note:** During the sign-in process, if a page appears prompting you to choose from a list of previously used accounts, select the account you previously used, and then enter your credentials.
 
-4. On the navigation menu on the left, click **Create a resource**, and search **Azure Active Directory B2C**, click **Create**.
-5. In **Create new B2C Tenant to existing Tenant** ,select **Create a new Azure AD B2C Tenant**, provide the following information:
-    - Organization name type **B2CMod11**.
-    - Initial domain name type **b2cmod11**YourInitials (Replace YourInitials with your initials).
-    - Country or region select your Country.
-6. Click on **Create**.
-7. In **Create new B2C Tenant to existing Tenant** ,select **Link an existing Azure AD B2C Tenant to my Azure subscription**, provide the following information:
-    - **Azure AD B2C Tenant** select **``b2cmod11[YourInitials].onmicrosoft.com``** (Replace YourInitials with your initials).
-    - Resource group select **Create new** and type **B2C**.
-8. Click on **Create**, and wait until the resource is created.
-9. On top bar click on your user information, the menu will open and under **DIRECTORY** select **B2CMod11**.
-    >**Note :** if you don't see **B2CMod11** just refresh the page.
-10. On top search bar type **Azure AD B2C** and navigate.
-11. On the **Azure AD B2C** blade, click **Applications** under **Manage** subtitle.
-12. Click on **Add** and provide the following information:
-    - Name type **B2C App**.
-    - Web App / Web API select **Yes**.
-    - Reply URL type **``http://localhost:51136/``**
-    - App ID URL type **api**.
-    - Native Client select **Yes**.
-13. Click on **Create**.
-14. On the **Azure AD B2C** blade, click **Sign-up or sign-in policies**, under **POLICIES** subtitle.
-15. Click on **Add** and provide the following information: 
-    - **Name** type **SignIn-Policy**
-    - Click on **Identity providers**, select **Email signup**, click **OK**.
-    - Click on **Sign-up attributes** , select **Display Name**, click **OK**.
-    - Click on **Application claims**, select **Display Name**, click **OK**. 
+4. On the navigation menu on the left, click **Create a resource**, search for **Azure Active Directory B2C**, and then click **Create**.
+5. In **Create new B2C Tenant to existing Tenant**, select **Create a new Azure AD B2C Tenant**, and then provide the following information:
+    - In the **Organization name** text box, type **B2CMod11**.
+    - In the **Initial domain name** text box, type **b2cmod11***YourInitials* (Replace *YourInitials* with your initials).
+    - In the **Country or region** list box, select your country.
+6. Click **Create**.
+7. In **Create new B2C Tenant to existing Tenant**, select **Link an existing Azure AD B2C Tenant to my Azure subscription**, and then provide the following information:
+    - In the **Azure AD B2C Tenant** list box, select **``b2cmod11***[YourInitials]***.onmicrosoft.com``** (Replace *YourInitials* with your initials).
+    - In the **Resource group** list box, select **Create new**, and then type **B2C**.
+8. Click **Create**, and then wait until the resource is created.
+9. On top bar, click your user information, the menu opens. Under **DIRECTORY**, select **B2CMod11**.
+    >**Note :** if you don't see **B2CMod11**, refresh the page.
+10. On top search bar, type **Azure AD B2C**, and then navigate.
+11. On the **Azure AD B2C** blade, under the **Manage** section, click **Applications**.
+12. Click **Add**, and then provide the following information:
+    - In the **Name** text box, type **B2C App**.
+    - In **Web App / Web API**, select **Yes**.
+    - In the **Reply URL** text box, type **``http://localhost:51136/``**
+    - In the **App ID URL** text box, type **api**.
+    - In **Native Client**, select **Yes**.
+13. Click **Create**.
+14. On the **Azure AD B2C** blade, under then **POLICIES** section, click **Sign-up or sign-in policies**.
+15. Click **Add** and provide the following information: 
+    - In the **Name** text box, type **SignIn-Policy**
+    - Click **Identity providers**, select **Email signup**, and then click **OK**.
+    - Click **Sign-up attributes** , select **Display Name**, and then click **OK**.
+    - Click **Application claims**, select **Display Name**, and then click **OK**. 
 16. Click **Create**.
-17. On the **Azure AD B2C** blade, click **Applications** under **Manage** subtitle.
-18. Click on **B2CApp**, and copy the **Application ID** to the next steps.
-19. On the **B2C App - Properties** blade, click **API access**, under **API ACCESS** subtitle.
-20. Click on **Add**, in **Select Scopes** select **user_impersontion**, and click **Save**.  
+17. On the **Azure AD B2C** blade, under the **Manage** section, click **Applications**.
+18. Click **B2CApp**, and copy the value from **Application ID** for the next steps.
+19. On the **B2C App - Properties** blade, under the **API ACCESS** section, click **API access**.
+20. Click **Add**, in **Select Scopes**, select **user_impersonation**, and then click **Save**.  
 21. Open **Visual Studio 2017**.
 22. On the **File** menu, point to **Open**, and then click **Project/Solution**.
 23. Go to **[repository root]\Allfiles\20487C\Mod11\DemoFiles\ClientAppUsingB2C**.
 24. Select the **ClientAppUsingB2C.sln** file, and then click **Open**.
 25. In **Solution Explorer**, under the **ClientAppUsingB2C.Server** project, double-click **Web.config**.
 26. Replace the following information: 
-    - **Tenant** replace YourInitials with your initials.
-    - **ClientId** replace with point 32.
-27. In **Solution Explorer** right click on **ClientAppUsingB2C.Server**, select **Publish**.
-28. In **Pick a publish target** window select **App Service**, select **Create New** and click on **Create Profile**.
-29. In **App Name** type **ClientAppUsingB2CServer**[YourInitials] (Replace YourInitials with your initials).
-30. Click on **Create**, and select **Publish**.
-31. Open **Microsoft Edge**, and type in the url **``http://clientappusingb2cserver[YourInitials].azurewebsites.net/api/values``** (Replace YourInitials with your initials).
-32. You should get the following message **Authorization has been denied for this request**.
-33. Go back to visaul studio.
-34. In **Solution Explorer**, under the **ClientAppUsingB2C.Client** project,expand **App.xaml** and double-click **App.xaml.cs**.
+    - In the **Tenant** text box, replace *YourInitials* with your initials.
+    - In the **ClientId** text box, replace with point 32.
+27. In **Solution Explorer**, right-click **ClientAppUsingB2C.Server**, and select **Publish**.
+28. In the **Pick a publish target** window, select **App Service**, select **Create New** and click **Create Profile**.
+29. In **App Name**, type **ClientAppUsingB2CServer***[YourInitials]* (Replace *YourInitials* with your initials).
+30. Click **Create**, and select **Publish**.
+31. Open **Microsoft Edge**, and type **``http://clientappusingb2cserver***[YourInitials]***.azurewebsites.net/api/values``** (Replace *YourInitials* with your initials).
+32. The **Authorization has been denied for this request** message appears.
+33. Go back to Visual Studio.
+34. In **Solution Explorer**, under the **ClientAppUsingB2C.Client** project, expand **App.xaml**, and then double-click **App.xaml.cs**.
 35. Replace the following information: 
-    - **Tenant** replace YourInitials with your initials.
-    - **ClientId** replace with point 32.
-    - **ApiScopes** replace YourInitials with your initials.
-    - **ApiEndpoint** replace YourInitials with your initials.
-36. In **Solution Explorer**, under the **ClientAppUsingB2C.Client** right click **Set as StartUp Project**.
-37. Run the application, press Ctrl+F5.
-38. In the App Click on **Sign In**.
-39. Click on **Sign up now**, Enter your details.
-40. Click on **Call Api**.
-41. Now display on your screen **Success you finish the demo. You integrated  the WebApi with the client app**. 
+    - In the **Tenant** text box, replace *YourInitials* with your initials.
+    - In the **ClientId** text box, replace with point 32.
+    - In the **ApiScopes** text box, replace *YourInitials* with your initials.
+    - In the **ApiEndpoint** text box, replace *YourInitials* with your initials.
+36. In **Solution Explorer**, under **ClientAppUsingB2C.Client**, right-click **Set as StartUp Project**.
+37. To run the application, press Ctrl+F5.
+38. In the app, click **Sign In**.
+39. Click **Sign up now** and enter your details.
+40. Click **Call Api**.
+41. The **Success you finish the demo. You integrated  the WebApi with the client app** message appears. 
 42. Go back to **Azure protal**.
-43. On the **Azure AD B2C** blade, click **Users**, under **MANAGE** subtitle.
-44. Your Display Name should now appear in the **All users** list.
-
+43. On the **Azure AD B2C** blade, under the **MANAGE** section, click **Users**.
+44. Your display name appears in the **All users** list.
 
 ### Demonstration: Configuring social logins using Azure AD B2C
 
 #### Preparation Steps
 
-  You need to have two available emails, one for the azure portal and the second for creating new user.
-  And also you need to finish the previous demo.
+  You need two available emails, one for the Azure portal and the second for creating new user.
+  You must finish the previous demonstration before starting this one.
 
 #### Demonstration Steps
 
 1. Open **Microsoft Edge**.
-2. Navigate to **https://apps.dev.microsoft.com**.
-3. Login with your azure accout email.
-4. Click on **Add an app**.
-5. In Application Name type **B2CApp**, click **Create**.
-6. Copy the **Application Id** to the following tasks.
-7. **Application Secrets** click on **Generate New Password**, copy the code to the following tasks, and click **OK**.
-8. Under **Platforms** click on **Add Platform**, select **Web**.
-9. In **Redirect URLs** type **``https://login.microsoftonline.com/te/b2cmod11[YourInitials].onmicrosoft.com/oauth2/authresp``** (Replace YourInitials with your initials).
-10. Click on **Save**.
+2. Go to **https://apps.dev.microsoft.com**.
+3. Login with your Azure id.
+4. Click **Add an app**.
+5. In the **Application Name** text box, type **B2CApp**, and then click **Create**.
+6. Copy the value from **Application Id** to the following tasks.
+7. In **Application Secrets**, click **Generate New Password**, copy the code to the following tasks, and then click **OK**.
+8. Under **Platforms**, click **Add Platform**, and then select **Web**.
+9. In **Redirect URLs**, type **``https://login.microsoftonline.com/te/b2cmod11***[YourInitials]***.onmicrosoft.com/oauth2/authresp``** (Replace *YourInitials* with your initials).
+10. Click **Save**.
 11. Open **Microsoft Edge**.
 12. Go to the Azure portal at **http://portal.azure.com**.
 13. If a page appears, prompting for your email address, enter your email address, and then click **Continue**. Wait for the sign-in page to appear, enter your email address and password, and then click **Sign In.**
 
    >**Note:** During the sign-in process, if a page appears prompting you to choose from a list of previously used accounts, select the account you previously used, and then enter your credentials.
 
-14. On top bar click on your user information, the menu will open and under **DIRECTORY** select **B2CMod11**.
-    >**Note :** if you don't see **B2CMod11** just refresh the page.
-15. On top search bar type **Azure AD B2C** and navigate.
-16. On the **Azure AD B2C** blade, click **Identity providers** under **Manage** subtitle.
-17. Click on **Add** and provide the following information:
-    - **Name** type **Microsoft**.
-    - Click on **identity provider type**, select **Microsoft Account**.
-    - Click on **Set up this identity provider**.
-        - **Client ID** paste from point 6.
-        - **Client secret** paste from point 7.
+14. On the top bar, click your user information, the menu will open, and under **DIRECTORY** select **B2CMod11**.
+    >**Note :**If you don't see **B2CMod11**, refresh the page.
+15. On the top search bar, type **Azure AD B2C** and navigate.
+16. On the **Azure AD B2C** blade, under the **Manage** section, click **Identity providers**.
+17. Click  **Add** and provide the following information:
+    - In the **Name** text box, type **Microsoft**.
+    - Click **identity provider type**, select **Microsoft Account**.
+    - Click **Set up this identity provider**.
+        - In the **Client ID** text box, paste the value from step 6.
+        - In the **Client secret** text box, paste the value from step 7.
         - Click **OK**.
 18. Click **Create**.
-19. On the **Azure AD B2C** blade, click **Sign-up or sign-in policies**, under **POLICIES** subtitle.
-20. In **Azure AD B2C - Sign-up or sign-in policies**, click on **B2C_1_SignIn-Policy**.
-21. On top bar click on **Edit**, select **Identity providers**.
-22. Select **Microsoft** , click **OK** and click on **Save**.
-
-23. On the **Azure AD B2C** blade, click **Applications** under **Manage** subtitle.
-24. Click on **B2CApp**, and copy the **Application ID** to the next steps.
-25. On the **B2C App - Properties** blade, click **Keys**, under **GENERAL** subtitle.
-26. Click on **Generate key**, then click **Save** and copy the **App key** to the next steps.
-
+19. On the **Azure AD B2C** blade, under the **POLICIES** section, click **Sign-up or sign-in policies**.
+20. In **Azure AD B2C - Sign-up or sign-in policies**, click **B2C_1_SignIn-Policy**.
+21. On the top bar, click **Edit**, and then select **Identity providers**.
+22. Select **Microsoft**, click **OK**, and then click **Save**.
+23. On the **Azure AD B2C** blade, under **Manage** section, click **Applications**.
+24. Click **B2CApp**, and copy the value from **Application ID** to the next steps.
+25. On the **B2C App - Properties** blade, under the **GENERAL** section, click **Keys**.
+26. Click **Generate key**, click **Save** and then copy the value from **App key** to the next steps.
 27. Open **Visual Studio 2017**.
 28. On the **File** menu, point to **Open**, and then click **Project/Solution**.
 29. Go to **[repository root]\Allfiles\20487C\Mod11\DemoFiles\AzureSocialLoginB2C**.
 30. Select the **AzureSocialLoginB2C.sln** file, and then click **Open**.
 31. In **Solution Explorer**, under the **AzureSocialLoginB2C** project, double-click **Web.config**.
 32. Replace the following information: 
-    - **Tenant** replace YourInitials with your initials.
-    - **ClientId** replace with point 24.
-    - **ClientSecret**  replace with point 26.
+    - In the **Tenant** text box, replace *YourInitials* with your initials.
+    - In the **ClientId** text box, paste the value from step 24.
+    - In the **ClientSecret**  text box, paste the value from step 26.
 33. To run the project, press Ctrl+F5.
-34. On the top right, click on **Sign in**, and then click on **Microsoft** under **Sign in with your social account**.
+34. On the top right, click **Sign in**, and then under **Sign in with your social account**, click **Microsoft**.
 35. Sign in using your second Microsoft account.
-36. Confirm terms of use by clicking **Yes**.
-37. Type in Display Name, then click **Continue**.
-38. Go back to **Azure protal**.
-39. On the **Azure AD B2C** blade, click **Users**, under **MANAGE** subtitle.
-40. Your Display Name should now appear in the **All users** list.
+36. To confirm terms of use, click **Yes**.
+37. Enter you display name, and click **Continue**.
+38. Go back to the Azure portal.
+39. On the **Azure AD B2C** blade, under the **MANAGE** section, click **Users**.
+40. Your display name appears in the **All users** list.
 
