@@ -86,9 +86,9 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
 5. On the **Azure Active Directory** blade, click **Custom domain names**, and then copy the value in the **NAME** field.
 6. Go back to the **Azure Active Directory** view, under the **Manage** section, click **Users** .
 7. On the top menu, click **New user**.
-    1. In the **Name** text box, enter your full name.
-    2. In the **User name** text box, enter your name + **@[Paste Domain name]** .
-    3. Click **Create**.
+    - In the **Name** text box, enter your full name.
+    - In the **User name** text box, enter your name + **@[Paste Domain name]** .
+    - Click **Create**.
 8. On the top menu, click **New guest user**.
 9. Enter the email address in the text box, and then click **Invite**.
 10. Open the email and accept the invitation.
@@ -116,41 +116,41 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
 7. In the **New ASP.NET Web Application - AzureADWebApp** dialog box, click **MVC**, and then click **OK**.
 8. In **Solution Explorer**, under the **MyApp** project, expand the **App\_Start** folder, and then double-click **WebApiConfig.cs**.
 9. Right-click the **AzureADWebApp** project, and then click **Manage NuGet Packages**.
-    1. In the **NuGet: AzureADWebApp** window, click **Browse**.
-    2. In the search box on the top left of the window, enter **Microsoft.Owin.Host.SystemWeb**, and then press **Enter**.
-    3. From the results, select **Microsoft.Owin.Host.SystemWeb**, and then click **Install**.
-    4. If a **Preview Changes** modal appears, click **OK**.
-    5. In the **License Acceptance** modal, click **I Accept**.
-    6. In the search box on the top left of the window, enter **Microsoft.Owin.Security.Cookies**, and then press **Enter**.
-    7. From the results, select **Microsoft.Owin.Security.Cookies**, and then click **Install**.
-    8. If a **Preview Changes** modal appears, click **OK**.
-    9. In the **License Acceptance** modal, click **I Accept**.
-    10. In the search box on the top left of the window, enter **Microsoft.Owin.Security.OpenIdConnect**, and then press **Enter**.
-    11. From the results, select **Microsoft.Owin.Security.OpenIdConnect**, and then click **Install**.
-    12. If a **Preview Changes** modal appears, click **OK**.
-    13. In the **License Acceptance** modal, click **I Accept**.
-    14. Wait until the package is completely downloaded and installed. To close the **NuGet Package Manager: AzureADWebApp** dialog box, click **Close**.
-10. Right click the **AzureADWebApp** project, and then point to **Add**, and then select **Class**.
-11. In the **Add New Item- AzureADWebApp** dialog box, in the **Name** text box, type **Startup.Auth.cs**, and then click **Add**.
-12. Add the following **using** directives at the beginning of the class.
+    - In the **NuGet: AzureADWebApp** window, click **Browse**.
+    - In the search box on the top left of the window, enter **Microsoft.Owin.Host.SystemWeb**, and then press **Enter**.
+    - From the results, select **Microsoft.Owin.Host.SystemWeb**, and then click **Install**.
+    - If a **Preview Changes** modal appears, click **OK**.
+    - In the **License Acceptance** modal, click **I Accept**.
+    - In the search box on the top left of the window, enter **Microsoft.Owin.Security.Cookies**, and then press **Enter**.
+    - From the results, select **Microsoft.Owin.Security.Cookies**, and then click **Install**.
+    - If a **Preview Changes** modal appears, click **OK**.
+    - In the **License Acceptance** modal, click **I Accept**.
+    - In the search box on the top left of the window, enter **Microsoft.Owin.Security.OpenIdConnect**, and then press **Enter**.
+    - From the results, select **Microsoft.Owin.Security.OpenIdConnect**, and then click **Install**.
+    - If a **Preview Changes** modal appears, click **OK**.
+    - In the **License Acceptance** modal, click **I Accept**.
+    - Wait until the package is completely downloaded and installed. To close the **NuGet Package Manager: AzureADWebApp** dialog box, click **Close**.
+11. Right click the **AzureADWebApp** project, and then point to **Add**, and then select **Class**.
+12. In the **Add New Item- AzureADWebApp** dialog box, in the **Name** text box, type **Startup.Auth.cs**, and then click **Add**.
+13. Add the following **using** directives at the beginning of the class.
    ```cs
         using Owin;
         using Microsoft.Owin.Security;
         using Microsoft.Owin.Security.Cookies;
         using Microsoft.Owin.Security.OpenIdConnect;
    ```
-13. Replace the **class** declaration with the following code.
+14. Replace the **class** declaration with the following code.
    ```cs
         public partial class Startup
    ```
-14. Add the following properties to the class.
+15. Add the following properties to the class.
    ```cs
         private static string clientId = ConfigurationManager.AppSettings["ClientId"];
         private static string aadInstance = ConfigurationManager.AppSettings["AADInstance"];
         private static string tenantId = ConfigurationManager.AppSettings["TenantId"];
         private static string authority = aadInstance + tenantId;
-```
-15. Add the following method to the class.
+   ```
+16. Add the following method to the class.
    ```cs
         public void ConfigureAuth(IAppBuilder app)
         {
@@ -166,68 +166,68 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
                 });
         }
    ```
-16. Drag the current class to the **App_Start** folder.
-17. Right-click the **AzureADWebApp** project, point to **Add**, and then select **Class**.
-18. In the **Add New Item- AzureADWebApp** dialog box, in the **Name** text box, type **Startup.cs**, and then click **Add**. 
-19. At the beginning of the class, add the following **using** directives.
+17. Drag the current class to the **App_Start** folder.
+18. Right-click the **AzureADWebApp** project, point to **Add**, and then select **Class**.
+19. In the **Add New Item- AzureADWebApp** dialog box, in the **Name** text box, type **Startup.cs**, and then click **Add**. 
+20. At the beginning of the class, add the following **using** directives.
    ```cs
         using Owin;
    ```
-20. Replace the class declaration with the following code.
+21. Replace the class declaration with the following code.
    ```cs
         public partial class Startup
    ```
-21. Add the following method to the class.
+22. Add the following method to the class.
    ```cs
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
         }
    ```
-22. Expand the **Controller** folder, select **HomeController.cs**.
-23. To the **HomeController** class, add an **[Authorize]** attribute.
-24. At the beginning of the class, add the following **using** directives.
+23. Expand the **Controller** folder, select **HomeController.cs**.
+24. To the **HomeController** class, add an **[Authorize]** attribute.
+25. At the beginning of the class, add the following **using** directives.
    ```cs
         using System.Security.Claims;
    ```
-25. Replace the **Contact** action content with the following code.
+26. Replace the **Contact** action content with the following code.
    ```cs
         string userfirstName = ClaimsPrincipal.Current.FindFirst(ClaimTypes.GivenName).Value;
         ViewBag.Message = String.Format("Welcome {0}!", userfirstName);
         return View();
    ```
-26. Click the **Web.config** file, and locate the **\<appSettings\>** section.
-27. Under the **\<appSettings\>** section, add the following code.
+27. Click the **Web.config** file, and locate the **\<appSettings\>** section.
+28. Under the **\<appSettings\>** section, add the following code.
    ```xml
         <add key="ClientId" value="[Azure Application ID]" />
         <add key="AADInstance" value="https://login.microsoftonline.com/" />
         <add key="Domain" value="[Azure AD Default Domain]" />
         <add key="TenantId" value="[Directory ID]" />
    ```
-28. Select the **AzureADWebApp** project, and then go to the **properties** view.
-29. Change the value for **SSL Enabled** from **False** to **True**.  
-30. Copy the value from **SSL Url**.
-31. Right-click the **AzureADWebApp** project, and select **Properties**.
-32. On the left menu, select **Web**, replace **Project Url** with the value for **SSL Url** that we copied earlier, and then press **Ctrl+S**.
-33. Open **Microsoft Edge**.
-34. Navigate to **https://portal.azure.com**.
-35. If a page appears prompting for your email address, enter your email address, click **Next**, enter your password, and then click **Sign In**.
-36. If the **Stay signed in?** dialog box appears, click **Yes**.
+29. Select the **AzureADWebApp** project, and then go to the **properties** view.
+30. Change the value for **SSL Enabled** from **False** to **True**.  
+31. Copy the value from **SSL Url**.
+32. Right-click the **AzureADWebApp** project, and select **Properties**.
+33. On the left menu, select **Web**, replace **Project Url** with the value for **SSL Url** that we copied earlier, and then press **Ctrl+S**.
+34. Open **Microsoft Edge**.
+35. Navigate to **https://portal.azure.com**.
+36. If a page appears prompting for your email address, enter your email address, click **Next**, enter your password, and then click **Sign In**.
+37. If the **Stay signed in?** dialog box appears, click **Yes**.
    >**Note**: During the sign-in process, if a page appears prompting you to choose from a list of previously used accounts, select the account that you previously used, and then continue to provide your credentials.   
-37. On the left side of the portal, click **Azure Active Directory**, and then click **App registrations**.
-38. Click **New application registration**.
+38. On the left side of the portal, click **Azure Active Directory**, and then click **App registrations**.
+39. Click **New application registration**.
     - In the **Name** text box, type **AzureADWebApp**.
     - In the **Sign-on URL** text box, enter the value from **SSL Url** from the previous task.
     - Click **Create**.
-39. Copy the value from **Application ID**, go back to Visual Studio and in the **web.config** file, replace the value in **ClientId** with the copied value.
-40. On the left side of the portal, click **Azure Active Directory**, then click **Custom domain names**, and copy the **NAME**.
-41. Go back to Visual Studio, in the **web.config** file, replace the value in **Domain** with the copied value.
-42. On the left side of the portal, click **Azure Active Directory**, click **Properties**, and then copy the value from **Directory ID**.
-43. Go back to Visual Studio, in the **web.config** file, replace the value in **TentantId** with the copied value.
-44. To save the changes, press Ctrl+S.
-45. To run the application, press F5.
-46. Login with user name and password.
-47. After the site loads, click **Contact**, and your name appears.   
+40. Copy the value from **Application ID**, go back to Visual Studio and in the **web.config** file, replace the value in **ClientId** with the copied value.
+41. On the left side of the portal, click **Azure Active Directory**, then click **Custom domain names**, and copy the **NAME**.
+42. Go back to Visual Studio, in the **web.config** file, replace the value in **Domain** with the copied value.
+43. On the left side of the portal, click **Azure Active Directory**, click **Properties**, and then copy the value from **Directory ID**.
+44. Go back to Visual Studio, in the **web.config** file, replace the value in **TentantId** with the copied value.
+45. To save the changes, press Ctrl+S.
+46. To run the application, press F5.
+47. Login with user name and password.
+48. After the site loads, click **Contact**, and your name appears.   
 
 # Lesson 3: Azure Active Directory B2C
 
