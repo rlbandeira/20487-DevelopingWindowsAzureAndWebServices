@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27428.2037
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientAppUsingB2C.Client", "ClientAppUsingB2C.Client\ClientAppUsingB2C.Client.csproj", "{E62610C3-4332-4D56-A435-1A6CB8B510EA}"
 EndProject
@@ -20,6 +20,8 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{E62610C3-4332-4D56-A435-1A6CB8B510EA}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{E62610C3-4332-4D56-A435-1A6CB8B510EA}.Debug|Any CPU.Build.0 = Debug|x86
+		{E62610C3-4332-4D56-A435-1A6CB8B510EA}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{E62610C3-4332-4D56-A435-1A6CB8B510EA}.Debug|ARM.ActiveCfg = Debug|ARM
 		{E62610C3-4332-4D56-A435-1A6CB8B510EA}.Debug|ARM.Build.0 = Debug|ARM
 		{E62610C3-4332-4D56-A435-1A6CB8B510EA}.Debug|ARM.Deploy.0 = Debug|ARM
