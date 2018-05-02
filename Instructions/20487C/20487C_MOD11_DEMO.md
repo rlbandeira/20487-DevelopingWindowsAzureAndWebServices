@@ -357,7 +357,8 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
 23. On the **Azure AD B2C** blade, under **Manage** section, click **Applications**.
 24. Click **B2CApp**, and copy the value from **Application ID** to the next steps.
 25. On the **B2C App - Properties** blade, under the **GENERAL** section, click **Keys**.
-26. Click **Generate key**, click **Save** and then copy the value from **App key** to the next steps.
+26. Click **Generate key**, click **Save** and then copy the value from **App key** for later use.
+    >**Note :** If the key have **" OR `** retry the this step once again until it generate valid key.
 27. Open **Visual Studio 2017**.
 28. On the **File** menu, point to **Open**, and then click **Project/Solution**.
 29. Go to **[repository root]\Allfiles\20487C\Mod11\DemoFiles\AzureSocialLoginB2C**.
