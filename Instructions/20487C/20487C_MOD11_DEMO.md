@@ -276,21 +276,26 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
 17. On the **Azure AD B2C** blade, under the **Manage** section, click **Applications**.
 18. Click **B2CApp**, and copy the value from **Application ID** for the next steps.
 19. On the **B2C App - Properties** blade, under the **API ACCESS** section, click **API access**.
-20. Click **Add**, in **Select Scopes**, select **user_impersonation**, and then click **Save**.  
-21. Open **Visual Studio 2017**.
+20. Click **Add**, in **Select Scopes**, select **user_impersonation**, and then click **Save**. 21. Open **Visual Studio 2017**.
 22. On the **File** menu, point to **Open**, and then click **Project/Solution**.
 23. Go to **[repository root]\Allfiles\20487C\Mod11\DemoFiles\ClientAppUsingB2C**.
 24. Select the **ClientAppUsingB2C.sln** file, and then click **Open**.
-25. In **Solution Explorer**, under the **ClientAppUsingB2C.Server** project, double-click **Web.config**.
-26. Replace the following information: 
+25. If you are prompted by a **Developers License** dialog box, click **I Agree**. If you are prompted by a **User Account Control**  dialog box, click **Yes**. In the **Windows Security** dialog box, enter your email address and a password, and then click **Sign in**. In the **Developers License** dialog box, click **Close**.
+26. In **Solution Explorer**, under the **ClientAppUsingB2C.Server** project, double-click **Web.config**.
+27. Replace the following information: 
     - In the **Tenant** text box, replace *YourInitials* with your initials.
     - In the **ClientId** text box, replace with the value copied in point 18.
-27. In **Solution Explorer**, right-click **ClientAppUsingB2C.Server**, and select **Publish**.
-28. In the **Pick a publish target** window, select **App Service**, select **Create New** and click **Create Profile**.
-29. In **App Name**, type **ClientAppUsingB2CServer***[YourInitials]* (Replace *YourInitials* with your initials).
+28. In **Solution Explorer**, right-click **ClientAppUsingB2C.Server**, and select **Publish**.
+29. In the **Pick a publish target** window, select **App Service**, select **Create New** and click **Create Profile**.
+30. In **App Name**, type **ClientAppUsingB2CServer***[YourInitials]* (Replace *YourInitials* with your initials).
 30. Click **Create**, and select **Publish**.
 31. Open **Microsoft Edge**, and type **``http://clientappusingb2cserver***[YourInitials]***.azurewebsites.net/api/values``** (Replace *YourInitials* with your initials).
-32. The **Authorization has been denied for this request** message appears.
+32. The following message wil appear:
+    ```xml
+        <Error>
+            <Message>Authorization has been denied for this request. </Message>
+        </Error>
+    ```
 33. Go back to Visual Studio.
 34. In **Solution Explorer**, under the **ClientAppUsingB2C.Client** project, expand **App.xaml**, and then double-click **App.xaml.cs**.
 35. Replace the following information: 
