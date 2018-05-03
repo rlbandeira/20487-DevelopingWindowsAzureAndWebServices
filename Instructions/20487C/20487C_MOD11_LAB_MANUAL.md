@@ -121,7 +121,7 @@ In this exercise, you will configure the BlueYonder Companion Web API and UWP ap
 1. From the **D:\AllFiles\Mod11\LabFiles\begin\BlueYonder.Companion.Client** folder, open the **BlueYonder.Server.sln** solution.
 2. In the **BlueYonder.Companion.Client** project, open **App.xaml.cs** , and then locate the **// TODO: Lab 11, Exercise 2: Task 2.2: Configure Azure B2C sttings.** comment. 
 
-     - Replace the properties' values under the comment with details from the portal.
+     - Replace the properties' values within the square brackets under the comment with details from the Azure portal.
 3. Replace the address used to communicate with the server:
     - In the **BlueYonder.Companion.Shared** project, open the **Addresses** class, in the **BaseUri** property, replace the address of the emulator with the cloud service address you created earlier.  
 4. Run the application.
