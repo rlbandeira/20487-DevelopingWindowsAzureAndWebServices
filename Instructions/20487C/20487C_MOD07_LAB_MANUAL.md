@@ -247,6 +247,7 @@ Next we will add an Azure Functions project and connect it to the WNS project.
   ```cs
         using BlueYonder.Companion.Entities;
         using BlueYonder.Entities;
+        using BlueYonder.Companion.Entities.Mappers;
   ```
 25. Change the signature of the **Run** method to look like this:
 ```cs
