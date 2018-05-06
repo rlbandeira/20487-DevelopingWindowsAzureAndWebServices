@@ -168,7 +168,7 @@ The main tasks for this exercise are as follows:
 
 1. Open the Microsoft Azure portal (**http://portal.azure.com**)
 
-    a. Create a new Service Bus named **BlueYonderServerLab07ServiceBus-YourInitials** (replace _YourInitials_ with your initials)
+    a. Create a new Service Bus named **BlueYonderLab07ServiceBus-YourInitials** (replace _YourInitials_ with your initials)
     b. Open the newly created service bus and Click **Shared Access Policies**.
     c. Click the **RootManageSharedAccessKey** policy and then Copy the value of the **Connection string–Primary key** text box.
 
