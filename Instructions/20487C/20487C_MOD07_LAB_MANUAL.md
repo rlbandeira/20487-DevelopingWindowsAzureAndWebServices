@@ -10,7 +10,7 @@
 First you need to make sure you have an Azure account. If you don't, go to **http://www.azure.com** and register.
 
 1. Under **[repository root]\AllFiles\20487C\Mod07\LabFiles\Setup** you will find a powershell script **createAzureServices.ps1**
-2. Execute the script via running **ps createAzureServices.ps1** in the command line.
+2. Execute the script via running **.\createAzureServices.ps1** in the command line.
 3. You will be asked to supply a subscription id, you can get it in the following way:
     - Open a browser and navigate to **http://portal.azure.com**, If are prompted to login, do so.
     - In the top bar there is a search box, in it enter "Subscriptions" and press enter. **Cost Management + Billing - Subscriptions** window should open.
