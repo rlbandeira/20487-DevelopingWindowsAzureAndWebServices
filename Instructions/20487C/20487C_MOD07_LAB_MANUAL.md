@@ -229,6 +229,9 @@ First we will add a WNS project bundled with the exercise:
 11. Add the following references to **BlueYonder.Companion.Functions** project:
     - BlueYonder.Companion.Entities
     - BlueYonder.Entities
+    - BlueYonder.Companion.WNS
+    - BlueYonder.DataAccess
+    - BlueYonder.Companion.Entities.Mappers
 12. Right click the new project you just created.
 13. Point to **Add** and click **New Item**
 14. Select **Azure Function**
