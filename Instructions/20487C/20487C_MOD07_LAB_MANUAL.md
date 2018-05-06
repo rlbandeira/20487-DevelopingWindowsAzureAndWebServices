@@ -205,7 +205,7 @@ During the setup phase for this lab, a notification hub named "BlueYonder07Hub" 
 
 1. Open the Microsoft Azure portal (**http://portal.azure.com**)
 2. Under **All Resources** pane, find "BlueYonder07Hub", click it to access it.
-11. Under **Manage** click **Notification Services**
+11. Under **Manage** click **Notification Settings**
 12. Click **Windows (WNS)**
 13. In **Package SID** field, enter "ms-app://s-1-15-2-1943958206-46993560-2941426192-3413777431-2244800519-641792188-4204354165"
 14. In **Security Key** field, enter "/A6E8J9JmfDFZMX5lhuCJdTeI32zcXMM"
