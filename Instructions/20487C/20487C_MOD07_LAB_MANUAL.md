@@ -293,7 +293,7 @@ We will need to add connections strings for our Azure SQL server, Azure Notifica
 
 #### Task 5: Test the Service Bus Queue with flight update messages
 
-1. Open the **BlueYonder.Companion.Client** solution from **[repository root]\AllFiles\20487C\Mod07\LabFiles\begin\BlueYonder.Client**.
+1. Open the **BlueYonder.Companion.Client** solution from **[repository root]\AllFiles\20487C\Mod07\LabFiles\begin\BlueYonder.Companion.Client**.
 3. Run the application without debugging (Ctrl + F5).
 4. The trip you purchased in the previous exercise will show in the **Upcoming Trip** list.
 5. Note the date of the trip.
