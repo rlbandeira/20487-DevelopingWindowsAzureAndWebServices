@@ -205,7 +205,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Upload public and private files to Azure Storage
 
-1. Open the **BlueYonder.Companion.Client.sln** solution from **[repoistory root]\AllFiles\20487C\Mod09\LabFiles\begin\BlueYonder.Companion.Client\** in a new Visual Studio 2012 instance.
+1. Open the **BlueYonder.Companion.Client.sln** solution from **[repoistory root]\AllFiles\20487C\Mod09\LabFiles\begin\BlueYonder.Companion.Client\** in a new Visual Studio 2017 instance.
 3. In the **Addresses** class of the **BlueYonder.Companion.Shared** project, set the **BaseUri** property to the Azure Web App name you wrote down at the beginning of this lab.
 4. Run the client app, search for **New** , and purchase a flight from **Paris** to **Seattle** _._
 5. Select the current trip from **Paris** to **Seattle** , and then select **Media** on the app bar.
