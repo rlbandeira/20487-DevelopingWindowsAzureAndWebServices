@@ -218,9 +218,7 @@ We are going to create a new **Azure Functions** project. Azure Functions will l
 First we will add a WNS project bundled with the exercise:
 1. Right Click the **BlueYonder.Companion** solution.
 2. Double click **BlueYonder.Companion.WNS** folder.
-3. Select **BlueYonder.Companion.WNS.csproj** and click Ok.
-
-Next we will add an Azure Functions project and connect it to the WNS project.
+3. Select **BlueYonder.Companion.WNS.csproj** and click Ok. Next we will add an Azure Functions project and connect it to the WNS project.
 4. Right click the **BlueYonder.Companion** solution.
 5. Point to **Add** and click **New Project**
 6. Expand **Installed** and then expand **Visual C#**
@@ -260,9 +258,6 @@ MessageHandler.Publish(updatedScheduleDto.ToFlightSchedule());
 27. Next, point to **BlueYonder.Companion.Functions** project and right click it.
 28. Point to **Add** and click **Existing Item**
 29. Select **MessageHandler.cs** that is located in **[repository root]\AllFiles\20487C\Mod07\LabFiles\Assets\MessageHandler.cs** and click **Ok**
-30. Under **BlueYonder.Companion.Functions**, right click **References** and select **Add Reference**
-31. Click **Solution** on the left.
-32. Check **BlueYonder.Companion.WNS** and click **Ok**
 
 #### Task 4: Publish the new Azure Functions project and configure it
 We will first have to publish our Azure Functions project and once it is published, we will need to provide further configuration through the Azure portal, configurations such as various connection strings (Azure SQL, Service Bus, Notification Hub)
