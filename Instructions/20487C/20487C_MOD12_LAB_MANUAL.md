@@ -63,7 +63,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 4: Add code to invalidate the list of latest reservations
 
-1. Locate the **Post** method. 
+1. Locate the **Get** method. 
 2. In the method, locate the **// TODO: Lab 12, Exercise 1, Task 1.4 : Delete the cached results from Redis** comment. 
 3. After it add code to delete the **RESERVATIONS_KEY** key from Azure Redis Cache.
 
