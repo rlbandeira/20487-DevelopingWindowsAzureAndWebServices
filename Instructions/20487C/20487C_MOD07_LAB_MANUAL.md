@@ -291,11 +291,11 @@ We will need to add connections strings for our Azure SQL server, Azure Notifica
         > The connection string can also be obtained by going to the **blueyonder07Hub** notification hub from the azure portal -> **MANAGE** -> **Access Policies** -> **DefaultFullSharedAccessSignature** -> **CONNECTION STRINGS** -> **Primary**
 6. Click **Save**
 
-#### Task 4: Test the Service Bus Queue with flight update messages
+#### Task 5: Test the Service Bus Queue with flight update messages
 
 1. Open the **BlueYonder.Companion.Client** solution from **[repository root]\AllFiles\20487C\Mod07\LabFiles\begin\BlueYonder.Client**.
 3. Run the application without debugging (Ctrl + F5).
-4. The trip you purchased in the previous exercise will show in the **Current Trip** list.
+4. The trip you purchased in the previous exercise will show in the **Upcoming Trip** list.
 5. Note the date of the trip.
 6. Open the **BlueYonder.Companion.FlightsManager** solution file from the **[repository root]\AllFiles\20487C\Mod07\LabFiles\begin\BlueYonder.Server** folder in a new Visual Studio 2017 instance.
 7. Open the **web.config** file from the **BlueYonder.FlightsManager** project, in the **&lt;appSettings&gt;** section, locate the **webapi:BlueYonderCompanionService** key, and then update the **{CloudService}** string to the Azure Web App name you created by publishing **BlueYonder.Companion.Host** project in the previous exercise.
