@@ -118,7 +118,7 @@ The main tasks for this exercise are as follows:
 
 4. Run the client app, search for **New**, and purchase a flight from _Seattle_ to _New-York_. Close the app after you purchase the trip.
 
-#### Task 5: View the collected diagnostics data
+#### Task 4: View the collected diagnostics data
 
 1. Return to the Visual Studio instance with the **BlueYonder.Companion** solution open.
 2. In Cloud Explorer, locate the Azure Storage account you have configured for the app servuce **Diagnostics logs**.
