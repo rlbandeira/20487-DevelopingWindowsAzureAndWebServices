@@ -268,7 +268,7 @@ We will first have to publish our Azure Functions project and once it is publish
 
 First we will publish the Azure Functions project
 1. Right click the **BlueYonder.Companion.Functions** project and click **Publish**
-2. Select **Azure Functions App**, make sure **Create New** is selected and click **Ok**
+2. Select **Azure Functions App**, make sure **Create New** is selected and click **Publish**
 3. A new window **Create App Service** will open.
 4. In the **App Name** field, enter **BlueYonderFunctions-YourInitials**
 5. In the **Resource Group** field, if nothing is populated, click **New**, give a name of your liking and click **Ok**
