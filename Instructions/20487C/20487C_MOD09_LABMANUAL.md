@@ -58,7 +58,7 @@ The main tasks for this exercise are as follows:
 
 4. Open the **Access keys** tab in the newly created account, and copy the **Key1** connection string.
 
-#### Task 2: Add a storage connection string to the web application project
+#### Task 2: Add a storage connection string to the cloud project
 
 1. Open the **BlueYonder.Companion** solution file from the **[repository root]\AllFiles\20487C\Mod09\LabFiles\begin\BlueYonder.Server** folder.
 
