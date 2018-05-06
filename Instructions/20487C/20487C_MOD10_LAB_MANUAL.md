@@ -105,7 +105,7 @@ The main tasks for this exercise are as follows:
 3. In the App Service's **Diagnostics logs** blade, activate **Application Logging (Blob)** and set the **Level**  to **Verbose**.
 4. Use the **blueyonder10_yourinitials_** account to store the logs.
 5. Store the logs in a container named **logs**.
-6. Set **Retention Period** to 1 day.
+6. Set **Retention Period (Days)** to 1 day.
 6. Save the logging configuration.
 7. Go to the **Overview** blade and copy the app service **URL**, you will need it for the next task.
 
