@@ -216,11 +216,10 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: View the content of the blob containers and the table
 
-1. Return to the Visual Studio 2017, and then connect to the Azure Storage account you created in the first exercise by using Server Explorer.
+1. Return to the Visual Studio 2017, and then connect to the Azure Storage account you created in the first exercise by using Cloud Explorer
+   - Attach a storage account to Cloud Explorer.
 
-   - Attach a storage account to Server Explorer.
-
-2. In Server Explorer, expand **Azure**, and then expand **Storage**.
+2. In Cloud Explorer, expand **Azure**, and then expand **Storage**. open the contents of the **FilesMetadata** table. The table contains metadata for both public and private photos.
 3. Expand the **Blobs** node and inspect the two folders that were created, one for private photos and one for public photos.
 3. Open the public blob container, copy the photo&#39;s URL and paste it in a browser&#39;s address bar. Verify that the photo appears.
 4. Open the private blob container, copy the photo&#39;s URL and go to the copied address.
