@@ -78,7 +78,7 @@ The main tasks for this exercise are as follows:
 
 5. View the collected diagnostics data.
 
-#### Task 1: Add trace messages to the ASP.NET Web API service and deploy the application
+#### Task 1: Add trace messages to the ASP.NET Web API service
 
 1. Open the **BlueYonder.Companion.sln** solution from the **[repository root]\AllFiles\Mod10\LabFiles\begin\BlueYonder.Server** folder in a new instance of Visual Studio 2017.
 2. Open the **TraceWriter.cs** file from the **BlueYonder.Companion.Host** project and implement the **Trace** method. Use .NET Diagnostics tracing to write the trace messages.
