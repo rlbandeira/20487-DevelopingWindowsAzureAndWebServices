@@ -57,8 +57,8 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Create the Service Bus Relay by using the Azure Portal
 
-2. Open the Microsoft Azure portal (**http://portal.azure.com**)
-3. Create a new Azure Service Relay named **BlueYonderServerLab07YourInitialsRelay** (Replace _YourInitials_ with your initials).
+1. Open the Microsoft Azure portal (**http://portal.azure.com**)
+2. Create a new Azure Service Relay named **BlueYonderServerLab07YourInitialsRelay** (Replace _YourInitials_ with your initials).
 
     - Select a region closest to your location.
     - Select the newly created Service Bus Relay, click **Shared access policies**, click the **RootManageSharedAccessKey** policy and then copy the primary key to the clipboard.
