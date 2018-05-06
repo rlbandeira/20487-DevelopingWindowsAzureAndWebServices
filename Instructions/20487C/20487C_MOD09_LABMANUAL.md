@@ -195,7 +195,7 @@ The main tasks for this exercise are as follows:
    >**Note:** The shared access key signature is a URL query string that you append to blob URLs. Without the query string, you cannot access private blobs.
 
 6. In the **BlueYonder.Companion.Controllers** project, open the **FilesController** class, and update the **TripMetadata** method to retrieve a list of private trip files in addition to the public trip files.
-7. To get private files, duplicate the call to the **GetFileUris** and set the Boolean parameter to **false**. Store the result in a variable named **privateUris**.
+7. To get private files, duplicate the call to the **GetFileUris** and set the Boolean parameter to **true**. Store the result in a variable named **privateUris**.
 8. Use the **Union** extension method to combine the private and public collections to a single collection. Store the collection in a variable named **allUris**.
 9. Change the code so that the **allKeys** collection will use the **allUris** collection instead of just the **publicUris** collection.
 10. Locate the **ToFileDto** method and explore its code. If the requested file is private, you create a shared access key for the blob&#39;s container, and then set the **Uri** property of the file to a URL containing the shared access key.
