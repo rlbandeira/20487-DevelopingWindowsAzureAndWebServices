@@ -54,7 +54,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Configure WCF message logging
 
-1. In the **Diagnostics** configuration, enable **Message Logging** and enable **Log Auto Flush**.
+1. In the **Diagnostics** configuration, enable **Message Logging** and enable **Log Auto Flush** and **Enable Tracing**.
 2. Expand the **Diagnostics** configuration node, and in the **Message Logging** configuration, set **LogEntireMessage** to **True**.
 3. Save the changes to the configuration and close the Service Configuration Editor window.
 
