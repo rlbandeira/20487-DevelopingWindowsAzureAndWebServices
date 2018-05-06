@@ -47,7 +47,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Open the WCF service configuration editor
 
-1. Open the **BlueYonder.Server.sln** solution from the **D:\AllFiles\Mod10\LabFiles\begin\BlueYonder.Server** folder.
+1. Open the **BlueYonder.Server.sln** solution from the **[repository root]\AllFiles\Mod10\LabFiles\begin\BlueYonder.Server** folder.
 3. Open the **Web.config** file from the **BlueYonder.Server.Booking.WebHost** project with the **WCF Configuration Editor**. When prompted that the **Microsoft.ServiceBus** assembly could not be found, click **Yes**, select the **Microsoft.ServiceBus.dll** assembly from web project&#39;s **bin** folder, and approve the warning message that appears next.
 
    >**Note:** To open the **WCF Configuration Editor** , in Solution Explorer, right-click the **Web.config** file, and then click **Edit WCF Configuration**.
