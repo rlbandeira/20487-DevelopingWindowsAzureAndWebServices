@@ -116,7 +116,7 @@ The main tasks for this exercise are as follows:
 #### Task 4: Test the WCF service
 
 1. Open the Azure portal (**http://portal.azure.com**)
-2. Locate the **BlueYonderServerLab07YourInitialsRelay** (Replace _YourInitials_ with your initials) Service Bus namespace, and then verify that it contains the **booking** relay.
+2. Locate the **BlueYonderServerLab07Relay***YourInitials* (Replace _YourInitials_ with your initials) Service Bus namespace, and then verify that it contains the **booking** relay.
 3. In the **BlueYonder.Companion** solution, bring back the call to the WCF service from the reservation controller.
 
     - In the **BlueYonder.Companion.Controllers** project, open **ReservationControll.cs** , and then locate the following comment.
