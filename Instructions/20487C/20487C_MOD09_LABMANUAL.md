@@ -24,7 +24,7 @@ After completing this lab, you will be able to:
 Estimated setup time: 15 minutes.
 
 1. Open Windows Explorer.
-2. Go to **[repository root]\AllFiles\20487C\Mod09\Setup**.
+2. Go to **[repository root]\AllFiles\20487C\Mod09\LabFiles\Setup**.
 3. Run the following command:
    ```batch
    ps createAzureServices.ps1
