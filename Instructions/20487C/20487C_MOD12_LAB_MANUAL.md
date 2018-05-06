@@ -18,7 +18,7 @@ Estimated Time: **20 Minutes**.
 
 1. Verify that you received credentials to sign in to the Microsoft Azure portal from you training provider, these credentials and the Azure account will be used throughout the labs of this course.
 
-### Exercise 1: Use Azure Redis Cache
+### Exercise 1: Use Microsoft Azure Redis Cache
 
 #### Scenario
 
