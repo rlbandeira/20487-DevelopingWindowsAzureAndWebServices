@@ -140,10 +140,10 @@ The main tasks for this exercise are as follows:
 6. Place a breakpoint at the beginning of the **CreateReservation** method, and then start debugging the web application.
 7. Open the **[repository root]\AllFiles\20487C\Mod07\LabFiles\begin\BlueYonder.Companion.Client\BlueYonder.Companion.Client.sln** solution file.
 9. In the **BlueYonder.Companion.Shared** project, open the **Addresses** class, and then set the **BaseUri** property to the Azure Cloud Service name you noted at the beginning of this lab.
-10. Start the client application without debugging, and purchase a new trip to New York.
+10. Start the client application without debugging, and purchase a new trip to Rome.
 
-    - Use **Search** and start typing **New**.
-    - Wait for the app to show list of flights from Seattle to New York.
+    - Use **Search** and start typing **Sea**.
+    - Wait for the app to show list of flights from Seattle to Rome.
     - Fill in the reservation form and click **Purchase**.
 
 >**Results**: After completing this exercise, you should have successfully run the client app to book a flight, and have the ASP.NET Web API services, running in the Azure Web Role, communicate with the on-premises WCF services by using Azure Service Bus Relays.
