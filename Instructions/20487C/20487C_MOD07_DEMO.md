@@ -62,7 +62,7 @@
   ```cs
         using Microsoft.ServiceBus;
 ```
-38. Locate the call to the **ServiceHost** constructor and change the host's address from **net.tcp://127.0.0.1:747/** to **sb://ServiceBusDemo07***YourInitials***.servicebus.windows.net** (Replace _YourInitials_ with your initials).
+38. Locate the call to the **ServiceHost** constructor and change the host's address from **net.tcp://127.0.0.1:747/** to **sb://ServiceBusDemo07**_YourInitials_**.servicebus.windows.net** (Replace _YourInitials_ with your initials).
 39. Locate the call to the **host.AddServiceEndpoint** method, and then update the binding to **NetTcpRelayBinding** by using the following code.
 
   ```cs
