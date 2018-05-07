@@ -345,7 +345,7 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
 16. On the **Azure AD B2C** blade, under the **Manage** section, click **Identity providers**.
 17. Click  **Add** and provide the following information:
     - In the **Name** text box, type **Microsoft**.
-    - Click **identity provider type**, select **Microsoft Account**.
+    - Click **identity provider type**, select **Microsoft Account** and then click **OK**.
     - Click **Set up this identity provider**.
         - In the **Client ID** text box, paste the value from step 6.
         - In the **Client secret** text box, paste the value from step 7.
