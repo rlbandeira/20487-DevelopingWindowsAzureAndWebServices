@@ -51,8 +51,8 @@ Wherever  you see a path to a file that starts with *[repository root]*, replace
 4. Select the **AzureDiagnostics.sln** file, and then click **Open**.
 5. Right click the **DiagnosticsWebRole** project, and then click **Publish**.
 6. Select **Microsoft Azure App Service**, select **Create New** and click **Publish**.
-7. In the **App Name** text box, type **AzureDiagnosticsExample-***yourinitials* (*yourinitials* are your initials, e.g. John Doe -> jd)
-8. In the **Resource Group** drop-down list, click **New..** and type **Mod10RC-***yourinitials*. Then click **OK**.
+7. In the **App Name** text box, type **AzureDiagnosticsExample-**_yourinitials_ (*yourinitials* are your initials, e.g. John Doe -> jd)
+8. In the **Resource Group** drop-down list, click **New..** and type **Mod10RC-**_yourinitials_. Then click **OK**.
 9. Click **Create** and wait for the deployment to finish.
 10. Open a browser and navigate to **http://portal.azure.com**.
 11. If a page appears, prompting you to enter your email address, enter your email address, and then click **Continue**.
@@ -62,8 +62,8 @@ Wherever  you see a path to a file that starts with *[repository root]*, replace
 
 13. If the **Windows Azure Tour** dialog box appears, close it.
 14. On the navigation menu on the left, click **App Services**.
-15. In the **App Services** blade, click **AzureDiagnosticsExample**-yourinitials.
-16. In the **AzureDiagnosticsExample-***yourinitials* blade, in the menu under **MONITORING**, click **Diagnostics logs**.
+15. In the **App Services** blade, click **AzureDiagnosticsExample**-_yourinitials_.
+16. In the **AzureDiagnosticsExample-**_yourinitials_ blade, in the menu under **MONITORING**, click **Diagnostics logs**.
 17. In the **Diagnostics logs** blade, turn on **Application Logging (Filesystem)**.
 18. Set **Level** to **Verbose**.
 19. Click **Save**.
