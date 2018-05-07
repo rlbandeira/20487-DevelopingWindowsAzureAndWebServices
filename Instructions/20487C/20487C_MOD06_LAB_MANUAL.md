@@ -121,7 +121,7 @@ The main tasks for this exercise are as follows:
 3. Connect to the WCF service through the WCF Test Client application, and verify if the application is able to retrieve metadata from both services.
 
     a. Open **Search Windows** by clicking the magnifying glass next to the **Start** menu.
-    b. Search for **Developer Command Line for VS 2017** and open it.
+    b. Search for **Developer Command Prompt for VS 2017** and open it.
     c. In the command line that opened, enter **wcftestclient** and press **enter**.
     d. Connect to the address **http://localhost/BlueYonder.Server.Booking.WebHost/Booking.svc**    
     e. Wait until you see the service and endpoints tree in the pane to the left.  
