@@ -18,7 +18,7 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
 8. In the **Action to take when request is not authenticated** list box, select **Log in with Azure Active Directory**.
 9. Under **Authentication Providers**, click **Azure Active Directory**.
 10.	In **Azure Active Directory Settings**, change **Management Mode** to **Express**.
-11.	Select **Create New AD App**, and the click **OK**. The blade closes.
+11.	Select **Create New AD App**, and then click **OK**. The blade closes.
 12.	On the **Authentication/Authorization** blade, click **Save**.
 13.	Click the **Overview** blade, and then click the **Authentication/Authorization** blade.
     >**Note**: Due to a bug in the Azure portal, you need to go out of the **Authentication/Authorization** blade and enter it again for the portal to recognize the new authentication settings.
