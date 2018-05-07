@@ -239,7 +239,7 @@ The main tasks for this exercise are as follows:
         - Click **App ServicePlan**
         - Click **Create New**
         - Enter the following values:
-          - App service plan: "BlueYonder-Lab-06"
+          - App service plan: BlueYonder-Lab-06
           - Location: The location closest to you.
         - Click **Create**
     d. Click **Create** and wait until the new Web App has been created.
