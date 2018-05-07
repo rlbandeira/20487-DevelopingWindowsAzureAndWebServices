@@ -201,7 +201,7 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
         ViewBag.Message = String.Format("Welcome {0}!", userfirstName);
         return View();
    ```
-25. Click the **Web.config** file, and locate the **\<appSettings\>** section.
+25. Double Click the **Web.config** file, and locate the **\<appSettings\>** section.
 26. Under the **\<appSettings\>** section, add the following code.
    ```xml
         <add key="ClientId" value="[Azure Application ID]" />
