@@ -17,6 +17,7 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
 5. In the **New** blade, click **Web + Mobile**, and then click **Web App**.
 6. In the **App Name** text box, enter **claims-example-***yourinitials* (replace *yourinitials* with your initials, e.g. – John Doe with  j.d.)
 7. Click **Create** and wait for the creation process to finish.
+ >**Note :** Click App Services and click the app name that you just created.
 8. In the **Authentication/Authorization** blade, enable **App Service Authentication**.
 9. In the **Action to take when request is not authenticated** list box, select **Log in with Azure Active Directory**.
 10. Under **Authentication Providers**, click **Azure Active Directory**.
