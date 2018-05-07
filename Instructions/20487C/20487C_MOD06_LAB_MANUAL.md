@@ -188,18 +188,17 @@ The main tasks for this exercise are as follows:
   After you deploy the ASP.NET Web API project to Azure, it cannot call the on-premises WCF service, so for now, the WCF Service calls are disabled. In Module 7, &quot;Windows Azure Service Bus&quot; in Course 20487, you will learn how a cloud application can connect to an on-premises service.
 
 3. Use Visual Studio 2017 to publish the **BlueYonder.Companion.Host** project as a new Web App.
-
-    a. Right click **BlueYonder.Companion.Host** project, and click **Publish**.
-    b. Select **Microsoft Azure App Service** and select **Create New**
-    c. Click **Publish**, a **Create App Service** window will open.
-    d. Fill in the following details:
+    - Right click **BlueYonder.Companion.Host** project, and click **Publish**.
+    - Select **Microsoft Azure App Service** and select **Create New**
+    - Click **Publish**, a **Create App Service** window will open.
+    - Fill in the following details:
       - App Name: **BlueYonder-Companion-*YourInitials*** (replace *YourInitials* with your initials)
       - Resource Group: **BlueYonder.Lab.06**
       - App Service Plan:
-        - Click **New**
-        - App Service Plan: **BlueYonder_Companion_*yourInitials*** (replace *yourInitials* with your initials)
-        - Location: Choose the location closest to you
-        - Click **Ok**
+        	- Click **New**
+        	- App Service Plan: **BlueYonder_Companion_*yourInitials*** (replace *yourInitials* with your initials)
+        	- Location: Choose the location closest to you
+        	- Click **Ok**
     e. Click **Create** to start deployment.
 
 #### Task 3:  Test the Companion client against the Azure hosted Companion Web API
@@ -207,10 +206,8 @@ The main tasks for this exercise are as follows:
 1. Open a new instance of Visual Studio 2017.
 2. Open the **BlueYonder.Companion.Client** solution at **[Repository root]\AllFiles\20487C\Mod06\LabFiles\BlueYonder.Companion.Client**
 3. Replace the address used to communicate with the server:
-
     a. In the **BlueYonder.Companion.Shared** project, open the **Addresses** class and in the **BaseUri** property, replace the address of the emulator with the cloud service address you created earlier.  
     b. Use the form **http://blueyonder-companion-YourInitials.azurewebsites.net/** (replace _YourInitials_ with your initials).
-
 4. Run the client app and search for flights to New York. Verify the client application is able to connect to the ASP.NET Web API Web application hosted in Windows Azure and retrieve the list of flights.
 
 >**Results**: You will verify the application works on Azure.
@@ -256,7 +253,6 @@ The main tasks for this exercise are as follows:
 
 2. In the **BlueYonder.FlightsManager** project, open the **web.config** file, and edit the **&lt;appSettings&gt;** section to substitute the **{YourInitials}** placeholder with the initials you have used when you published the Companion web API project to a new Web App in the previous exercise.
 3. Publish the **BlueYonder.FlightsManager** project.
-
    - Right click the **BlueYonder.FlightManager** project.
    - Click **Publish**.
    - Select **Microsoft Azure App Service** and then select "**Select Existing**"
