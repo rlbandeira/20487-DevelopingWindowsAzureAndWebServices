@@ -114,7 +114,7 @@ The main tasks for this exercise are as follows:
 2. Open the **BlueYonder.Companion.Client.sln** solution from the **[repository root]\AllFiles\20487C\Mod10\LabFiles\begin\BlueYonder.Companion.Client** folder.
 3. In the **Addresses** class of the **BlueYonder.Companion.Shared** project, set the **BaseUri** property to the Azure cloud service name you noted in the beginning of this lab.
 
-    - Replace the **[Web Api web app name] ** string with the URL you copied in the previous task.
+    - Replace the **[Web Api web app name]** string with the URL you copied in the previous task.
 
 4. Run the client app, search for **New**, and purchase a flight from _Seattle_ to _New-York_. Close the app after you purchase the trip.
 
