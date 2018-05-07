@@ -106,7 +106,7 @@ The main tasks for this exercise are as follows:
 
 5. Run the client app again, verify that the weather forecast appears for the current trip, and then close the client app.
 
-   >**Note:** The staging and the production deployments share their databases, which is why the current trip, which you created with the production deployment, appears when connect to the staging deployment. ** **
+   >**Note:** The staging and the production deployments share their databases, which is why the current trip, which you created with the production deployment, appears when connect to the staging deployment.
 
 #### Task 4: Perform a Swap by using the Azure portal and retest the client app
 
