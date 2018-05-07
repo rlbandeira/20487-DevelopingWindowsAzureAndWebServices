@@ -276,7 +276,8 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
 17. On the **Azure AD B2C** blade, under the **Manage** section, click **Applications**.
 18. Click **B2CApp**, and copy the value from **Application ID** for the next steps.
 19. On the **B2C App - Properties** blade, under the **API ACCESS** section, click **API access**.
-20. Click **Add**, in **Select Scopes**, select **user_impersonation**, and then click **Save**. 21. Open **Visual Studio 2017**.
+20. Click **Add**, in **Select Scopes**, select **user_impersonation**, and then click **Save**. 
+21. Open **Visual Studio 2017**.
 22. On the **File** menu, point to **Open**, and then click **Project/Solution**.
 23. Go to **[repository root]\Allfiles\20487C\Mod11\DemoFiles\ClientAppUsingB2C**.
 24. Select the **ClientAppUsingB2C.sln** file, and then click **Open**.
