@@ -15,7 +15,7 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
    >**Note:** During the sign-in process, if a page appears prompting you to choose from a list of previously used accounts, select the account you previously used, and then enter your credentials.
 4. In theAzure portal, click **Create a resource**.
 5. In the **New** blade, click **Web + Mobile**, and then click **Web App**.
-6. In the **App Name** text box, enter **claims-example-***yourinitials* (replace *yourinitials* with your initials, e.g. – John Doe with  j.d.)
+6. In the **App Name** text box, enter **claims-example-**_yourinitials_ (replace *yourinitials* with your initials, e.g. – John Doe with  j.d.)
 7. Click **Create** and wait for the creation process to finish.
  >**Note :** Click App Services and click the app name that you just created.
 8. In the **Authentication/Authorization** blade, enable **App Service Authentication**.
@@ -254,11 +254,11 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
 4. On the navigation menu on the left, click **Create a resource**, search for **Azure Active Directory B2C**, and then click **Create**.
 5. In **Create new B2C Tenant to existing Tenant**, select **Create a new Azure AD B2C Tenant**, and then provide the following information:
     - In the **Organization name** text box, type **B2CMod11**.
-    - In the **Initial domain name** text box, type **b2cmod11***YourInitials* (Replace *YourInitials* with your initials).
+    - In the **Initial domain name** text box, type **b2cmod11**YourInitials (Replace *YourInitials* with your initials).
     - In the **Country or region** list box, select your country.
 6. Click **Create**.
 7. In **Create new B2C Tenant to existing Tenant**, select **Link an existing Azure AD B2C Tenant to my Azure subscription**, and then provide the following information:
-    - In the **Azure AD B2C Tenant** list box, select **``b2cmod11***[YourInitials]***.onmicrosoft.com``** (Replace *YourInitials* with your initials).
+    - In the **Azure AD B2C Tenant** list box, select **b2cmod11[YourInitials].onmicrosoft.com** (Replace *YourInitials* with your initials).
     - In the **Resource group** list box, select **Create new**, and then type **B2C**.
 8. Click **Create**, and then wait until the resource is created.
 9. On top bar, click your user information, the menu opens. Under **DIRECTORY**, select **B2CMod11**.
@@ -294,9 +294,9 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
     - In the **ClientId** text box, replace with the value copied in point 18.
 28. In **Solution Explorer**, right-click **ClientAppUsingB2C.Server**, and select **Publish**.
 29. In the **Pick a publish target** window, select **App Service**, select **Create New** and click **Create Profile**.
-30. In **App Name**, type **ClientAppUsingB2CServer***[YourInitials]* (Replace *YourInitials* with your initials).
+30. In **App Name**, type **ClientAppUsingB2CServer**[YourInitials] (Replace *YourInitials* with your initials).
 30. Click **Create**, and select **Publish**.
-31. Open **Microsoft Edge**, and type **``http://clientappusingb2cserver***[YourInitials]***.azurewebsites.net/api/values``** (Replace *YourInitials* with your initials).
+31. Open **Microsoft Edge**, and type **http://clientappusingb2cserver[YourInitials].azurewebsites.net/api/values``** (Replace *YourInitials* with your initials).
 32. The following message wil appear:
     ```xml
         <Error>
@@ -337,7 +337,7 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
 6. Copy the value from **Application Id** to the following tasks.
 7. In **Application Secrets**, click **Generate New Password**, copy the code to the following tasks, and then click **OK**.
 8. Under **Platforms**, click **Add Platform**, and then select **Web**.
-9. In **Redirect URLs**, type **``https://login.microsoftonline.com/te/b2cmod11***[YourInitials]***.onmicrosoft.com/oauth2/authresp``** (Replace *YourInitials* with your initials).
+9. In **Redirect URLs**, type **https://login.microsoftonline.com/te/b2cmod11[YourInitials].onmicrosoft.com/oauth2/authresp** (Replace *YourInitials* with your initials).
 10. Click **Save**.
 11. Open **Microsoft Edge**.
 12. Go to the Azure portal at **http://portal.azure.com**.
