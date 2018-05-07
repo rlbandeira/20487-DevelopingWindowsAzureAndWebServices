@@ -138,6 +138,7 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
         using Microsoft.Owin.Security;
         using Microsoft.Owin.Security.Cookies;
         using Microsoft.Owin.Security.OpenIdConnect;
+	using System.Configuration; 
    ```
 14. Replace the **class** declaration with the following code.
    ```cs
