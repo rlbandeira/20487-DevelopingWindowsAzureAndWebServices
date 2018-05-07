@@ -89,7 +89,7 @@ The main tasks for this exercise are as follows:
    | service | BlueYonder.BookingService.Implementation.BookingService |
    | relativeAddress | Booking.svc |
 
-  >**Note:** You can also refer to Lesson 1, &quot;Hosting Service On-Premises&quot;, Topic 2, &quot;Hosting WCF Service in IIS&quot; in this module, for a code example. ** **
+  >**Note:** You can also refer to Lesson 1, &quot;Hosting Service On-Premises&quot;, Topic 2, &quot;Hosting WCF Service in IIS&quot; in this module, for a code example.
 
 3. Add a **&lt;system.web&gt;** element to the **&lt;configuration&gt;** section, and in it add a **&lt;compilation&gt;** element and a **&lt;httpRuntime&gt;** element.
 
