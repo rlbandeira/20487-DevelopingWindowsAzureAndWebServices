@@ -56,7 +56,7 @@ The main tasks for this exercise are as follows:
 
 1. Open the **BlueYonder.Server** solution file from the **[repository root]\AllFiles\20487C\Mod06\LabFiles\begin\BlueYonder.Server** folder.
 2. To the **BlueYonder.Server** solution, add a new **ASP.NET Web Application (.NET Framework)** project named  **BlueYonder.Server.Booking.WebHost**.
-3. In the **New ASP.NET Web Application** window, select **Empty** and click **Ok**.
+3. In the **New ASP.NET Web Application- BlueYonder.Server.Booking.WebHost** window, select **Empty** and click **Ok**.
 4. Use the **Package Manager Console** window to install version **6.2.0** of the **EntityFramework** NuGet package, in the  **BlueYonder.Server.Booking.WebHost** project.
 
 
