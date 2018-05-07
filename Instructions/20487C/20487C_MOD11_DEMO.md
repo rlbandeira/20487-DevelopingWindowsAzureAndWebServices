@@ -92,7 +92,7 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
 6. Go back to the **Azure Active Directory** view, under the **Manage** section, click **Users** .
 7. On the top menu, click **New user**.
     - In the **Name** text box, enter your full name.
-    - In the **User name** text box, enter your name + **@[Paste Domain name]** .
+    - In the **User name** text box, enter your name + **@[Paste Domain name]**. (Domain name which you have copied in point 5)
     - Click **Create**.
 8. On the top menu, click **New guest user**.
 9. Enter the email address in the text box, and then click **Invite**.
