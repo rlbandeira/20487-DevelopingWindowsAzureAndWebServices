@@ -56,6 +56,7 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
             SecurityTokenValidated = OnTokenValidated
         }
    ```
+   > **Note :** If there is any syntax error saying that Comma Operator is expected. Please put Comma operator after **postLogoutRedirectUri**.
 35.	At the end of the **ConfigureAuth** method, add the following code:
    ```cs
         private async Task OnTokenValidated(SecurityTokenValidatedNotification<OpenIdConnectMessage, OpenIdConnectAuthenticationOptions> context) => await Task.FromResult(0);
