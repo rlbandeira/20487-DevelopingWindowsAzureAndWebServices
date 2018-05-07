@@ -72,7 +72,7 @@ Before you begin this demo, you must complete the following steps:
 
 ```xml
        <appSettings>
-         <add key="ReidsConnectionString" value="*place the connection string here*" />
+         <add key="ReidsConnectionString" value="[place the connection string here]" />
        </appSettings>
 ```
 
