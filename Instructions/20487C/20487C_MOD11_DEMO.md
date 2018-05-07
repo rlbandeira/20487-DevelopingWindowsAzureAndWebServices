@@ -231,6 +231,7 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
 42. Go back to Visual Studio, in the **web.config** file, replace the value in **TentantId** with the copied value.
 43. To save the changes, press Ctrl+S.
 44. To run the application, press F5.
+ > **Note :** If AzureADWebApp dialog appears, click Accept.
 45. Login with user name and password.
 46. After the site loads, click **Contact**, and your name appears.   
 
