@@ -119,12 +119,11 @@ The main tasks for this exercise are as follows:
   >**Note:** In addition to adding net.tcp to the site bindings list, you also need to enable net.tcp for each Web application you host in IIS. By enabling net.tcp, WCF will automatically create an endpoint with NetTcpBinding.
 
 3. Connect to the WCF service through the WCF Test Client application, and verify if the application is able to retrieve metadata from both services.
-
-    a. Open **Search Windows** by clicking the magnifying glass next to the **Start** menu.
-    b. Search for **Developer Command Prompt for VS 2017** and open it.
-    c. In the command line that opened, enter **wcftestclient** and press **enter**.
-    d. Connect to the address **http://localhost/BlueYonder.Server.Booking.WebHost/Booking.svc**
-    e. Wait until you see the service and endpoints tree in the pane to the left.  
+- Open **Search Windows** by clicking the magnifying glass next to the **Start** menu.
+- Search for **Developer Command Prompt for VS 2017** and open it.
+- In the command line that opened, enter **wcftestclient** and press **enter**.
+- Connect to the address **http://localhost/BlueYonder.Server.Booking.WebHost/Booking.svc**
+- Wait until you see the service and endpoints tree in the pane to the left.  
     
 >**Results**: You will be able to run the WCF Test Client application and verify if the services are running properly in IIS.
 
