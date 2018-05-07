@@ -148,20 +148,19 @@ The main tasks for this exercise are as follows:
 1. Open the Microsoft Azure portal ( **http://portal.azure.com** )
 
 2. Create a new **SQL Database** Server.
-
-    a. Open the **New** blade.
-    b. Start a **SQL Database** journey.
-    c. In the **SQL Database** blade, enter the following details:
-      - Database name: **blueyonder**
-      - Resource Group: Select **Create new** and enter **BlueYonder.Lab.06**
-      - Server: Click on **Configure required settings** and the **Server** and **New server** blades will open. Enter the following details in the **New Server** blade:
-       - Server name: **blueyonder-lab-06-dbserver-*YourInitials*** (replace *YourInitials* with your initials, e.g. - John Doe will become jd)
-        - Server admin login: **BlueYonderAdmin**
-        - Password: **Pa$$w0rd**
-        - Confirm password: **Pa$$w0rd**
-        - Location: Pick the closest location to you
-        - Click **Select**
-      - Click **Create**
+- Open the **New** blade.
+- Start a **SQL Database** journey.
+- In the **SQL Database** blade, enter the following details:
+	* Database name: **blueyonder**
+	* Resource Group: Select **Create new** and enter **BlueYonder.Lab.06**
+	* Server: Click on **Configure required settings** and the **Server** and **New server** blades will open. Enter the following details in the **New Server** blade:
+		* Server name: **blueyonder-lab-06-dbserver-*YourInitials*** (replace *YourInitials* with your initials, e.g. - John Doe will become jd)
+		* Server admin login: **BlueYonderAdmin**
+		* Password: **Pa$$w0rd**
+		* Confirm password: **Pa$$w0rd**
+		* Location: Pick the closest location to you
+		* Click **Select**
+- Click **Create**
 
 
 3. Open the **BlueYonder.Companion.sln** solution file from the **[repository root]\AllFiles\20487C\Mod06\LabFiles\begin\BlueYonder.Server** folder in a new Visual Studio 2017 instance.
