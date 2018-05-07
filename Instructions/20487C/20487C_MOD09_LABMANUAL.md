@@ -132,7 +132,7 @@ The main tasks for this exercise are as follows:
 12. Set the entity&#39;s partition key to the **locationID** parameter. Convert the **locationID** from **int** to **string**.
 13. Set the entity&#39;s row key to a URI-encoded value of the entity&#39;s **Uri** property. Use the **HttpUtility.UrlEncode** static method to encode the URI.
 
-   >**Note:** The **RowKey** property is set to the file&#39;s URL, because it has a unique value. The URL is encoded because the forward slash (/) character is not valid in row keys. The **PartitionKey** property is set to the **locationID** property, because the partition key groups all the files from a single location in the same partition. By using the location&#39;s ID as the partition key, you can query the table and get all the files uploaded to a specific location. ** **
+   >**Note:** The **RowKey** property is set to the file&#39;s URL, because it has a unique value. The URL is encoded because the forward slash (/) character is not valid in row keys. The **PartitionKey** property is set to the **locationID** property, because the partition key groups all the files from a single location in the same partition. By using the location&#39;s ID as the partition key, you can query the table and get all the files uploaded to a specific location.
 
 14. Explore the code in the **Metadata** method. The method creates the **FileEntity** object and saves it to the table.
 
