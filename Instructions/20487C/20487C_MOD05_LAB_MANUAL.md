@@ -63,7 +63,7 @@ The main tasks for this exercise are as follows:
 
    c. Decorate each of the new properties with the **[DataMember]** attribute.
 
-  >**Note:** Review the **ReservationCreationFault** class in the **Faults** folder. The class will be used later as a data contract object to mark a fault reservation. ** **
+  >**Note:** Review the **ReservationCreationFault** class in the **Faults** folder. The class will be used later as a data contract object to mark a fault reservation.
 
 #### Task 2: Create a service contract for the booking service
 
@@ -182,9 +182,9 @@ The main tasks for this exercise are as follows:
            <add name="BlueYonderServer" connectionString="Data Source=.\SQLEXPRESS;Database=BlueYonder.Server.Lab5;Integrated    Security=SSPI" 
         providerName="System.Data.SqlClient" />
         </connectionStrings>
-```
-  >**Note:** You can copy the connection string from the ASP.NET Web API services configuration file in  **[repository root]\Allfiles\20487C\Mod05\Labfiles\begin\BlueYonder.Server\BlueYonder.Companion.Host\Web.config**. Make sure you change the database parameter to **BlueYonder.Server.Lab5**.
-```
+   ```
+  >**Note :** You can copy the connection string from the ASP.NET Web API services configuration file in  **[repository root]\Allfiles\20487C\Mod05\Labfiles\begin\BlueYonder.Server\BlueYonder.Companion.Host\Web.config**. Make sure you change the database parameter to **BlueYonder.Server.Lab5**.
+
 
  ##### Task 2: Create the service hosting code
 
