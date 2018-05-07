@@ -83,7 +83,7 @@ The main tasks for this exercise are as follows:
     - In the new **&lt;behavior&gt;** element, add a **&lt;transportClientEndpointBehavior&gt;** behavior element to the configuration.
     - In the behavior element add a **&lt;tokenProvider&gt;** element, and in it, add a **&lt;sharedAccessSignature&gt;** element with the **keyName** attribute set to **RootManageSharedAccessKey** and the **key** attribute set to the access key of the new Service Bus you created.
 
-   >**Note:** Visual Studio Intellisense uses built-in schemas to perform validations. Therefore, it will not recognize the **transportClientEndpointBehavior** behavior extension, and will display a warning. Disregard this warning. ** **
+   >**Note:** Visual Studio Intellisense uses built-in schemas to perform validations. Therefore, it will not recognize the **transportClientEndpointBehavior** behavior extension, and will display a warning. Disregard this warning.
 
 5. Locate the endpoint of the service, and then set it to use the new endpoint behavior.
 
@@ -244,7 +244,7 @@ First we will add a WNS project bundled with the exercise:
 21. In **Queue name** enter "**FlightUpdatesQueue**"
 22. Click **Ok**
 23. A new file **PublishFlightUpdates.cs** will be added to the **BlueYonder.Companion.Functions** project.
-24. Add the following ```**using**``` statements:
+24. Add the following **using** statements:
   ```cs
         using BlueYonder.Companion.Entities;
         using BlueYonder.Entities;
