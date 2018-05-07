@@ -10,60 +10,63 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
 
 1. Open a browser. 
 2. In the address bar, enter **https://portal.azure.com**, and the press Enter.
-3. In theAzure portal, click **Create a resource**.
-4. In the **New** blade, click **Web + Mobile**, and then click **Web App**.
-5. In the **App Name** text box, enter **claims-example-***yourinitials* (replace *yourinitials* with your initials, e.g. – John Doe with  j.d.)
-6. Click **Create** and wait for the creation process to finish.
-7. In the **Authentication/Authorization** blade, enable **App Service Authentication**.
-8. In the **Action to take when request is not authenticated** list box, select **Log in with Azure Active Directory**.
-9. Under **Authentication Providers**, click **Azure Active Directory**.
-10.	In **Azure Active Directory Settings**, change **Management Mode** to **Express**.
-11.	Select **Create New AD App**, and then click **OK**. The blade closes.
-12.	On the **Authentication/Authorization** blade, click **Save**.
-13.	Click the **Overview** blade, and then click the **Authentication/Authorization** blade.
+3. If a page appears, prompting for your email address, enter your email address, and then click **Continue**. Wait for the sign-in page to appear, enter your email address and password, and then click **Sign In.**
+
+   >**Note:** During the sign-in process, if a page appears prompting you to choose from a list of previously used accounts, select the account you previously used, and then enter your credentials.
+4. In theAzure portal, click **Create a resource**.
+5. In the **New** blade, click **Web + Mobile**, and then click **Web App**.
+6. In the **App Name** text box, enter **claims-example-***yourinitials* (replace *yourinitials* with your initials, e.g. – John Doe with  j.d.)
+7. Click **Create** and wait for the creation process to finish.
+8. In the **Authentication/Authorization** blade, enable **App Service Authentication**.
+9. In the **Action to take when request is not authenticated** list box, select **Log in with Azure Active Directory**.
+10. Under **Authentication Providers**, click **Azure Active Directory**.
+11.	In **Azure Active Directory Settings**, change **Management Mode** to **Express**.
+12.	Select **Create New AD App**, and then click **OK**. The blade closes.
+13.	On the **Authentication/Authorization** blade, click **Save**.
+14.	Click the **Overview** blade, and then click the **Authentication/Authorization** blade.
     >**Note**: Due to a bug in the Azure portal, you need to go out of the **Authentication/Authorization** blade and enter it again for the portal to recognize the new authentication settings.
-14.	On the **Authentication/Authorization** blade, click **Azure Active Directory**.
-15.	In **Azure Active Directory Settings**, click **Azure AD App**.
-16.	On the **Azure AD Applications** blade, copy the value under the **CLIENT ID** column.
-17.	Open **Visual Studio 2017**.
-18.	Click **File**, point to **New**, and then click **Project**.
-19.	In the **New Project** modal, expand **Installed**, and then expand **Visual C#**.
-20.	Click **Web**, and then select the **ASP.NET Web Application (.NET Framework)** template.
-21.	In the **Name** text box, enter **ClaimsExampleApp**.
-22.	Click **OK**.
-23.	In the **New ASP.NET Web Application** modal, select the **MVC** template.
-24.	Click **Change Authentication**.
-25.	In the **Change Authentication** dialog box, select **Work or School accounts**.
-26.	Expand **More Options**.
-27.	Select the **Overwrite the application entry if one with the same ID exists** check box.
-28.	In the **Client ID** text box, paste the value you copied in step 16.
-29.	Click **OK**.
-30.	In the **New ASP.NET Web Application** modal, click **OK**.
-31.	In **Solution Explorer**, expand the **App_Start** folder, and then open the **Startup.Auth.cs** file.
-32.	Add the following **using** directives:
+15.	On the **Authentication/Authorization** blade, click **Azure Active Directory**.
+16.	In **Azure Active Directory Settings**, click **Azure AD App**.
+17.	On the **Azure AD Applications** blade, copy the value under the **CLIENT ID** column.
+18.	Open **Visual Studio 2017**.
+19.	Click **File**, point to **New**, and then click **Project**.
+20.	In the **New Project** modal, expand **Installed**, and then expand **Visual C#**.
+21.	Click **Web**, and then select the **ASP.NET Web Application (.NET Framework)** template.
+22.	In the **Name** text box, enter **ClaimsExampleApp**.
+23.	Click **OK**.
+24.	In the **New ASP.NET Web Application** modal, select the **MVC** template.
+25.	Click **Change Authentication**.
+26.	In the **Change Authentication** dialog box, select **Work or School accounts**.
+27.	Expand **More Options**.
+28.	Select the **Overwrite the application entry if one with the same ID exists** check box.
+29.	In the **Client ID** text box, paste the value you copied in step 16.
+30.	Click **OK**.
+31.	In the **New ASP.NET Web Application** modal, click **OK**.
+32.	In **Solution Explorer**, expand the **App_Start** folder, and then open the **Startup.Auth.cs** file.
+33.	Add the following **using** directives:
    ```cs
         using System.Threading.Tasks;
         using Microsoft.Owin.Security.Notifications;
         using Microsoft.IdentityModel.Protocols;
    ```
-33.	Under **PostLogoutRedirectUri**, add the following piece of code:
+34.	Under **PostLogoutRedirectUri**, add the following piece of code:
    ```cs
         Notifications = new OpenIdConnectAuthenticationNotifications
         {
             SecurityTokenValidated = OnTokenValidated
         }
    ```
-34.	At the end of the **ConfigureAuth** method, add the following code:
+35.	At the end of the **ConfigureAuth** method, add the following code:
    ```cs
         private async Task OnTokenValidated(SecurityTokenValidatedNotification<OpenIdConnectMessage, OpenIdConnectAuthenticationOptions> context) => await Task.FromResult(0);
    ```
-35.	Put a breakpoint in the **OnTokenValidated** method that you just added.
-36.	To debug the application, press F5.
+36.	Put a breakpoint in the **OnTokenValidated** method that you just added.
+37.	To debug the application, press F5.
 		The browser opens a page with the address starting with **https://login.microsoftonline.com**. The page has two buttons, **Accept** and **Cancel**.
-37.	Click **Accept**. The application stops.
-38.	Inspect the **context** object, expand **AuthenticationTicket**, and then inspect the **Identity** member.
-39.	To see the list of claims, expand **Identity**, expand **Claims**, and then expand **Results View**.
-40.	Review the list of claims and note some familiar claims, such as your name and the email address that you used to sign up to Microsoft Azure.
+38.	Click **Accept**. The application stops.
+39.	Inspect the **context** object, expand **AuthenticationTicket**, and then inspect the **Identity** member.
+40.	To see the list of claims, expand **Identity**, expand **Claims**, and then expand **Results View**.
+41.	Review the list of claims and note some familiar claims, such as your name and the email address that you used to sign up to Microsoft Azure.
     >**Note**: The list of claims you saw in step 39 is provided by Microsoft Azure. In the next lesson you will be introduced to Azure Active Directory, the identity provider used in this demonstration. 
 
 # Lesson 2: Introduction to Azure Active Directory
