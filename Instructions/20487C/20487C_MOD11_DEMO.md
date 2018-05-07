@@ -189,7 +189,7 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
             ConfigureAuth(app);
         }
    ```
-21. Expand the **Controller** folder, select **HomeController.cs**.
+21. Expand the **Controllers** folder, Double click **HomeController.cs**.
 22. To the **HomeController** class, add an **[Authorize]** attribute.
 23. At the beginning of the class, add the following **using** directives.
    ```cs
