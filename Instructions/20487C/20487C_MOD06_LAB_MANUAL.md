@@ -155,7 +155,7 @@ The main tasks for this exercise are as follows:
       - Database name: **blueyonder**
       - Resource Group: Select **Create new** and enter **BlueYonder.Lab.06**
       - Server: Click on **Configure required settings** and the **Server** and **New server** blades will open. Enter the following details in the **New Server** blade:
-        - Server name: **blueyonder-lab-06-dbserver-*YourInitials*** (replace *YourInitials* with your initials, e.g. - John Doe will become jd)
+       - Server name: **blueyonder-lab-06-dbserver-*YourInitials*** (replace *YourInitials* with your initials, e.g. - John Doe will become jd)
         - Server admin login: **BlueYonderAdmin**
         - Password: **Pa$$w0rd**
         - Confirm password: **Pa$$w0rd**
@@ -203,7 +203,7 @@ The main tasks for this exercise are as follows:
 #### Task 3:  Test the Companion client against the Azure hosted Companion Web API
 
 1. Open a new instance of Visual Studio 2017.
-2. Open the **BlueYonder.Companion.Client** solution at **[Repository root]\AllFiles\20487C\Mod06\LabFiles\BlueYonder.Companion.Client**
+2. Open the **BlueYonder.Companion.Client** solution at **[Repository root]\AllFiles\20487C\Mod06\LabFiles\begin\BlueYonder.Companion.Client**
 3. Replace the address used to communicate with the server:
     a. In the **BlueYonder.Companion.Shared** project, open the **Addresses** class and in the **BaseUri** property, replace the address of the emulator with the cloud service address you created earlier.  
     b. Use the form **http://blueyonder-companion-YourInitials.azurewebsites.net/** (replace _YourInitials_ with your initials).
