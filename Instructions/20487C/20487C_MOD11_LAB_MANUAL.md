@@ -60,7 +60,7 @@ In this exercise you will create an Azure AD B2C tenant. Then you will link that
 2. Create a new app.
 3. Generate a new password for your new application.
 4. Add a new Web platform.
-    >**Note :** In **Redirect URLs**, type **https://login.microsoftonline.com/te/***[YourTenantName]***.onmicrosoft.com/oauth2/authresp** (Replace *YourTenantName* with your tenant name).
+    >**Note :** In **Redirect URLs**, type **https://login.microsoftonline.com/te/[YourTenantName].onmicrosoft.com/oauth2/authresp** (Replace *YourTenantName* with your tenant name).
 5. On the Azure protal, create a new identity provider by using the **Microsoft Account** provider.
 6. Attach your new provider with the policy that was created in the previews task.
   
