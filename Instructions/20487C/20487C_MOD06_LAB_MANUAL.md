@@ -206,12 +206,12 @@ The main tasks for this exercise are as follows:
 
 1. Open a new instance of Visual Studio 2017.
 2. Open the **BlueYonder.Companion.Client** solution at **[Repository root]\AllFiles\20487C\Mod06\LabFiles\BlueYonder.Companion.Client**
-2. Replace the address used to communicate with the server:
+3. Replace the address used to communicate with the server:
 
     a. In the **BlueYonder.Companion.Shared** project, open the **Addresses** class and in the **BaseUri** property, replace the address of the emulator with the cloud service address you created earlier.  
-    b. Use the form **https://blueyondercompanionYourInitials.cloudapp.net/** (replace _YourInitials_ with your initials).
+    b. Use the form **http://blueyonder-companion-YourInitials.azurewebsites.net/** (replace _YourInitials_ with your initials).
 
-3. Run the client app and search for flights to New York. Verify the client application is able to connect to the ASP.NET Web API Web application hosted in Windows Azure and retrieve the list of flights.
+4. Run the client app and search for flights to New York. Verify the client application is able to connect to the ASP.NET Web API Web application hosted in Windows Azure and retrieve the list of flights.
 
 >**Results**: You will verify the application works on Azure.
 
