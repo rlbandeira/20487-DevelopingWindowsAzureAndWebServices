@@ -123,9 +123,9 @@ The main tasks for this exercise are as follows:
     a. Open **Search Windows** by clicking the magnifying glass next to the **Start** menu.
     b. Search for **Developer Command Prompt for VS 2017** and open it.
     c. In the command line that opened, enter **wcftestclient** and press **enter**.
-    d. Connect to the address **http://localhost/BlueYonder.Server.Booking.WebHost/Booking.svc**    
+    d. Connect to the address **http://localhost/BlueYonder.Server.Booking.WebHost/Booking.svc**
     e. Wait until you see the service and endpoints tree in the pane to the left.  
-
+    
 >**Results**: You will be able to run the WCF Test Client application and verify if the services are running properly in IIS.
 
 ### Exercise 2: Hosting the ASP.NET Web API Services in a new Azure Web App
