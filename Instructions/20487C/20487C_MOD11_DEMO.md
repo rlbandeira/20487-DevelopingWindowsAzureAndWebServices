@@ -364,17 +364,18 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
 28. On the **File** menu, point to **Open**, and then click **Project/Solution**.
 29. Go to **[repository root]\Allfiles\20487C\Mod11\DemoFiles\AzureSocialLoginB2C**.
 30. Select the **AzureSocialLoginB2C.sln** file, and then click **Open**.
-31. In **Solution Explorer**, under the **AzureSocialLoginB2C** project, double-click **Web.config**.
-32. Replace the following information: 
+31. If a **Security Warning** dailog box appears, click **Yes**.
+32. In **Solution Explorer**, under the **AzureSocialLoginB2C** project, double-click **Web.config**.
+33. Replace the following information: 
     - In the **Tenant** text box, replace *YourInitials* with your initials.
     - In the **ClientId** text box, paste the value from step 24.
     - In the **ClientSecret**  text box, paste the value from step 26.
-33. To run the project, press Ctrl+F5.
-34. On the top right, click **Sign in**, and then under **Sign in with your social account**, click **Microsoft**.
-35. Sign in using your second Microsoft account.
-36. To confirm terms of use, click **Yes**.
-37. Enter you display name, and click **Continue**.
-38. Go back to the Azure portal.
-39. On the **Azure AD B2C** blade, under the **MANAGE** section, click **Users**.
-40. Your display name appears in the **All users** list.
+34. To run the project, press Ctrl+F5.
+35. On the top right, click **Sign in**, and then under **Sign in with your social account**, click **Microsoft**.
+36. Sign in using your second Microsoft account.
+37. To confirm terms of use, click **Yes**.
+38. Enter you display name, and click **Continue**.
+39. Go back to the Azure portal.
+40. On the **Azure AD B2C** blade, under the **MANAGE** section, click **Users**.
+41. Your display name appears in the **All users** list.
 
