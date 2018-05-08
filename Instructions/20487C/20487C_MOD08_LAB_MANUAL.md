@@ -30,9 +30,9 @@ Verify that you received the credentials to sign in to the Azure portal from you
 2. In the **User Account Control** modal, click **Yes**.
 3. Go to **[repository root]\AllFiles\20487C\Mod08\LabFiles\Setup**
 4. Run the following command:
-```batch
-ps createAzureServices.ps1
-```
+   ```batch
+   .\createAzureServices.ps1
+   ```
 5. Follow the on-screen instructions.
 
 ### Exercise 1: Deploying an Updated Service to Azure
