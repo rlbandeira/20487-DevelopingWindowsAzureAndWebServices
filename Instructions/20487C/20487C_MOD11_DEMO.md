@@ -10,6 +10,7 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
 
 1. Open a browser. 
 2. In the address bar, enter **https://portal.azure.com**, and the press Enter.
+3. Insert your credentials to enter to the portal.
 3. If a page appears, prompting for your email address, enter your email address, and then click **Continue**. Wait for the sign-in page to appear, enter your email address and password, and then click **Sign In.**
 
    >**Note:** During the sign-in process, if a page appears prompting you to choose from a list of previously used accounts, select the account you previously used, and then enter your credentials.
