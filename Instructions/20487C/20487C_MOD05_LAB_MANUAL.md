@@ -229,7 +229,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Add a reference to the service contract project in the ASP.NET Web API project
 
-1. Open the **[repository root]\AllFiles\20487C\Mod05\LabFiles\begin\BlueYonder.Server\BlueYonder.Companion.sln** solution file in a new Visual Studio 2012 instance, and add the **BlueYonder.BookingService.Contracts** project from the  **[repository root]\Allfiles\20487C\Mod05\Labfiles\begin\BlueYonder.Server\BlueYonder.BookingService.Contracts** folder to the solution.
+1. Open the **[repository root]\AllFiles\20487C\Mod05\LabFiles\begin\BlueYonder.Server\BlueYonder.Companion.sln** solution file in a new Visual Studio 2017 instance, and add the **BlueYonder.BookingService.Contracts** project from the  **[repository root]\Allfiles\20487C\Mod05\Labfiles\begin\BlueYonder.Server\BlueYonder.BookingService.Contracts** folder to the solution.
 
 2. In the **BlueYonder.Companion.Controllers** project, add a reference to the **BlueYonder.BookingService.Contracts** project.
 3. In the **BlueYonder.Companion.Host** project, add a reference to the **BlueYonder.BookingService.Contracts** project.
@@ -302,7 +302,7 @@ The main tasks for this exercise are as follows:
 
 1. Place a breakpoint on the line of code that calls the **CreateReservationOnBackendSystem** method, and start debugging the web application.
 2. Open the **BlueYonder.Companion.Client** solution from the **[repository root]\AllFiles\20487C\Mod05\LabFiles\begin** folder, and run it without debugging.
-3. Search for **New** and purchase a new trip from _Seattle_ to _New York_.
+3. Search for **Paris** and purchase a new trip from _Seattle_ to _Paris_.
 4. Debug the **BlueYonder.Companion** and **BlueYonder.Server** solutions. Verify that the ASP.NET Web API service is able to call the WCF service. Continue running both solutions and verify that the client is showing the new reservation.
 
 >**Results**: After you complete this exercise, you will be able to run the Blue Yonder Companion client application and purchase a trip.
