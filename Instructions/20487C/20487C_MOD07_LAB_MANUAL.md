@@ -287,6 +287,9 @@ We will need to add connections strings for our Azure SQL server, Azure Notifica
     - Key: "NotificationHubConnectionString", value: The connection string for the notification hub you got from the setup phase. 
         > The connection string can also be obtained by going to the **blueyonder07Hub** notification hub from the azure portal -> **MANAGE** -> **Access Policies** -> **DefaultFullSharedAccessSignature** -> **CONNECTION STRINGS** -> **Primary**
 6. Click **Save**
+7. Publish the **BlueYonder.Companion.Host** project.
+8. Open the **BlueYonder.Server** solution and run the **BlueYonder.Server.Booking.WebHost** project.
+Locate the address bar and add /booking.svc to the end of your address.
 
 #### Task 5: Test the Service Bus Queue with flight update messages
 
