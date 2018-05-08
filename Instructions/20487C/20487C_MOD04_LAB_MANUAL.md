@@ -99,7 +99,7 @@ The main tasks for this exercise are as follows:
 
 >**Results**: Your web application will verify that the minimum necessary information is sent by the client before trying to handle it.
 
-### Exercise 4: Securing the Communication between the Client and the Server
+### Exercise 3: Securing the Communication between the Client and the Server
 
 #### Scenario
 
@@ -113,7 +113,7 @@ The main tasks for this exercise are as follows:
 
 2. Test the client application against the secure connection
 
-#### Task 1: Add an HTTPS binding in IIS
+#### Task 1: Add an HTTPS binding in IIS Express
 
 1. In the **BlueYonder.Companion** solution, select the **BlueYonder.Companion.Host** project, and then go to the properties view.
 2. Change **SSL Enabled** from **False** to **True**.
@@ -121,9 +121,9 @@ The main tasks for this exercise are as follows:
 4. You will be prompted to trust the IIS Express SSL certificate. Click **Yes**.
 5. A **Security Warning** window will pop up asking you if you want to install the certificate. Click **Yes**.
 
-#### Task 3: Test the client application against the secure connection
+#### Task 2: Test the client application against the secure connection
 
-1. Return to the **BlueYonder.Companion.Client** solution in the **20487B-SEA-DEV-C** virtual machine.
+1. Return to the **BlueYonder.Companion.Client** solution.
 	
 
    - Open the **Addresses.cs** file from the **BlueYonder.Companion.Shared** project and in the **BaseUri** property, change the URL from using HTTP to HTTPS.
