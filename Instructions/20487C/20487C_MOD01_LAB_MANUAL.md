@@ -30,10 +30,10 @@ The main tasks for this exercise are as follows:
 #### Task 1: Create a new Azure SQL Database server
 
 1. Open a browser and navigate to the Azure portal at **https://portal.azure.com**.
-2. On the left side navigation pane, click the **+ New** button.
+2. On the left side navigation pane, click the **+ Create a resource** button.
 3. In the search box, enter **SQL Server**, then select **SQL Server (logical server)** from the results.
 4. Enter the following values:
-  - Server name: **my-first-azure-sql-database-*YourInitials*** (replace *YourInitials* with your initials, e.g. - John Doe -> jd)
+  - Server name: **blueyonder-*YourInitials*** (replace *YourInitials* with your initials, e.g. - John Doe -> jd)
   - Server admin login: **SQLAdmin**
   - Password: **Pa$$w0rd**
   - Confirm Password: **Pa$$w0rd**
@@ -45,7 +45,7 @@ You can track its progress by hovering over the bell icon on the top bar.
 #### Task 2: Manage the Azure SQL Database server from SQL Server Management Studio
 
 1. Open the SQL server you created in the previous step by clicking on it in the **All Resources** pane on the Azure portal.
-2. Click on **Firewall/Virtual Networks**, then click **Add client IP** and then click **Save**
+2. Click on **Firewall and Virtual Networks**, then click **Add client IP** and then click **Save**
 3. Open Microsoft SQL Server Management Studio 2017 and connect to the new server. Use the server name  **SQLServerName.database.windows.net**, and the sign-in name and the password that you used in the previous task (Replace **SQLServerName** with the server name that you wrote down in the previous task).
 4. In Object Explorer, right-click the **Databases** node, and then click **Import Data Tier Application**.
 5. Import the **BlueYonder.bacpac** file located in the **[Repository root]\AllFiles\20487C\Mod01\LabFiles\Assets** folder.
@@ -70,11 +70,10 @@ The main tasks for this exercise are as follows:
 
 2. Add an ADO.NET Entity Data Model to the project.
 
-    a. Connect to the **SQLServerName.database.windows.net** server with the sign-in name and the password that you used in the previous task (replace **SQLServerName** with the server name you have written down in the previous exercise), and then select the **BlueYonder** database.
-
-    b. Make sure to select the option to include the database password in the connection string.
-    c. Import the **Locations** and **Travelers** tables.
-    d. Save the EDMX file after it opens, and then close it.
+    - Connect to the **SQLServerName.database.windows.net** server with the sign-in name and the password that you used in the previous task (replace **SQLServerName** with the server name you have written down in the previous exercise), and then select the **BlueYonder** database.
+    - Make sure to select the option to include the database password in the connection string.
+    - Import the **Locations** and **Travelers** tables.
+    - Save the EDMX file after it opens, and then close it.
 
    
    >**Results** : After completing this exercise, you should have created Entity Framework wrappers for the **BlueYonder** database.
@@ -105,8 +104,8 @@ The main tasks for this exercise are as follows:
 
 5. Create the new controller by using the **Web API 2 Controller with actions, using Entity Framework** template.
 
-6. Select the **Location** model class.
-7. Select the **BlueYonderEntities** data context class.
+6. Select the **Location**(BlueYonder.Model) model class.
+7. Select the **BlueYonderEntities**(BlueYonder.Model) data context class.
 
    >**Note:** You now have a Web API controller for the Location model.
 
@@ -132,8 +131,8 @@ The main tasks for this exercise are as follows:
 #### Task 1: Create a New Azure Web App
 
 1. Open Azure portal at **https://portal.azure.com**.
-2. On the left side navigation pane, click **+ New** and then click **Web App**.
-3. Name the web app **BlueYonderWebSite_YourInitials_** (Replace **_YourInitials_** with your initials), create a new App Service plan, and then select the region that is closest to your location.
+2. On the left side navigation pane, click **+ Create a resource** and then click **Web App**.
+3. Name the web app **BlueYonderWebSite**_YourInitials_ (Replace _YourInitials_ with your initials), create a new App Service plan, and then select the region that is closest to your location.
 4. Click **Create** and wait until the new web app is ready.
 
 #### Task 2: Deploy the web application to the Azure web app
@@ -142,10 +141,10 @@ The main tasks for this exercise are as follows:
 2. Select **Microsoft Azure App Service** and make sure **Select Existing** is selected.
 3. Click **Publish**.
 4. An **App Service** window will open. If you are logged in to Visual Studio, then your account may appear on the top right. If it doesn't, click **Add an Account** dropdown, then click the **Add an account** item and proceed through the sign in process.
-5. After you've signed in with your Azure account, the subscription field will be populated automatically and the **BlueYonderWebsite_yourInitials_** (replace _yourInitials_ with your initials) folder will appear below the group of fields.
-6. Expand **BlueYonderWebsite_yourInitials_** folder and select the **BlueYonderWebsite_yourInitials_** web app.
+5. After you've signed in with your Azure account, the subscription field will be populated automatically and the **BlueYonderWebsite**_yourInitials_ (replace _yourInitials_ with your initials) folder will appear below the group of fields.
+6. Expand **BlueYonderWebsite**_yourInitials_ folder and select the **BlueYonderWebsite**_yourInitials_ web app.
 7. Click **Ok** and the publishing process will start, it may take a few minutes.
-8. After the publish has finished, open a browser and navigate to **http://blueyonderwebsite_yourInitials_.azurewebsites.net/api/locations**
+8. After the publish has finished, open a browser and navigate to **http://blueyonderwebsite[yourInitials].azurewebsites.net/api/locations**
 4. An XML or JSON describing a list of locations will appear. (On Chrome - XML, Edge and Firefox - JSON)
 
 #### Task 3: Delete the Azure SQL Database Server
