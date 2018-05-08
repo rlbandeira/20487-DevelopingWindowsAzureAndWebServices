@@ -31,7 +31,7 @@ Verify that you received the credentials to sign in to the Azure portal from you
 3. Go to **[repository root]\AllFiles\20487C\Mod08\LabFiles\Setup**
 4. Run the following command:
 ```batch
-ps .\createAzureServices.ps1
+  .\createAzureServices.ps1
 ```
 5. Follow the on-screen instructions.
 
@@ -87,7 +87,9 @@ The main tasks for this exercise are as follows:
 9. Expand the **Deployment Slots** node
 10. Select **Staging**.
 11. Click **Ok**.
-
+12. Open **Visual Studio** as **administrator** and Open the solution **[repository root]\AllFiles\20487C\Mod08\LabFiles\begin\BlueYonder.Server\BlueYonder.Server.sln**.
+13. Run the **BlueYonder.Server.Booking.WebHost** project.
+14. Locate the address bar and add **\/booking.svc** to the end of your address. Then wait until it will finish to load.
    >**Note:** You are performing the same procedure as you did in Task 1 of this exercise, with one difference: you are deploying to the **Staging** environment and not to the **Production** environment.
 
 #### Task 3: Test the client app with the production and staging deployments
