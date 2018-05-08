@@ -84,19 +84,20 @@ The main tasks for this exercise are as follows:
 2. Open the **TraceWriter.cs** file from the **BlueYonder.Companion.Host** project and implement the **Trace** method. Use .NET Diagnostics tracing to write the trace messages.
 
    >**Note:** You can see an example for implementing the **ITraceWriter** interface in lesson 2, &quot;Configuring Service Diagnostics&quot;.
-
-3. In the **BlueYonder.Companion.Host** project, under the **App\_Start** folder, open the **WebApiConfig.cs** file, and add the code to replace the default trace writer service of ASP.NET Web API with a new instance of the **TraceWriter** class.
+   
+3. Build the solution.
+4. In the **BlueYonder.Companion.Host** project, under the **App\_Start** folder, open the **WebApiConfig.cs** file, and add the code to replace the default trace writer service of ASP.NET Web API with a new instance of the **TraceWriter** class.
 
    >**Note:** You can see an example for registering the **TraceWriter** class in lesson 2, &quot;Configuring Service Diagnostics&quot;.
 
-4. In the **BlueYonder.Companion.Controllers** project, open the **ReservationsController.cs** file, locate the **Post** method, and after the call to the **Save** method, add code to trace an information message.
+5. In the **BlueYonder.Companion.Controllers** project, open the **ReservationsController.cs** file, locate the **Post** method, and after the call to the **Save** method, add code to trace an information message.
 
     - Add a using directive for the **System.Web.Http.Tracing**, to get the tracing extension methods
     - Use the **Configuration.Services.GetTraceWriter** method to get an instance of the trace writer.
     - Use the **Info** extension method to write the trace message. Set the category to **ReservationController**, and include the reservation&#39;s confirmation code in the trace message.
 
    >**Note:** You can see an example for tracing messages with the **TraceWriter** class in lesson 2, &quot;Configuring Service Diagnostics&quot;.
-5. Use Visual Studio 2017 to publish the **BlueYonder.Companion.Host** project to the **blueyonder-companion-10-_yourinitials_** app service.
+6. Use Visual Studio 2017 to publish the **BlueYonder.Companion.Host** project to the **blueyonder-companion-10-_yourinitials_** app service.
 
 #### Task 2: Configure Windows Azure Diagnostics for the App Service
 
