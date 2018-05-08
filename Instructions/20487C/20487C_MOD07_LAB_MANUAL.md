@@ -59,7 +59,6 @@ The main tasks for this exercise are as follows:
 
 1. Open the Microsoft Azure portal (**http://portal.azure.com**)
 2. Create a new Azure Service Relay named **BlueYonderLab07Relay-YourInitials** (Replace _YourInitials_ with your initials).
-
     - Select a region closest to your location.
     - Select the newly created Service Bus Relay, click **Shared access policies**, click the **RootManageSharedAccessKey** policy and then copy the primary key to the clipboard.
 
@@ -167,10 +166,9 @@ The main tasks for this exercise are as follows:
 #### Task 1: Send flight update messages to the Service Bus Queue
 
 1. Open the Microsoft Azure portal (**http://portal.azure.com**)
-
-    a. Create a new Service Bus named **BlueYonderLab07ServiceBus-YourInitials** (replace _YourInitials_ with your initials)
-    b. Open the newly created service bus and Click **Shared Access Policies**.
-    c. Click the **RootManageSharedAccessKey** policy and then Copy the value of the **Connection string–Primary key** text box.
+    - Create a new Service Bus named **BlueYonderLab07ServiceBus-YourInitials** (replace _YourInitials_ with your initials)
+    - Open the newly created service bus and Click **Shared Access Policies**.
+    - Click the **RootManageSharedAccessKey** policy and then Copy the value of the **Connection string–Primary key** text box.
 
 2. Return to the **BlueYonder.Companion** solution in Visual Studio 2017, and then add the **Connection string** that you copied in the previous step to the **web.config** file.
 
