@@ -51,6 +51,20 @@ The main tasks for this exercise are as follows:
   - If the **serviceType** parameter is of the type **LocationsController** , create an instance of the **LocationsController** class with the required repository.
 
   >**Note:** The BlueYonderResolver class implements the IDependencyResolver interface.
+  
+#### Task 3: Register the dependency resolver class with HttpConfiguration
+
+1. Open the **WebApiConfig.cs** class in **BlueYonder.Companion.Host** project and add the following code at the beginning of the **Register** method and save the file.
+   ```cs
+        config.DependencyResolver = new BlueYonderResolver();
+	```
+2. Add a breakpoint in the first line of the constructor of **LocationsController.cs** in * **BlueYonder.Companion.Controllers** project.
+3. Run the **BlueYonder.Companion.Host** project.
+4. Append the **Locations** string to the address in the address bar, and then press Enter. The address should be: **http://localhost:9239/Locations**.
+5. Switch back to Visual Studio and make sure the code breaks on the breakpoint.
+6. Move the mouse cursor over the constructor&#39;s parameter and verify it is not null. Then remove the breakpoint and stop the program.
+
+    >**Results**: You will be able to inject data repositories to the controllers instead of creating them explicitly inside the controllers. This will decouple the controllers from the implementation of the repositories.
 
 ### Exercise 2: Applying Validation Rules in the Booking Service
 
