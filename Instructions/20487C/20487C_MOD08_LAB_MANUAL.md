@@ -93,18 +93,18 @@ The main tasks for this exercise are as follows:
 #### Task 3: Test the client app with the production and staging deployments
 
 1. Open the client solution from  **[repository root]\AllFiles\20487C\Mod08\LabFiles\begin\BlueYonder.Companion.Client**.
-
-2. In the **Addresses** class of the **BlueYonder.Companion.Shared** project, set the **BaseUri** property to the name of the Azure App Service that was created during the lab setup (**blueyonder-companion-08-_yourinitials_**).
-3. Run the client app without debugging, purchase a trip from Seattle to New York, and verify that the weather forecast for the current trip is missing the temperature.
+2. Click on the **Build** tab in the top menu, and then click **Build Solution**.
+3. In the **Addresses** class of the **BlueYonder.Companion.Shared** project, set the **BaseUri** property to the name of the Azure App Service that was created during the lab setup (**blueyonder-companion-08-_yourinitials_**).
+4. Run the client app without debugging, purchase a trip from Seattle to New York, and verify that the weather forecast for the current trip is missing the temperature.
 
    - The temperature text should show only the Fahrenheit sign.
    - Close the client app after you verify that the temperature is not shown.
 
-4. In the **Addresses** class, duplicate the **BaseUri** property, and set one of the implementations to the staging deployment URL. Place the second implementation in comment, because you will need it in the next task.
+5. In the **Addresses** class, duplicate the **BaseUri** property, and set one of the implementations to the staging deployment URL. Place the second implementation in comment, because you will need it in the next task.
 
    - In the Azure portal, open the configuration of your app service, and then copy the staging deployment slot URL to the **BaseUri**  property.
 
-5. Run the client app again, verify that the weather forecast appears for the current trip, and then close the client app.
+6. Run the client app again, verify that the weather forecast appears for the current trip, and then close the client app.
 
    >**Note:** The staging and the production deployments share their databases, which is why the current trip, which you created with the production deployment, appears when connect to the staging deployment.
 
