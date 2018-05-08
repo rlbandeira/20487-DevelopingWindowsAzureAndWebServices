@@ -30,9 +30,9 @@ Verify that you received the credentials to sign in to the Azure portal from you
 2. In the **User Account Control** modal, click **Yes**.
 3. Go to **[repository root]\AllFiles\20487C\Mod08\LabFiles\Setup**
 4. Run the following command:
-   ```batch
-   .\createAzureServices.ps1
-   ```
+```batch
+ps .\createAzureServices.ps1
+```
 5. Follow the on-screen instructions.
 
 ### Exercise 1: Deploying an Updated Service to Azure
@@ -95,16 +95,18 @@ The main tasks for this exercise are as follows:
 1. Open the client solution from  **[repository root]\AllFiles\20487C\Mod08\LabFiles\begin\BlueYonder.Companion.Client**.
 2. Click on the **Build** tab in the top menu, and then click **Build Solution**.
 3. In the **Addresses** class of the **BlueYonder.Companion.Shared** project, set the **BaseUri** property to the name of the Azure App Service that was created during the lab setup (**blueyonder-companion-08-_yourinitials_**).
-4. Run the client app without debugging, purchase a trip from Seattle to New York, and verify that the weather forecast for the current trip is missing the temperature.
+4. Locate method **Register**, and then replace the **{NotificationHubConnectionString}** with **DefaultListenSharedAccessSignature** value that you copied earlier.
+5. In **Solution Explorer**, right-click the **BlueYonder.Companion.Client** project, and then click **Set as StartUp Project**.
+6. Run the client app without debugging, purchase a trip from Seattle to Paris, and verify that the weather forecast for the current trip is missing the temperature
 
    - The temperature text should show only the Fahrenheit sign.
    - Close the client app after you verify that the temperature is not shown.
 
-5. In the **Addresses** class, duplicate the **BaseUri** property, and set one of the implementations to the staging deployment URL. Place the second implementation in comment, because you will need it in the next task.
+7. In the **Addresses** class, duplicate the **BaseUri** property, and set one of the implementations to the staging deployment URL. Place the second implementation in comment, because you will need it in the next task.
 
    - In the Azure portal, open the configuration of your app service, and then copy the staging deployment slot URL to the **BaseUri**  property.
 
-6. Run the client app again, verify that the weather forecast appears for the current trip, and then close the client app.
+8. Run the client app again, verify that the weather forecast appears for the current trip, and then close the client app.
 
    >**Note:** The staging and the production deployments share their databases, which is why the current trip, which you created with the production deployment, appears when connect to the staging deployment.
 
@@ -137,7 +139,7 @@ The main tasks for this exercise are as follows:
 
 ### Task 1: Deploy the Booking and FrequentFlyer web applications to IIS.
 
-1. Open the solution **[repository root]\AllFiles\20487C\Mod08\LabFiles\begin\BlueYonder.Server\BlueYonder.Server.sln** as an Administrator.
+1. Go back to the **BlueYonder.server** instance.
 2. Publish the **BlueYonder.Server.Booking.WebHost** to IIS with the following values:
     - Server: **localhost**
     - Site name: **Default Web Site/BlueYonder.Server.Booking.WebHost**
@@ -158,10 +160,12 @@ The main tasks for this exercise are as follows:
 1. Open **IIS Manager** and remove the **BlueYonder.Server.Booking.WebHost** and **BlueYonder.Server.FrequentFlyer.WebHost** applications.
 
 2. Import the package from **[Path to your user folder]\Downloads\backup.zip**.
-
-3. Close IIS Manager, open the Azure portal(http://portal.azure.com), and verify that there is a listener for the  **booking** relay.
-4. In the Azure portal, locate the Service Bus Relay you wrote down at the beginning of this lab
-5. Open the Service Bus Relay configuration, click the **Relays** tab, and verify that there is a listener for the **booking** relay.
+3. Go to your **IIS server** by writing the following line in the address bar: 
+**http://localhost/BlueYonder.Server.Booking.WebHost**
+4. Locate the address bar and add **/booking.svc** to the end of your address. Then wait until it will finish to load.
+5. Close IIS Manager, open the Azure portal(http://portal.azure.com), and verify that there is a listener for the  **booking** relay.
+6. In the Azure portal, locate the Service Bus Relay you wrote down at the beginning of this lab
+7. Open the Service Bus Relay configuration, click the **Relays** tab, and verify that there is a listener for the **booking** relay.
 
    >**Results**: After a "system failure", you've restored the Booking and FrequentFlyer services by redeploying using a backup package, thus they are back online.
 
