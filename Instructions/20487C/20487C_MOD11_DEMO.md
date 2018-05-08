@@ -36,14 +36,14 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
 21.	Click **Web**, and then select the **ASP.NET Web Application (.NET Framework)** template.
 22.	In the **Name** text box, enter **ClaimsExampleApp**.
 23.	Click **OK**.
-24.	In the **New ASP.NET Web Application** modal, select the **MVC** template.
+24.	In the **New ASP.NET Web Application - ClaimsExampleApp** modal, select the **MVC** template.
 25.	Click **Change Authentication**.
 26.	In the **Change Authentication** dialog box, select **Work or School accounts**.
 27.	Expand **More Options**.
 28.	Select the **Overwrite the application entry if one with the same ID exists** check box.
 29.	In the **Client ID** text box, paste the value you copied in step 16.
 30.	Click **OK**.
-31.	In the **New ASP.NET Web Application** modal, click **OK**.
+31.	In the **New ASP.NET Web Application - ClaimsExampleApp** modal, click **OK**.
 32.	In **Solution Explorer**, expand the **App_Start** folder, and then open the **Startup.Auth.cs** file.
 33.	Add the following **using** directives:
    ```cs
@@ -253,12 +253,12 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
    >**Note:** During the sign-in process, if a page appears prompting you to choose from a list of previously used accounts, select the account you previously used, and then enter your credentials.
 
 4. On the navigation menu on the left, click **Create a resource**, search for **Azure Active Directory B2C**, and then click **Create**.
-5. In **Create new B2C Tenant to existing Tenant**, select **Create a new Azure AD B2C Tenant**, and then provide the following information:
+5. In **Create new B2C Tenant or Link to existing Tenant**, select **Create a new Azure AD B2C Tenant**, and then provide the following information:
     - In the **Organization name** text box, type **B2CMod11**.
     - In the **Initial domain name** text box, type **b2cmod11**YourInitials (Replace *YourInitials* with your initials).
     - In the **Country or region** list box, select your country.
 6. Click **Create**.
-7. In **Create new B2C Tenant to existing Tenant**, select **Link an existing Azure AD B2C Tenant to my Azure subscription**, and then provide the following information:
+7. In **Create new B2C Tenant or Link to existing Tenant**, select **Link an existing Azure AD B2C Tenant to my Azure subscription**, and then provide the following information:
     - In the **Azure AD B2C Tenant** list box, select **b2cmod11[YourInitials].onmicrosoft.com** (Replace *YourInitials* with your initials).
     - In the **Resource group** list box, select **Create new**, and then type **B2C**.
 8. Click **Create**, and then wait until the resource is created.
@@ -283,7 +283,7 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
 17. On the **Azure AD B2C** blade, under the **Manage** section, click **Applications**.
 18. Click **B2CApp**, and copy the value from **Application ID** for the next steps.
 19. On the **B2C App - Properties** blade, under the **API ACCESS** section, click **API access**.
-20. Click **Add**, in **Select Scopes**, select **user_impersonation**, and then click **Save**. 
+20. Click **Add**, in **Select Scopes**, select **user_impersonation**, and then click **Ok**. 
 21. Open **Visual Studio 2017**.
 22. On the **File** menu, point to **Open**, and then click **Project/Solution**.
 23. Go to **[repository root]\Allfiles\20487C\Mod11\DemoFiles\ClientAppUsingB2C**.
@@ -347,7 +347,7 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
    >**Note:** During the sign-in process, if a page appears prompting you to choose from a list of previously used accounts, select the account you previously used, and then enter your credentials.
 
 14. On the top bar, click your user information, the menu will open, and under **DIRECTORY** select **B2CMod11**.
-    >**Note :**If you don't see **B2CMod11**, refresh the page.
+    >**Note :** Click All Resources and then click Switch Directories and then retry the step.
 15. On the top search bar, type **Azure AD B2C** and press **Enter**.
 16. On the **Azure AD B2C** blade, under the **Manage** section, click **Identity providers**.
 17. Click  **Add** and provide the following information:
