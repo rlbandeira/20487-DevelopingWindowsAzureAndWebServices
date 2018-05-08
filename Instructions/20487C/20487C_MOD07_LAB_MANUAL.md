@@ -74,7 +74,7 @@ The main tasks for this exercise are as follows:
 
     - Open the **Web.config** file
     - Locate the endpoint of the service named **BookingTcp**, and then change its **binding** attribute to **netTcpRelayBinding**.
-    - Add an address attribute with the following value: **sb://BlueYonderServerLab07Relay-YourInitials.servicebus.windows.net/booking** (Replace _YourInitials_ with your initials).
+    - Add an address attribute with the following value: **sb://BlueYonderLab07Relay-YourInitials.servicebus.windows.net/booking** (Replace _YourInitials_ with your initials).
 
 4. Add a new endpoint behavior named **sbTokenProvider** to the endpoint behaviors configuration.
 
