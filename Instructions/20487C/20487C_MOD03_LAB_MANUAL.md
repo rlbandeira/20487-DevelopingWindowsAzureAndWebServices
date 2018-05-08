@@ -115,7 +115,7 @@ The main tasks for this exercise are as follows:
 3. Insert a breakpoint at the beginning of the **GetTravelerAsync** method.
 4. Review the **CreateTravelerAsync** method. The method sets the **ContentType** header to request a JSON response. The method then uses the **PostAsync** method to send a POST request to the server.
 5. Insert a breakpoint at the beginning of the **CreateTravelerAsync** method.
-6. Review the **UpdateTravelerAsync** method. The method uses the **client.PutAsync** method to send a PUT request to the server.
+6. Review the **UpdateTravelerAsync** method. The method uses the **PutAsync** method to send a PUT request to the server.
 7. Insert a breakpoint at the beginning of the **UpdateTravelerAsync** method.
 
 #### Task 2: Debug the Client App
