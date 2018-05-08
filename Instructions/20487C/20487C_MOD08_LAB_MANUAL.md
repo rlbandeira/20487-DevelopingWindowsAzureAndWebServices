@@ -81,7 +81,7 @@ The main tasks for this exercise are as follows:
 3. Go to **Deployment slots** and add a **Staging** slot.
 4. In **Visual Studio 2017**, open the publish page for the **BlueYonder.Companion.Host** project
 5. Publish the **BlueYonder.Companion.Host** project to the app service you just created:
-6. In the publish page select **Azure App Service** and select "**Select Existing**"
+6. In the publish page select **App Service** and select "**Select Existing**"
 7. In the **App Service** modal, expand the **BlueYonder.Lab.08** node
 8. Expand **blueyonder-companion-08-_yourinitials_** node
 9. Expand the **Deployment Slots** node
