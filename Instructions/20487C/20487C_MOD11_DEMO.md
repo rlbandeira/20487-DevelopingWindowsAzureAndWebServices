@@ -288,6 +288,9 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
 22. On the **File** menu, point to **Open**, and then click **Project/Solution**.
 23. Go to **[repository root]\Allfiles\20487C\Mod11\DemoFiles\ClientAppUsingB2C**.
 24. Select the **ClientAppUsingB2C.sln** file, and then click **Open**.
+
+	>**Note :** If a security warning dialog appears click Ok and then if a dialog shows that project target framework is not installed - click **Change the target to..** option.
+	
 25. If you are prompted by a **Developers License** dialog box, click **I Agree**. If you are prompted by a **User Account Control**  dialog box, click **Yes**. In the **Windows Security** dialog box, enter your email address and a password, and then click **Sign in**. In the **Developers License** dialog box, click **Close**.
 26. In **Solution Explorer**, under the **ClientAppUsingB2C.Server** project, double-click **Web.config**.
 27. Replace the following information: 
