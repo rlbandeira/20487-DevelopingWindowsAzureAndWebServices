@@ -107,7 +107,7 @@ The main tasks for this exercise are as follows:
 
    a. Remove the **return null** line of code.  
    b. Build the relative URI using the string format **&quot;{0}travelers/{1}&quot;**. Replace the {0} placeholder with the **BaseUri** property and the {1} placeholder with the **hardwareId** variable.  
-   c. Call the **client.GetAsync** method with the relative address you constructed. Use the **await** keyword to call the method asynchronously. Store the response in a variable called **response**.  
+   c. Call the **GetAsync** method with the relative address you constructed. Use the **await** keyword to call the method asynchronously. Store the response in a variable called **response**.  
    d. Check the value of the **response.IsSuccessStatusCode** property. If the value is **false** , return **null**.  
    e If the value of the **response.IsSuccessStatusCode** property is **true** , read the response into a string by using the  **response.Content.ReadAsStringAsync** method. Use the **await** keyword to call the method asynchronously.  
    f. Use the **JsonConvert.DeserializeObjectAsync** static method to convert the JSON string to a **Traveler** object. Call the method using the **await** keyword and return the deserialized traveler object.
