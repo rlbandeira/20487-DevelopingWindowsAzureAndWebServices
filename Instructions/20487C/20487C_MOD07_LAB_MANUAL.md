@@ -180,9 +180,9 @@ The main tasks for this exercise are as follows:
 
 3. Open the **ServiceBusQueueHelper** class located in the **BlueYonder.Companion.Controllers** project, and then implement the **ConnectToQueue** method.
 
-    a. Create a Service Bus namespace manager object by using the connection string of the Service Bus.
-    b. Use the **ConfigurationManager.AppSettings** to retrieve the connection string.
-    c. To create the namespace manager object, use the **CreateFromConnectionString** method of the **NamespaceManager** class.    
+    a. Use the **ConfigurationManager.AppSettings** to retrieve the connection string.
+    b. To create the namespace manager object, use the **CreateFromConnectionString** method of the **NamespaceManager** class.    
+    c. Create a Service Bus namespace manager object by using the connection string of the Service Bus.
     d. Check if the Queue exists and create it by using the **CreateQueue** API if necessary.    
     e. Return a new **QueueClient** object for the queue by using the **CreateFromConnectionString** method of the **QueueClient** class.
 
