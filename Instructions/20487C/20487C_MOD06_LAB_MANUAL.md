@@ -108,6 +108,10 @@ The main tasks for this exercise are as follows:
   >**Note:** IIS uses the address of the web application to create the service metadata address and the service endpoint address.
 
 5. In the **BlueYonder.Server.Booking.WebHost** project&#39;s properties, on the **Web** tab, change the server from IIS Express to the local IIS Web server, and then build the solution.
+6. Open **Microsoft SQL Server Management Studio** and connect to **.\SQLEXPRESS** (Server name) using **Windows Authentication**.
+7. Expand the **Security** tab in the left menu and then expand the **Logins** tab.
+8. Right-Click on **BUILTIN\Users** and click **Properties**.
+9. In the left menu select **Server Roles** and check the **dbcreator** and **sysadmin** options and then click **Ok**.
 
 #### Task 3: Configure the web applications to support NET.TCP
 
