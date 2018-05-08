@@ -67,7 +67,7 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
 37.	To debug the application, press F5.
 		The browser opens a page with the address starting with **https://login.microsoftonline.com**. The page has two buttons, **Accept** and **Cancel**.
 38.	Click **Accept**. The application stops.
-39.	Inspect the **context** object, expand **AuthenticationTicket**, and then inspect the **Identity** member.
+39.	In **Locals** tab in bottom left, inspect the **context** object, expand **AuthenticationTicket**, and then inspect the **Identity** member.
 40.	To see the list of claims, expand **Identity**, expand **Claims**, and then expand **Results View**.
 41.	Review the list of claims and note some familiar claims, such as your name and the email address that you used to sign up to Microsoft Azure.
     >**Note**: The list of claims you saw in step 39 is provided by Microsoft Azure. In the next lesson you will be introduced to Azure Active Directory, the identity provider used in this demonstration. 
