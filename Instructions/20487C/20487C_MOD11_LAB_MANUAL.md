@@ -74,7 +74,7 @@ In this exercise, you will configure the BlueYonder Companion Web API and UWP ap
 
 #### Task 1:  Integrating the BlueYonder server
 
-1. From the **[repository root]\AllFiles\20487C\Mod11\LabFiles\begin\BlueYonder.Companion.Client** folder, open the **BlueYonder.Client.sln** solution.
+1. From the **[repository root]\AllFiles\20487C\Mod11\LabFiles\begin\BlueYonder.Companion** folder, open the **BlueYonder.Companion.sln** solution.
 2. From the **BlueYonder.Companion.Host** project, open the **Web.config** file, and add the following code in **\<appSettings\>**:
    ```xml
         <add key="ida:ClientId" value="[Application id]" />  
