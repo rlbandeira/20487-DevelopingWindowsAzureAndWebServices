@@ -206,7 +206,7 @@ The service cannot be tested unless the service behavior has the **serviceMetada
 17. To start the service host without debugging, press Ctrl+F5.  
 18. Wait for the service host console to display the **Service Hosted Successfully!** message.  
 19. Return to Visual Studio 2017. In **Solution Explorer**, right-click the **ServiceClient** project, and then click **Set as StartUp Project**.  
-20. To start the client without debugging, press Ctrl+F5.  
+20. To start the client without debugging, press Ctrl+F5 (If a security warning appears click **Allow Access**).
 21. Wait until the console application starts and displays the **Booking response: Approved, booking reference: AR3254** message.  
 22. Close both console applications and Visual Studio 2017.  
 
