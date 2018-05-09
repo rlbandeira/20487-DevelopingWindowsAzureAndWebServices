@@ -28,7 +28,7 @@ Estimated setup time: 60 minutes.
 2. Go to **[repository root]\AllFiles\20487C\Mod11\Setup**.
 3. Run the following command:
    ```batch
-   ps createAzureServices.ps1
+    .\createAzureServices.ps1
    ```
 4. Follow the on-screen instructions.
 
