@@ -225,7 +225,7 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
     - In the **Name** text box, type **AzureADWebApp**.
     - In the **Sign-on URL** text box, enter the value from **SSL Url** from the previous task.
     - Click **Create**.
-38. If necessary, Click **View All Applications** and then copy the **Application ID** value from newly created App registration.
+38. If necessary, Click **View All Applications** and then copy the **Application ID** value from newly created App registration.go back to Visual Studio and in the **Web.config** file, replace the value in the **ClientId** app setting with the copied value.
 39. On the left side of the portal, click **Azure Active Directory**, then click **Custom domain names**, and copy the **NAME**.
 40. Go back to Visual Studio, in the **web.config** file, replace the value in **Domain** with the copied value.
 41. On the left side of the portal, click **Azure Active Directory**, click **Properties**, and then copy the value from **Directory ID**.
