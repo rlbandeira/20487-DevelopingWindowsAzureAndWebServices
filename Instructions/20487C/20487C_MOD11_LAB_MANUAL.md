@@ -118,7 +118,7 @@ In this exercise, you will configure the BlueYonder Companion Web API and UWP ap
    ```
 #### Task 2: Integrating the BlueYonder native client
 
-1. From the **D:\AllFiles\Mod11\LabFiles\begin\BlueYonder.Companion.Client** folder, open the **BlueYonder.Server.sln** solution.
+1. Open the **[repository root]\AllFiles\20487C\Mod11\LabFiles\begin\BlueYonder.Companion.Client\BlueYonder.Companion.Client.sln** solution.
 2. In the **BlueYonder.Companion.Client** project, open **App.xaml.cs** , and then locate the **// TODO: Lab 11, Exercise 2: Task 2.2: Configure Azure B2C sttings.** comment. 
 
      - Replace the properties' values within the square brackets under the comment with details from the Azure portal.
