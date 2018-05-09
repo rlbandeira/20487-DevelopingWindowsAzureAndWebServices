@@ -205,14 +205,17 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Upload public and private files to Azure Storage
 
-1. Open the **BlueYonder.Companion.Client.sln** solution from **[repoistory root]\AllFiles\20487C\Mod09\LabFiles\begin\BlueYonder.Companion.Client\** in a new Visual Studio 2017 instance.
-3. In the **Addresses** class of the **BlueYonder.Companion.Shared** project, set the **BaseUri** property to the Azure Web App name you wrote down at the beginning of this lab.
-4. Run the client app, search for **New** , and purchase a flight from **Paris** to **Seattle** _._
-5. Select the current trip from **Paris** to **Seattle** , and then select **Media** on the app bar.
-6. On the **Media** page, use the app bar to add the **StatueOfLiberty.jpg** file from the **[repository root]\Allfiles\20487C\Mod09\LabFiles\Assets** folder. Use the app bar to upload the file to the public storage.
-7. On the **Media** page, use the app bar to add the **EmpireStateBuilding.jpg** file from the **[repository root]\Allfiles\20487C\Mod09\LabFiles\Assets** Use the app bar to upload the file to the private storage.
-8. Return to the **Current Trip** page and then go to the **Media** page again. Wait for a few seconds until the photos are downloaded from Azure storage, and verify that both the private and public photos appear.
-9. Return to the **Blue Yonder Companion** page (the main page). Under **Seattle at a Glance** , verify that the photo of the Statue of Liberty, which you uploaded to the public container, appears.
+1. Open the **BlueYonder.Server.sln** solution from **[repoistory root]\AllFiles\20487C\Mod09\LabFiles\begin\BlueYonder.Server** and run the **BlueYonder.Server.WebHost** project.
+2. Add **\booking.svc** to the end of the address in the address bar and press **Enter**.
+
+3. Open the **BlueYonder.Companion.Client.sln** solution from **[repoistory root]\AllFiles\20487C\Mod09\LabFiles\begin\BlueYonder.Companion.Client** in a new Visual Studio 2017 instance.
+4. In the **Addresses** class of the **BlueYonder.Companion.Shared** project, set the **BaseUri** property to the Azure Web App name you wrote down at the beginning of this lab.
+5. Run the client app, search for **New** , and purchase a flight from **Paris** to **Seattle** _._
+6. Select the current trip from **Paris** to **Seattle** , and then select **Media** on the app bar.
+7. On the **Media** page, use the app bar to add the **StatueOfLiberty.jpg** file from the **[repository root]\Allfiles\20487C\Mod09\LabFiles\Assets** folder. Use the app bar to upload the file to the public storage.
+8. On the **Media** page, use the app bar to add the **EmpireStateBuilding.jpg** file from the **[repository root]\Allfiles\20487C\Mod09\LabFiles\Assets** Use the app bar to upload the file to the private storage.
+9. Return to the **Current Trip** page and then go to the **Media** page again. Wait for a few seconds until the photos are downloaded from Azure storage, and verify that both the private and public photos appear.
+10. Return to the **Blue Yonder Companion** page (the main page). Under **Seattle at a Glance** , verify that the photo of the Statue of Liberty, which you uploaded to the public container, appears.
 
 #### Task 3: View the content of the blob containers and the table
 
