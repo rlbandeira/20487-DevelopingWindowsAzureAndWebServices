@@ -58,7 +58,7 @@ The main tasks for this exercise are as follows:
    ```cs
         config.DependencyResolver = new BlueYonderResolver();
 	```
-2. Add a breakpoint in the first line of the constructor of **LocationsController.cs** in * **BlueYonder.Companion.Controllers** project.
+2. Add a breakpoint in the first line of the constructor of **LocationsController.cs** in **BlueYonder.Companion.Controllers** project.
 3. Run the **BlueYonder.Companion.Host** project.
 4. Append the **Locations** string to the address in the address bar, and then press Enter. The address should be: **http://localhost:9239/Locations**.
 5. Switch back to Visual Studio and make sure the code breaks on the breakpoint.
