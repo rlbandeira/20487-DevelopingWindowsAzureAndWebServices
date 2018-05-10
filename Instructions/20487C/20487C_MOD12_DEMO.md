@@ -37,6 +37,7 @@ Before you begin this demo, you must complete the following steps:
   - To define the number of instances for the web app, select **Scale out** (App Service plan), and in the **Configure** tab, set  **Instance count** to **2** ant then **Click Save**.  
   - To download the profile of the web app to your computer, click **Overview**, and then click the **Get publish profile** tab and then click **Save**.
   > **Note:** You will need this profile later to publish the project to the web app.
+8. Close all open windows.
 
 ### Demonstration: Using Microsoft Azure Redis Cache
 
@@ -80,6 +81,7 @@ Before you begin this demo, you must complete the following steps:
  8. In the **Publish**, from the listed targets, click the **Create new** profile, select the **Import** profile, and then click **Publish**. This will open **File Explorer**. Go to the folder where you saved the **Publish** profile and open it.
  9. Click the **Publish** option and wait for the web application to be deployed. When deployment is complete your web app should open in the browser.
  > **Note:** To enter the Azure portal, from the menu on the left side, select **App Services**, and then select **ScalableAzureApp**. To find the **URL** of the **ScalableAzureApp** web app, in the **ScalableAzureApp** pane, you can select **Overview**. To view or edit the scale of **ScalableAzureApp**, in the **ScalableAzureApp**pane, select the **Scale out** app service plan.   
+10. Close all open windows.
  
  ©2018 Microsoft Corporation. All rights reserved.
 
