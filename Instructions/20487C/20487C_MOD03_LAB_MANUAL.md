@@ -85,7 +85,7 @@ The main tasks for this exercise are as follows:
   - If the traveler exists, call the **Delete** and then the **Save** methods of the **Travelers** repository, and then use the  **Request.CreateResponse** method, to return an HTTP response message with the **HttpStatusCode.OK** status.
   
 
-  >**Results** : After completing this exercise, you should have run the project from Visual Studio 2012 and access the travelers&#39; service.
+  >**Results** : After completing this exercise, you should have run the project from Visual Studio 2017 and access the travelers&#39; service.
 
 ### Exercise 2: Consuming an ASP.NET Web API Service
 
@@ -165,7 +165,7 @@ The main tasks for this exercise are as follows:
 
 >**Results** : After completing this exercise, you should have run the BlueYonder Companion client application and created a traveler when purchasing a trip. You also should have retrieved an existing traveler and updated its details.
 
-©2017 Microsoft Corporation. All rights reserved.
+©2018 Microsoft Corporation. All rights reserved.
 
 The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
 
