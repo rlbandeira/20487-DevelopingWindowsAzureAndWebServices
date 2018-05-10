@@ -210,7 +210,7 @@
 
 1. Open **Visual Studio 2017**.
 2. On the **File** menu, point to **Open**, and then click **Project/Solution**.
-3. Browse to **[repository root]\AllFiles\20487C\Allfiles\Mod04\DemoFiles\ImagesWithMediaTypeFormatter**.
+3. Browse to **[repository root]\AllFiles\20487C\Mod04\DemoFiles\ImagesWithMediaTypeFormatter**.
 4. Select the **ImagesWithMediaTypeFormatter.sln** file, and then click **Open**.
 5. In **Solution Explorer**, expand the **ImagesWithMediaTypeFormatter.Host** project, then expand the **Controllers** folder, and then double-click **ValuesController.cs**.
 6. Review the contents of the **ValuesController** class. The controller handles **Value** objects.
