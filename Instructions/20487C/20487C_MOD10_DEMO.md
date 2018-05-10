@@ -38,6 +38,7 @@ Wherever  you see a path to a file that starts with *[repository root]*, replace
 28. Click the **Message** tab.
 29. Show the message content.
 30. Close the Microsoft Service Trace Viewer window.
+31. Close all open windows.
 
 # Lesson 3: Monitoring Services Using Windows Azure Diagnostics
 
@@ -98,6 +99,7 @@ Wherever  you see a path to a file that starts with *[repository root]*, replace
 48. In the **Blob properties** blade, click **Download**.
 49. Open the downloaded file in Excel or notepad.
 50. One of the rows with level **Verbose** should have your message listed in the **message** column.
+51. Close all open windows.
 
 # Lesson 4: Collecting Windows Azure Metrics
 
@@ -143,6 +145,7 @@ Wherever  you see a path to a file that starts with *[repository root]*, replace
 24. Go back to the Azure portal and wait for the graph to update. 
 25. Verify that the number of **Http 2xx** has increased.
     > Note: It can take a minute or two for the graph to show the new requests
+26. Close all open windows.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
