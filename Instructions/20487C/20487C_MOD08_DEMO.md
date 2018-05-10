@@ -27,7 +27,7 @@ To activate IIS on Windows 10, perform the following steps:
 6. Clear the **Create directory for solution** check box, and then click **OK**.
 7. In the **New ASP.NET Web Application - MyApp** dialog box, select **Web API**, and then click **OK**.
 8. In **Solution Explorer**, right-click the **MyApp** project, and then click **Publish**.
-9. On the **Publish** page, select **IIS, FTP, etc**, and then click **Publish**.
+9. On the **Pick a publish target** page, select **IIS, FTP, etc**, and then click **Publish**.
 10. In the **Publish** dialog box, verify that the selected publish method is **Web Deploy**, and set the rest of the fields by using the following values:
     - Server: **localhost**
     - Site Name: **Default Web Site/MyApp**
