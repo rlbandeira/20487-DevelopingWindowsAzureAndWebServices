@@ -100,7 +100,7 @@ Click **Ok**, Windows proceeds to install the required components; when it is do
         Now **Visual Studio 2017** can display the list of Web Apps and Cloud Services to which you can deploy applications.
 
 20.	In Visual Studio, in **Solution Explorer**, right-click **MyWebSite** project, and then click **Publish**.
-21.	In the **Publish Web** dialog box, choose **App Services**, in the **Microsoft Azure App Service** view, select the **Select Existing** option, and then click **Publish**.
+21.	In the **Pick a publish target** dialog box, choose **App Services**, in the **Microsoft Azure App Service** view, select the **Select Existing** option, and then click **Publish**.
 22.	In the **App Service** dialog box, expand **BlueYonder.Demo.06** folder, select **wawsdemoYourInitial**, and then click **OK**.
 23. Click **Publish**. Visual Studio publishes the application according to the settings that are provided in the profile file. After deployment finishes, Visual Studio opens Internet Explorer and displays the web app. The deployment process is quick, because the process only copies the content of the application to an existing virtual machine and does not need to wait for a new virtual machine to be created.
 24. Close all open windows.
