@@ -133,6 +133,9 @@ To verify that the installation worked, follow the first set of instructions abo
   ```cs
 		New-WDPublishSettings -ComputerName 127.0.0.1 -AgentType MSDepSvc -FileName "C:\[path to downloads folder]\Server.publishsettings"
 ```
+
+   >**Note** :**path to downloads folder** variable should be replaced with your downloads folder path.
+	
 5. To synchronize the web application to the remote server, type the following command, and then press Enter.
 
   ```cs
