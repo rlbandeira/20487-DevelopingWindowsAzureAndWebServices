@@ -71,6 +71,7 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
 41.	To see the list of claims, expand **Identity**, expand **Claims**, and then expand **Results View**.
 42.	Review the list of claims and note some familiar claims, such as your name and the email address that you used to sign up to Microsoft Azure.
     >**Note**: The list of claims you saw in step 39 is provided by Microsoft Azure. In the next lesson you will be introduced to Azure Active Directory, the identity provider used in this demonstration. 
+43. Close all open windows.
 
 # Lesson 2: Introduction to Azure Active Directory
 
@@ -106,7 +107,8 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
     - In the **Membership type** list box, select **Assigned**.
     - Click **Members**, select the guest user, and then click **Select**.
     - Click **Create**.
-14. Open **Groups**, see that the **Group** is created.      
+14. Open **Groups**, see that the **Group** is created.
+15. Close all open windows.
 
 
 ### Demonstration: Using Azure AD to secure ASP.NET Web Applications.
@@ -234,7 +236,8 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
 44. To run the application, press F5.
  > **Note :** If AzureADWebApp dialog appears, click Accept.
 45. Login with user name and password.
-46. After the site loads, click **Contact**, and your name appears.   
+46. After the site loads, click **Contact**, and your name appears.
+47. Close all open windows.
 
 # Lesson 3: Azure Active Directory B2C
 
@@ -323,6 +326,7 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
 42. Go back to **Azure protal**.
 43. On the **Azure AD B2C** blade, under the **MANAGE** section, click **Users**.
 44. Your display name appears in the **All users** list.
+45. Close all open windows.
 
 ### Demonstration: Configuring social logins using Azure AD B2C
 
@@ -388,4 +392,5 @@ Wherever you see a path to file starting with **[repository root]**, replace it 
 39. Go back to the Azure portal.
 40. On the **Azure AD B2C** blade, under the **MANAGE** section, click **Users**.
 41. Your display name appears in the **All users** list.
+42. Close all open windows.
 
