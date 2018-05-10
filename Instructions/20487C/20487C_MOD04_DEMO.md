@@ -138,6 +138,7 @@
 39. Review the lines in the **Call Stack** that display the calls to **HttpControllerHandler**, **HttpServer**, and  **DelegatingHandler**.
 40. To continue debugging, press F5. When the debugger breaks inside **TraceFilterAttribute**, review the lines executed by the **ApiController** class.
 41. To stop the debugger, press Shift+F5.
+42. Close all open windows.
 
 ### Demonstration 2: Creating Asynchronous Actions
 
@@ -200,7 +201,7 @@
 19. Click **OK**.
 20. To start both the projects without debugging, press Ctrl+F5.
 21. In the browser, notice the XML containing the list of countries.
-22. Close the browser.
+22. Close all open windows.
 
 ### Demonstration 3: Returning Images by Using Media Type Formatters
 
@@ -248,6 +249,7 @@
 39. Click the **Body** tab and review the image with the number two.
 40. Click **Clear session**.
 41. To close the developer tools window, press **F12**.
+42. Close all open windows.
 
 
 # Lesson 2: Implementing Security in ASP.NET Web API Services
@@ -294,7 +296,7 @@
     * Password: **Admin**
 
 19. Click **OK**. Verify that you can see an XML reply with the response of the action.
-20. Close the browser.
+20. Close all open windows.
 
 # Lesson 3: Injecting Dependencies into Controllers
 
@@ -316,7 +318,7 @@
 11. Review the **Register** method. The dependency resolver that will be used by ASP.NET Web API is the one that is set in the **config.DependencyResolver** property.
 12. To start the project without debugging, press Ctrl+F5.
 13. To call the **Get** action of the **CoursesController** class, in the browser window, append the **api/courses** relative address to the address bar, and then press Enter.
-14. Close the browser and all open windows.
+14. Close all open windows.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
