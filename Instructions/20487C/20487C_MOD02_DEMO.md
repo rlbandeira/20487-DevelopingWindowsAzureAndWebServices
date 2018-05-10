@@ -94,6 +94,7 @@
 
 40. Expand the **dbo.Products** and **dbo.Stores** tables, and then expand the **Columns** node in each of them to see that both tables have **Id** and **Name** columns, similar to their corresponding class properties.
 41. Close **Microsoft SQL Server Management Studio 17**.
+42. Close all open windows.
 
 
 
@@ -156,6 +157,7 @@
      >1. IntelliTrace is available on Visual Studio 2017 Enterprise edition. 
 
 15. To stop the debugger, press Shift+F5.
+16. Close all open windows.
 
 ### Demonstration 2: Running Stored Procedures with Entity Framework
 
@@ -170,6 +172,7 @@
 7. Review the query that is being assigned to the **averageGradeInCourse** variable and notice that the average grade of the WCF course is calculated, and then printed to the console.
 8. The **ExecuteSqlCommand** statement calls the **spUpdateGrades** stored procedure with two parameters, **CourseName** and **GradeChange**.
 9. To run the console application, press Ctrl+F5. Notice that the updated average grade is printed to the console before and after the change.
+10. Close all open windows.
 
 
 # Lesson 4: Manipulating Data
