@@ -86,7 +86,7 @@
 ```
 45. In the **Write** method, locate the call to the **ChannelFactory** constructor.
 46. In the constructor call, change the binding from **NetTcpBinding** to **NetTcpRelayBinding**.
-47. In the constructor call, change the endpoint address from **net.tcp://127.0.0.1:747/console** to **sb://ServiceBusDemo07***YourInitials***.servicebus.windows.net/console** (Replace *YourInitials* with your initials).
+47. In the constructor call, change the endpoint address from **net.tcp://127.0.0.1:747/console** to **sb://ServiceBusDemo07*YourInitials*.servicebus.windows.net/console** (Replace *YourInitials* with your initials).
 48. Before calling the **factory.CreateChannel** method, add the following code.
 
   ```cs
