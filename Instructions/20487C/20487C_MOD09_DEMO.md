@@ -27,6 +27,7 @@ Wherever  you see a path to a file starting with *[repository root]*, replace it
 8. Click the storage account you just created, click **Properties**, and then review the different URLs for the blob, table, and queue resources.
 9. Click **Access keys** in the left menu.
 10. Review the two access keys and the option to regenerate them.
+11. Close all open windows.
 
     >**Note**: You need the access keys to access the storage account. The secondary key is required to renew the primary key; for example, if the primary key is compromised.
 
@@ -83,6 +84,7 @@ Wherever  you see a path to a file starting with *[repository root]*, replace it
 32. In **Server Explorer**, expand **Azure**, and then expand **Storage**, right-click **Development**, and then click **Refresh**.
 33. In **Server Explorer**, expand **Development**, then expand **Blobs**, and then double-click the **files** node.
 34. Review the list of blobs in the **files [Container]** window. These are the same blobs that were displayed in the browser.
+35. Close all open windows.
 
 # Lesson 3: Microsoft Azure Table Storage
 
@@ -178,6 +180,7 @@ Locate the Add method, and then add the following code before calling the GetTab
 52. Click **Add**, and then wait for the table to display the three countries.
 53. Return to Visual Studio 2017, and in **Server Explorer**, double-click the **Countries** node.
 54. Click the **Refresh** icon. The **Population** column should appear in the table.
+55. Close all open windows.
 
 
 # Lesson 4: Microsoft Azure Queue Storage
@@ -240,6 +243,7 @@ Locate the Add method, and then add the following code before calling the GetTab
 35. Place both the **Sender** and **Receiver** console windows next to each other.
 36. View the contents of both the windows. Each message that is sent to the queue is retrieved from the queue.
 37. Close the **Sender** console window. Wait for the **Receiver** application to finish handling the queued messages, and then close the **Receiver** console window.
+38. Close all open windows.
 
 
 # Lesson 5: Restricting Access to Microsoft Azure Storage
@@ -273,7 +277,7 @@ Locate the Add method, and then add the following code before calling the GetTab
 16. Return to the **Home Page – Shared Access Signature** tab, and wait until the time next to the **Will work until** link has passed.
 17. Click the **Will work until** link, and review the error message, which indicates that the authentication failed because the shared access signature expired.
 18. Return to the **Home Page – Shared Access Signature** tab, click **Extend Policy**, wait for the page to refresh the expiration time, and then click the **Will work until** link. Verify that the photo appears in a new tab.
-19. Close the browser.
+19. Close all open windows.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
