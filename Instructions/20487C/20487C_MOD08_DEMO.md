@@ -45,6 +45,7 @@ To activate IIS on Windows 10, perform the following steps:
 17. In **Solution Explorer**, right-click the **MyApp** project, and then click **Publish**.
 18. In the **Publish** page, click **Publish**.
 19. Wait until the publishing completes and the browser opens. Verify that you see three values.
+20. Close all open windows.
 
 # Lesson 2: Creating and Deploying Web Application Packages
 
@@ -108,6 +109,7 @@ To verify that the installation worked, follow the first set of instructions abo
 16. In the **Overwrite Existing Files** step, select **Yes**, and then click **Next**.
 17. Wait for the import to complete, and then click **Finish**.
 18. Open a browser and navigate to **http://localhost/MyApp/api/values**, you should see either XML or JSON output, depending on your browser.
+19. Close all open windows.
 
 # Lesson 3: Command-Line Tools for Web Deploy
 
@@ -140,6 +142,7 @@ To verify that the installation worked, follow the first set of instructions abo
 7. In the **Services** window go to **Web Deployment Agent Service** and then under status verify that the service is running. If not right click and then click **Start**.
 8. Open a browser and navigate to **http://localhost/MyAppDeployedWithPowerShell/api/values**.
 9. Wait until the response is returned, you should see three values in the form of either XML or JSON, depending on your browser.
+10. Close all open windows.
 
 # Lesson 4: Continuous Delivery with TFS and Git
 
@@ -231,6 +234,7 @@ To present this demonstration, you must have a Microsoft account. If you have no
 58. A browser will open in the MSTS build page where you can see the progress of the build.
 59. When the build is done, return to the Azure portal, click **Refresh logs** and review the last deployment.
 60. Open a browser tab and navigate to the web app at the url: **http://[yourwebapp].azurewebsites.net/api/values** and you should see three values in a form of XML or JSON.
+61. Close all open windows.
 
 
 # Lesson 6: Best Practices for Production Deployment
@@ -289,6 +293,7 @@ To present this demonstration, you must have a Microsoft account. If you have no
 31. In **Solution Explorer**, expand the **http://localhost/MyProductionApp** website, and double-click the **Web.config** file.
 32. In the **&lt;connectionStrings&gt;** section, review the **DefaultConnection** connection string. Note that it now uses the  **ProductionSQLServer** database.
 33. Show students the **&lt;compilation&gt;** configuration section under the **&lt;system.web&gt;** configuration group. Point out the missing **debug** attribute.
+34. Close all open windows.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
