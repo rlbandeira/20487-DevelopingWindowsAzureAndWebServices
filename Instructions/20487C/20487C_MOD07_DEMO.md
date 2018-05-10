@@ -111,7 +111,7 @@ Wherever you see a path to file starting at [repository root], replace it with t
 63. Save the file to **[repository root]\Allfiles\20487C\Mod07\DemoFiles\ServiceBusRelay**.
 64. Return to Visual Studio 2017.
 65. In **Solution Explorer**, right-click the **ServiceBusRelay.WebClient** project, and then click **Publish**.
-66. In the **Publish** dialog box, click **Import profile** and click **Publish** and then go to **[repository root]\Allfiles\20487C\Mod07\DemoFiles\ServiceBusRelay**. Select the profile file that you downloaded earlier, and then click **Open**.
+66. In the **Pick a publish target** dialog box, click **Import profile** and click **Publish** and then go to **[repository root]\Allfiles\20487C\Mod07\DemoFiles\ServiceBusRelay**. Select the profile file that you downloaded earlier, and then click **Open**.
 67. In the **Import Publish Profile** dialog box, click **OK**.
 68. Click **Publish**. Visual Studio 2017 publishes the web application according to the settings that are provided in the profile file. After the deployment completes, the uploaded web application opens in a new browser window.
 69. Return to Visual Studio 2017.
