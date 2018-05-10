@@ -137,7 +137,7 @@ Wherever  you see a path to a file that starts with *[repository root]*, replace
 16. Go to **[repository root]\Allfiles\20487C\Mod10\DemoFiles\WebSiteMonitoring\SimpleWebApplication**.
 17. Select the **SimpleWebApplication.sln** file, and then click **Open**.
 18. In **Solution Explorer**, right click the **SimpleWebApplication** project, and then click **Publish**.
-19. In the **Publish** page, select **Microsoft Azure App Service**, and then select **Select Existing**.
+19. In the **Pick a publish target** page, select **Microsoft Azure App Service**, and then select **Select Existing**.
 20. Click **Publish**.
 21. In the **App Service** modal, expand the **demo** folder, and then select the **metricsdemoYourInitials** app service.
 22. Click **OK** and wait for the publish operation to finish and for a browser to open.
