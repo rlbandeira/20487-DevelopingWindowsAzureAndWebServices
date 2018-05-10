@@ -40,7 +40,7 @@
   a. **General** (no section). Provides an overview about the activity of the web app, access control and metadata.  
   b. **Deployments**. Controls how and when the application is deployed.  
   c. **Settings**. Allows you to control settings such as monitoring capabilities, remote access, security tokens, scaling and more.
-16. Close the browser.
+16. Close all open windows.
 
 # Lesson 5: Exploring the Blue Yonder Airlines&#39; Travel Companion Application
 
