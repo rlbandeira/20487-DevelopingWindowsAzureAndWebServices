@@ -55,6 +55,7 @@ the following path: **[repository root]\AllFiles\20487C\Mod03** should be change
 19. To start debugging the application, press **F5**.
 20. In the address bar of the browser, append **api/values/list** to the end of the address, and then press Enter.
 21. You should see the same result as in step 12.
+22. Close all open windows.
 
 # Lesson 3: Handling HTTP Requests and Responses
 
@@ -104,6 +105,7 @@ the following path: **[repository root]\AllFiles\20487C\Mod03** should be change
 11. In the address bar of the browser, append **api/destinations/1** to the end of the address, and then press Enter.
 12. When prompted by the browser, click **Open**, the JSON file should be displayed in the browser. Verify that you see information for Seattle.
 13. Append **api/destinations/6** to the end of the address, and then press Enter. Verify that you get an HTTP 404 response.
+14. Close all open windows.
 
 # Lesson 4: Hosting and Consuming ASP.NET Web API Services
 
@@ -148,6 +150,7 @@ the following path: **[repository root]\AllFiles\20487C\Mod03** should be change
 12. Type **1** in the **Location id** box, and then click **delete**.
 13. Show that the breakpoint in the **Delete** method is reached.
 14. To stop the debugger, press Shift+F5.
+15. Close all open windows.
 
 ### Demonstration 2: Consuming Services Using HttpClient
 
