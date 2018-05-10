@@ -53,7 +53,7 @@
     - IsApproved: **True**
 
 32. Close the WCF Test Client application.
-33. Close Visual Studio 2017.
+33. Close all open windows.
 
 # Lesson 3: Configuring and Hosting WCF Services
 
@@ -132,7 +132,8 @@ The service cannot be tested unless the service behavior has the **serviceMetada
 31. On the Start menu, click the **Microsoft Edge** icon, select all the text in the browser address bar, and press Ctrl+V to paste the metadata address you copied. Press Enter.
 32. The page displays an explanation of how to consume the service from a client. Click **http://localhost:8733/?wsdl**, and then review the overall structure of the WSDL file.
 33. Close the browser and the WCF Test Client window.
-34. Return to Visual Studio 2017, press Shift+F5 to stop debugging, and then close Visual Studio 2017.
+34. Return to Visual Studio 2017, press Shift+F5 to stop debugging.
+35. Close all open windows.
 
 # Lesson 4: Consuming WCF Services
 
@@ -163,7 +164,7 @@ The service cannot be tested unless the service behavior has the **serviceMetada
     
 18. To close the client console application, press Enter.
 19. Switch to the service console application window, and press Enter to shut down the service.
-20. Close both console applications and Visual Studio 2017.
+20. Close all open windows.
 
 ### Demonstration 2: Using Channel Factories
 
@@ -208,7 +209,7 @@ The service cannot be tested unless the service behavior has the **serviceMetada
 19. Return to Visual Studio 2017. In **Solution Explorer**, right-click the **ServiceClient** project, and then click **Set as StartUp Project**.  
 20. To start the client without debugging, press Ctrl+F5 (If a security warning appears click **Allow Access**).
 21. Wait until the console application starts and displays the **Booking response: Approved, booking reference: AR3254** message.  
-22. Close both console applications and Visual Studio 2017.  
+22. Close all open windows.  
 
 ©2018 Microsoft Corporation. All rights reserved.  
 
