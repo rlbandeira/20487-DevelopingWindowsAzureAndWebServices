@@ -239,7 +239,7 @@ To present this demonstration, you must have a Microsoft account. If you have no
 57. Double-click the build definition that appears under the **My Builds** group.
 58. A browser will open in the MSTS build page where you can see the progress of the build.
 59. When the build is done, return to the Azure portal, click **Refresh logs** and review the last deployment.
-60. Open a browser tab and navigate to the web app at the url: **http://[yourwebapp].azurewebsites.net/api/values** and you should see three values in a form of XML or JSON.
+60. Open a browser tab and navigate to the web app at the url: **http://[yourwebapp].azurewebsites.net/api/values** and you should see three values in a form of XML or JSON. (replace yourwebapp with your WebApp's name)
 	>**Note :** Replace the **yourwebapp** variable with your web app name.
 61. Close all open windows.
 
