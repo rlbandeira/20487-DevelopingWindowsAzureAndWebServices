@@ -138,7 +138,7 @@ The main tasks for this exercise are as follows:
 
 Before you deploy the ASP.NET Web API services to Azure, you need to create a cloud service where you will deploy the web application and an SQL Database server for the application to use. After you create the cloud service, you will upload several certificates to it, so the web application can use these certificates when calling the on-premises WCF service.
 
-After you create the components in Azure, you will create the cloud project in Visual Studio 2012, and configure it to deploy the ASP.NET Web API web application to an Azure web role. Before deploying the application to Azure, you will test it locally with the Azure compute emulator, and after you verify it is running properly, you will deploy it to Azure.
+After you create the components in Azure, you will create the cloud project in Visual Studio 2017, and configure it to deploy the ASP.NET Web API web application to an Azure web role. Before deploying the application to Azure, you will test it locally with the Azure compute emulator, and after you verify it is running properly, you will deploy it to Azure.
 
 The main tasks for this exercise are as follows:
 
@@ -219,7 +219,7 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-In this exercise, you will deploy the flights manager web application to an Azure Web App. The first step will be to create an Azure Web App. After you create the Web App, you will download the publish settings file, which you will then use in Visual Studio 2012 to populate all the publish settings required by the publish process (such as destination server, user name, and password).
+In this exercise, you will deploy the flights manager web application to an Azure Web App. The first step will be to create an Azure Web App. After you create the Web App, you will download the publish settings file, which you will then use in Visual Studio 2017 to populate all the publish settings required by the publish process (such as destination server, user name, and password).
 
 The main tasks for this exercise are as follows:
 
@@ -267,7 +267,7 @@ The main tasks for this exercise are as follows:
 
 >**Results**: After you publish the flights manager web application, you will open the web application in a browser and verify if it is working properly and is able to communicate with the web role you deployed in the previous exercise.
 
-©2017 Microsoft Corporation. All rights reserved.
+©2018 Microsoft Corporation. All rights reserved.
 
 The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
 
