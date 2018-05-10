@@ -121,6 +121,7 @@
      >**Note:** You can also ask students to open a browser window on their computers, go to the address of the web app, type messages, and send them to the console window. Show the students their messages in the console window.
 
 74. Close the browser window, and then close the console window.
+75. Close all open windows.
 
 # Lesson 2: Microsoft Azure Service Bus Queues
 
@@ -228,7 +229,7 @@
 57. In **Solution Explorer**, right-click the **ServiceBusMessageReceiver** project, and then click **Set as StartUp Project**.
 58. To run the receiver console application, press Ctrl+F5.
 59. Check that the **Receiver** console window prints the text **Hello**, and then **Goodbye**.
-60. Close the console window.
+60. Close all open windows.
 
 # Lesson 3: Microsoft Azure Service Bus Topics
 
@@ -313,7 +314,7 @@
     - The **Cheap Purchases Subscriber** console window prints two messages describing two purchases with a price that is less than $4000.
     - The **Expensive Purchases Subscriber** console window prints two messages describing two purchases with a price that is more than $4000.
 
-43. Close the three console windows.
+43. Close all open windows.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
