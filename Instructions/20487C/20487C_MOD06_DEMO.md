@@ -62,6 +62,7 @@ Click **Ok**, Windows proceeds to install the required components; when it is do
     Visual Studio 2017 proceeds to build and deploy the service to IIS. When it's done, a browser automatically opens and navigates to the service WSDL.
     
 15. Review the WCF service WSDL.
+16. Close all open windows.
 
 # Lesson 2: Hosting Services in Microsoft Azure
 
@@ -102,6 +103,7 @@ Click **Ok**, Windows proceeds to install the required components; when it is do
 21.	In the **Publish Web** dialog box, choose **App Services**, in the **Microsoft Azure App Service** view, select the **Select Existing** option, and then click **Publish**.
 22.	In the **App Service** dialog box, expand **BlueYonder.Demo.06** folder, select **wawsdemoYourInitial**, and then click **OK**.
 23. Click **Publish**. Visual Studio publishes the application according to the settings that are provided in the profile file. After deployment finishes, Visual Studio opens Internet Explorer and displays the web app. The deployment process is quick, because the process only copies the content of the application to an existing virtual machine and does not need to wait for a new virtual machine to be created.
+24. Close all open windows.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
