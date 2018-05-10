@@ -93,7 +93,7 @@ Wherever  you see a path to a file that starts with *[repository root]*, replace
 42. On the portal menu on the left, click **Storage accounts**.
 43. Click **azdiagnostics***yourinitials*, and then click **Blobs**.
 44. In the **Blob service** blade, click the **diagnostics-logs** container.
-45. In the **diagnostics-logs** blade, click **AzureDiagnosticsExample-***yourinitials*.
+45. In the **diagnostics-logs** blade, click **AzureDiagnosticsExample-_yourinitials_**.
 46. Click **[current year]**, click **[current month]** and then click **[current day]**.
 47. Click **[current hour]** and then click the most recently modified blob.
 48. In the **Blob properties** blade, click **Download**.
