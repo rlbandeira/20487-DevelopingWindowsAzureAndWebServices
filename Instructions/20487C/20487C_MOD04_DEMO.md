@@ -243,7 +243,7 @@
 33. Click the **Body** tab and review the XML string.
 34. Click **Clear session**.
 35. Click **Get image**.
-36. On the **Network* tab, click the record with **"2"**.
+36. On the **Network** tab, click the record with **"2"**.
 37. On the **Headers** tab under the **Request Headers** node, notice that the **Accept** header contains the string **image/png**.
 38. Scroll to **Response Headers** node and notice that **Content-Type** is set to **image/png**.
 39. Click the **Body** tab and review the image with the number two.
